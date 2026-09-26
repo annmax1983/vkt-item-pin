@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support VKT Item Pin</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: #f0f2f5;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+      max-width: 820px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* ── Header banner ── */
+    .banner {
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+      padding: 36px 40px 32px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .banner-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      flex-shrink: 0;
+      backdrop-filter: blur(4px);
+    }
+    .banner-text h1 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .banner-text p {
+      font-size: 14px;
+      opacity: 0.85;
+      line-height: 1.5;
+    }
+
+    /* ── Body two-column ── */
+    .body {
+      display: flex;
+      gap: 0;
+    }
+
+    .col {
+      flex: 1;
+      padding: 28px 36px;
+    }
+    .col-left {
+      border-right: 1px solid #eee;
+    }
+
+    .col h2 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #2563eb;
+      margin-bottom: 14px;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .feature-list li {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #444;
+      padding-left: 22px;
+      position: relative;
+    }
+    .feature-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #2563eb;
+      opacity: 0.5;
+    }
+
+    .thank-text {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #555;
+    }
+    .thank-text p + p {
+      margin-top: 12px;
+    }
+    .thank-text .heart {
+      color: #e74c3c;
+    }
+
+    /* ── CTA ── */
+    .cta {
+      text-align: center;
+      padding: 28px 36px 36px;
+      border-top: 1px solid #eee;
+    }
+    .cta .disclaimer {
+      font-size: 12px;
+      color: #aaa;
+      margin-bottom: 12px;
+      font-style: italic;
+    }
+    .cta p {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 16px;
+    }
+
+    .kofi-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 36px;
+      background: #72a4f2;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(114, 164, 242, 0.35);
+    }
+    .kofi-btn:hover {
+      background: #5b8ee0;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(114, 164, 242, 0.4);
+    }
+    .kofi-btn:active {
+      transform: translateY(0);
+    }
+    .kofi-btn .btn-icon {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      text-align: center;
+      padding: 16px 36px 20px;
+      font-size: 12px;
+      color: #aaa;
+    }
+    .footer a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      body { padding: 12px; }
+      .banner { padding: 24px 20px; flex-direction: column; text-align: center; }
+      .body { flex-direction: column; }
+      .col-left { border-right: none; border-bottom: 1px solid #eee; }
+      .col { padding: 24px 20px; }
+      .cta { padding: 24px 20px 28px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <!-- Banner -->
+    <div class="banner">
+      <div class="banner-icon">📌</div>
+      <div class="banner-text">
+        <h1>VKT Item Pin</h1>
+        <p data-i18n="tagline"></p>
+      </div>
+    </div>
+
+    <!-- Body: two columns -->
+    <div class="body">
+      <!-- Left: features -->
+      <div class="col col-left">
+        <h2 data-i18n="featuresTitle"></h2>
+        <ul class="feature-list" id="featureList"></ul>
+      </div>
+
+      <!-- Right: thank you -->
+      <div class="col">
+        <h2 data-i18n="thankTitle"></h2>
+        <div class="thank-text" id="thankText"></div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta">
+      <p class="disclaimer" data-i18n="disclaimer"></p>
+      <p data-i18n="ctaHint"></p>
+      <a class="kofi-btn" href="https://ko-fi.com/annmax?buyACoffee=true&ref=itempin" target="_blank" rel="noopener">
+        <svg class="btn-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+          <line x1="6" y1="1" x2="6" y2="4"/>
+          <line x1="10" y1="1" x2="10" y2="4"/>
+          <line x1="14" y1="1" x2="14" y2="4"/>
+        </svg>
+        <span data-i18n="btnText"></span>
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <a href="https://github.com/annmax1983/ItemPin" target="_blank" rel="noopener">GitHub</a>
+      &nbsp;·&nbsp;
+      <a href="https://annmax1983.github.io/ItemPin/privacy-policy.html" target="_blank" rel="noopener" data-i18n="privacyPolicy">Privacy Policy</a>
+      &nbsp;·&nbsp; Copyright © 2026 VKT Item Pin
+    </div>
+  </div>
+
+  <script>
+    // ============================================================
+    //  i18n — 6 languages
+    // ============================================================
+    const I18N = {
+      zh: {
+        tagline: '一键采集商品快照 · 价格走势跟踪 · 本地仪表盘 · 隐私优先',
+        featuresTitle: '✨ 功能特色',
+        features: [
+          '悬停商品点击 Pin，自动提取标题、价格、型号、链接、图片',
+          '24 个主流购物网站适配：Amazon、eBay、Etsy、Walmart 等',
+          '同款商品重复采集自动追加价格点，生成走势图',
+          '本地仪表盘：日期分组、搜索筛选、JSON 备份',
+          '手动拾取模式，任何网站都能兜底采集',
+          'Manifest V3 · 数据仅存本机，仅授权激活时联网'
+        ],
+        thankTitle: '💌 想对你说',
+        thank: [
+          '感谢你使用 VKT Item Pin。做这个小工具，是因为我经常在各购物网站之间比价、记录，截图和备忘录太乱了。',
+          '如果它帮你把心心念念的商品管理得井井有条，那对我来说就是最好的回报。',
+          '如果你愿意请我喝一杯咖啡 <span class="heart">☕</span>，我会非常开心——这会让我更有动力继续打磨它。'
+        ],
+        disclaimer: 'Ko-fi 赞助为自愿行为，不影响任何功能使用。赞助与扩展功能无绑定关系，仅为用户自发支持。',
+        ctaHint: '点击下方按钮，跳转到 Ko-fi 支持页面',
+        btnText: 'Buy Me a Coffee',
+        privacyPolicy: '隐私政策'
+      },
+      en: {
+        tagline: 'One-click product snapshots · Price history tracking · Local dashboard · No tracking',
+        featuresTitle: '✨ Features',
+        features: [
+          'Hover a product, click Pin: title, price, model, link and image auto-extracted',
+          '24 shopping sites supported: Amazon, eBay, Etsy, Walmart and more',
+          'Re-capture the same item to append price points and build trend charts',
+          'Local dashboard: date groups, search & filters, JSON backup',
+          'Manual pick mode as a fallback for any website',
+          'Manifest V3 · Data stays in your browser; only license activation connects'
+        ],
+        thankTitle: '💌 A Note to You',
+        thank: [
+          'Thank you for using VKT Item Pin. I built this tool because I kept comparing and bookmarking products across shopping sites, and screenshots and notes got messy fast.',
+          'If it helps you keep track of the things you want, that\'s already the best reward I could ask for.',
+          'If you\'d like to <span class="heart">☕</span> buy me a coffee, I\'d really appreciate it — it keeps me motivated to make it even better.'
+        ],
+        disclaimer: 'Ko-fi sponsorship is purely voluntary and does not affect any features. Sponsorship has no binding to extension functionality — it is solely user-initiated support.',
+        ctaHint: 'Click the button below to visit the Ko-fi support page',
+        btnText: 'Buy Me a Coffee',
+        privacyPolicy: 'Privacy Policy'
+      },
+      ja: {
+        tagline: 'ワンクリック商品スナップショット · 価格履歴トラッキング · ローカルダッシュボード · トラッキングなし',
+        featuresTitle: '✨ 機能紹介',
+        features: [
+          '商品にホバーしてPinをクリック：タイトル・価格・型番・リンク・画像を自動取得',
+          '24以上のショッピングサイト対応：Amazon、eBay、Etsy、Walmart など',
+          '同じ商品を再収集すると価格ポイントを追加し、トレンドチャートを作成',
+          'ローカルダッシュボード：日付グループ・検索・フィルタ・JSONバックアップ',
+          '手動ピックモードでどんなサイトでも収集可能',
+          'Manifest V3 · データはブラウザ内のみ、ライセンス認証時のみ接続'
+        ],
+        thankTitle: '💌 ご利用ありがとうございます',
+        thank: [
+          'VKT Item Pinをご利用いただきありがとうございます。ショッピングサイト間で商品を比較・記録する際、スクリーンショットやメモが乱雑になりがちだったので作りました。',
+          '欲しいものの管理が整然とできているなら、それが何よりの喜びです。',
+          'もしよろしければ、コーヒーを <span class="heart">☕</span> 一杯おごっていただけると、とても嬉しいです。改善の励みになります。'
+        ],
+        disclaimer: 'Ko-fi は純粋な任意のスポンサーシップです。機能に一切影響せず、スポンサーシップと拡張機能は無関係です。ユーザーの自発的なサポートのみです。',
+        ctaHint: '下のボタンをクリックすると Ko-fi サポートページに移動します',
+        btnText: 'Buy Me a Coffee',
+        privacyPolicy: 'プライバシーポリシー'
+      },
+      de: {
+        tagline: 'Produkt-Snapshots mit einem Klick · Preisverlauf · Lokales Dashboard · Kein Tracking',
+        featuresTitle: '✨ Funktionen',
+        features: [
+          'Produkt mit der Maus überfahren, Pin klicken: Titel, Preis, Modell, Link und Bild automatisch erfasst',
+          '24 Shopping-Websites unterstützt: Amazon, eBay, Etsy, Walmart und mehr',
+          'Gleicher Artikel erneut erfassen fügt Preispunkte hinzu und erzeugt Trenddiagramme',
+          'Lokales Dashboard: Datumsgruppen, Suche & Filter, JSON-Backup',
+          'Manueller Pick-Modus als Rückfallebene für jede Website',
+          'Manifest V3 · Daten bleiben im Browser; nur die Lizenzaktivierung verbindet'
+        ],
+        thankTitle: '💌 Ein paar Worte an Sie',
+        thank: [
+          'Vielen Dank, dass Sie VKT Item Pin nutzen. Ich habe dieses Tool gebaut, weil ich ständig Produkte über Shops hinweg verglichen und gespeichert habe — Screenshots und Notizen wurden schnell unübersichtlich.',
+          'Wenn es Ihnen hilft, Ihre Wunschartikel im Blick zu behalten, ist das die beste Belohnung.',
+          'Wenn Sie mir gerne einen <span class="heart">☕</span> Kaffee ausgeben möchten, würde mich das sehr freuen — es motiviert mich, das Tool noch besser zu machen.'
+        ],
+        disclaimer: 'Ko-fi-Sponsoring ist rein freiwillig und beeinträchtigt keine Funktionen. Das Sponsoring hat keinen Einfluss auf die Erweiterungsfunktionen — es ist ausschließlich eine freiwillige Unterstützung durch die Nutzer.',
+        ctaHint: 'Klicken Sie auf die Schaltfläche unten, um zur Ko-fi-Support-Seite zu gelangen',
+        btnText: 'Buy Me a Coffee',
+        privacyPolicy: 'Datenschutzrichtlinie'
+      },
+      es: {
+        tagline: 'Capturas de productos con un clic · Historial de precios · Panel local · Sin seguimiento',
+        featuresTitle: '✨ Características',
+        features: [
+          'Pasa el ratón sobre un producto, pulsa Pin: título, precio, modelo, enlace e imagen extraídos automáticamente',
+          '24 tiendas compatibles: Amazon, eBay, Etsy, Walmart y más',
+          'Volver a capturar el mismo artículo añade puntos de precio y crea gráficos de tendencia',
+          'Panel local: grupos por fecha, búsqueda y filtros, copia de seguridad JSON',
+          'Modo de selección manual como respaldo para cualquier sitio web',
+          'Manifest V3 · Los datos permanecen en tu navegador; solo la activación de licencia se conecta'
+        ],
+        thankTitle: '💌 Unas palabras para ti',
+        thank: [
+          'Gracias por usar VKT Item Pin. Construí esta herramienta porque comparaba y guardaba productos entre tiendas constantemente, y las capturas y notas se volvían un desastre.',
+          'Si te ayuda a tener controlados los artículos que quieres, esa ya es la mejor recompensa.',
+          'Si quieres invitarme a un <span class="heart">☕</span> café, me haría muy feliz — me motivaría a seguir mejorándolo.'
+        ],
+        disclaimer: 'El patrocinio en Ko-fi es puramente voluntario y no afecta ninguna funcionalidad. El patrocinio no tiene vinculación con las funciones de la extensión — es únicamente apoyo iniciado por el usuario.',
+        ctaHint: 'Haz clic en el botón de abajo para visitar la página de soporte de Ko-fi',
+        btnText: 'Buy Me a Coffee',
+        privacyPolicy: 'Política de Privacidad'
+      },
+      fr: {
+        tagline: 'Instantanés de produits en un clic · Historique des prix · Tableau de bord local · Aucun suivi',
+        featuresTitle: '✨ Fonctionnalités',
+        features: [
+          'Survolez un produit, cliquez sur Pin : titre, prix, modèle, lien et image extraits automatiquement',
+          '24 sites marchands pris en charge : Amazon, eBay, Etsy, Walmart…',
+          'Re-capturer le même article ajoute des points de prix et crée des graphiques de tendance',
+          'Tableau de bord local : groupes par date, recherche et filtres, sauvegarde JSON',
+          'Mode de sélection manuel en secours pour n\'importe quel site',
+          'Manifest V3 · Les données restent dans votre navigateur ; seule l\'activation de licence se connecte'
+        ],
+        thankTitle: '💌 Un petit mot pour vous',
+        thank: [
+          'Merci d\'utiliser VKT Item Pin. J\'ai construit cet outil parce que je comparais et enregistrais sans cesse des produits sur différents sites — les captures d\'écran et les notes devenaient vite ingérables.',
+          'S\'il vous aide à suivre les articles que vous convoitez, c\'est déjà la plus belle récompense.',
+          'Si vous souhaitez m\'offrir un <span class="heart">☕</span> café, cela me ferait très plaisir — cela me motiverait à l\'améliorer encore.'
+        ],
+        disclaimer: 'Le parrainage sur Ko-fi est purement volontaire et n\'affecte aucune fonctionnalité. Le parrainage n\'est lié à aucune fonctionnalité de l\'extension — il s\'agit uniquement d\'un soutien initié par l\'utilisateur.',
+        ctaHint: 'Cliquez sur le bouton ci-dessous pour accéder à la page de soutien Ko-fi',
+        btnText: 'Buy Me a Coffee',
+        privacyPolicy: 'Politique de Confidentialité'
+      }
+    };
+
+    // ============================================================
+    //  Language detection
+    // ============================================================
+    function detectLang() {
+      const raw = (navigator.language || 'en').toLowerCase();
+      const map = { 'zh-tw': 'zh', 'zh-hans': 'zh', 'zh-hant': 'zh', 'zh-cn': 'zh' };
+      const mapped = map[raw] || raw;
+      const base = mapped.split('-')[0];
+      return I18N[mapped] ? mapped : (I18N[base] ? base : 'en');
+    }
+
+    // ============================================================
+    //  Apply translations to DOM
+    // ============================================================
+    function applyLang(lang) {
+      const t = I18N[lang];
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key]) el.textContent = t[key];
+      });
+
+      document.getElementById('featureList').innerHTML = t.features.map(f => `<li>${f}</li>`).join('');
+      document.getElementById('thankText').innerHTML = t.thank.map(p => `<p>${p}</p>`).join('');
+      document.documentElement.lang = lang;
+    }
+
+    // ============================================================
+    //  Init
+    // ============================================================
+    applyLang(detectLang());
+  </script>
+</body>
+</html>

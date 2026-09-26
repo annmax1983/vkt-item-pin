@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VKT Item Pin Promotional Tile</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 1400px;
+  height: 560px;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+.tile {
+  width: 1400px;
+  height: 560px;
+  background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 40%, #f0f4ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 80px;
+  gap: 70px;
+  position: relative;
+}
+.tile::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, #c8d6e5 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.25;
+}
+.left {
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+/* Real popup screenshot */
+.shot {
+  height: 490px;
+  width: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: block;
+}
+.right {
+  flex: 1;
+  max-width: 640px;
+  position: relative;
+  z-index: 1;
+}
+.badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: #fff;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  letter-spacing: 0.3px;
+}
+.right h1 {
+  font-size: 50px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+.right .sub {
+  font-size: 20px;
+  color: #64748b;
+  margin-bottom: 28px;
+  line-height: 1.4;
+}
+.bullets { list-style: none; padding: 0; }
+.bullets li {
+  font-size: 17px;
+  color: #334155;
+  padding: 9px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.bullets li .icon-small {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.brand {
+  position: absolute;
+  right: 28px;
+  bottom: 16px;
+  font-size: 12px;
+  color: #94a3b8;
+  z-index: 1;
+}
+</style>
+</head>
+<body>
+  <div class="tile">
+    <div class="left">
+      <img class="shot" src="imgs/B01.png" alt="VKT Item Pin popup preview">
+    </div>
+    <div class="right">
+      <span class="badge">Manifest V3 · Privacy First</span>
+      <h1>VKT Item Pin</h1>
+      <p class="sub">Pin Product Snapshots & Track Price History</p>
+      <ul class="bullets">
+        <li><span class="icon-small">📌</span> One-click snapshot: title, price, model, link</li>
+        <li><span class="icon-small">📈</span> Automatic price history & trend charts</li>
+        <li><span class="icon-small">🛒</span> 24 shopping sites: Amazon, eBay, Etsy, Walmart…</li>
+        <li><span class="icon-small">🗂️</span> Local dashboard with search & filters</li>
+        <li><span class="icon-small">🔒</span> All data stays in your browser</li>
+      </ul>
+    </div>
+  </div>
+  <div class="brand">VKT Item Pin v1.1.0</div>
+</body>
+</html>

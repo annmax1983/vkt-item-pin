@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VKT Item Pin — Privacy Policy</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #1e293b;
+    background: #f8fafc;
+    line-height: 1.7;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+  h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; color: #2563eb; }
+  .updated { font-size: 13px; color: #94a3b8; margin-bottom: 32px; }
+  .highlight {
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 20px 0;
+  }
+  .highlight strong { color: #065f46; }
+  h2 { font-size: 18px; font-weight: 600; margin: 28px 0 12px; color: #334155; }
+  p { margin-bottom: 12px; font-size: 15px; color: #475569; }
+  ul { margin: 0 0 12px 20px; }
+  li { margin-bottom: 6px; font-size: 15px; color: #475569; }
+  code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
+  .footer-link {
+    display: inline-block; margin-bottom: 24px;
+    color: #2563eb; text-decoration: none; font-size: 14px;
+  }
+  .footer-link:hover { text-decoration: underline; }
+  footer {
+    margin-top: 40px; padding-top: 20px; border-top: 1px solid #e2e8f0;
+    text-align: center; font-size: 13px; color: #94a3b8;
+  }
+  footer a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+  <a class="footer-link" href="https://annmax1983.github.io/ItemPin/">← VKT Item Pin</a>
+  <h1 id="title"></h1>
+  <p class="updated" id="updated"></p>
+
+  <div class="highlight" id="highlight"></div>
+
+  <h2 id="h1"></h2>
+  <p id="p1"></p>
+  <ul id="l1"></ul>
+
+  <h2 id="h2"></h2>
+  <p id="p2"></p>
+  <ul id="l2"></ul>
+  <p id="p2note"></p>
+
+  <h2 id="h3"></h2>
+  <p id="p3"></p>
+
+  <h2 id="h4"></h2>
+  <p id="p4"></p>
+
+  <h2 id="h5"></h2>
+  <p id="p5"></p>
+
+  <h2 id="h6"></h2>
+  <p id="p6"></p>
+
+  <footer>
+    <p>&copy; 2026 VKT Item Pin. <span id="rights"></span></p>
+    <p><a href="https://github.com/annmax1983/ItemPin" id="gh"></a></p>
+  </footer>
+</div>
+
+<script>
+const I18N = {
+  en: {
+    title: '🔒 Privacy Policy', updated: 'Last updated: September 2026',
+    highlight: '<strong>Short version:</strong> VKT Item Pin saves product snapshots (title, price, model, link, image) <strong>only in your browser</strong>. Page content is read locally to extract product information when you interact with the extension — it is never uploaded. The only network request is the optional Pro license activation, which sends your license key and basic browser info to the license server.',
+    h1: 'Data Collection', p1: 'VKT Item Pin does <strong>not</strong> collect or upload any of the following:', l1: ['Browsing history or pages you visit without interacting with the extension', 'Usage analytics or telemetry', 'Cookies or tracking identifiers', 'Your captured data — snapshots are stored locally and never sent to any server'],
+    h2: 'Permissions', p2: 'VKT Item Pin uses these permissions to capture product snapshots on shopping pages:', l2: ['<strong>storage</strong> — Saves your captured product snapshots and settings locally in <code>chrome.storage.local</code>.', '<strong>activeTab</strong> — Accesses the current tab only when you hover the Pin button or trigger a capture.', '<strong>scripting</strong> — Injects the extraction code on demand to read product information (title, price, model) from the page you are viewing.', '<strong>Host access</strong> — Lets the Pin button and one-click capture work on shopping sites. Page content is processed locally only; nothing is uploaded.'], p2note: 'Host access covers all sites so the Pin button works on any shop you browse. It is used solely to extract product information at your request — never to monitor your browsing in the background.',
+    h3: 'Data Storage', p3: 'Captured snapshots are stored locally in your browser using <code>chrome.storage.local</code>. You can export or delete them anytime from the dashboard. All data is deleted when you uninstall the extension.',
+    h4: 'License Activation & Network', p4: 'Free use works without any required network connection for capturing. If you activate a Pro license, VKT Item Pin sends your license key, a device ID, and basic browser info (browser version, language, timezone) to our license server (api.annmax1983.com) to validate the license. No page content or captured data is ever sent.',
+    h5: 'Third-Party Links', p5: 'The extension footer links to our website, GitHub repository, and a voluntary Ko-fi support page. Visiting those sites is subject to their own privacy policies.',
+    h6: 'Contact', p6: 'If you have questions, please open an issue on <a href="https://github.com/annmax1983/ItemPin">GitHub</a>.',
+    rights: 'All rights reserved.', gh: 'GitHub Repository'
+  },
+  'zh-CN': {
+    title: '🔒 隐私条款', updated: '最后更新：2026 年 9 月',
+    highlight: '<strong>简要说明：</strong>VKT Item Pin 采集的商品快照（标题、价格、型号、链接、图片）<strong>仅保存在您的浏览器中</strong>。当您与扩展交互时，插件会在本地读取页面内容以提取商品信息——绝不上传任何数据。唯一的网络请求是可选的 Pro 授权激活，它会向授权服务器发送您的授权密钥和基本浏览器信息。',
+    h1: '数据收集', p1: 'VKT Item Pin <strong>不会</strong>收集或上传以下任何信息：', l1: ['浏览历史或您未与扩展交互时访问的页面', '使用分析或遥测数据', 'Cookie 或跟踪标识符', '您采集的数据——快照仅存储在本地，绝不发送到任何服务器'],
+    h2: '权限说明', p2: 'VKT Item Pin 使用以下权限在购物页面上采集商品快照：', l2: ['<strong>storage</strong> — 将您采集的商品快照和设置保存在 <code>chrome.storage.local</code> 本地存储中', '<strong>activeTab</strong> — 仅在您悬停 Pin 按钮或触发采集时访问当前标签页', '<strong>scripting</strong> — 按需注入提取代码，从您正在浏览的页面读取商品信息（标题、价格、型号）', '<strong>主机权限</strong> — 让 Pin 按钮和一键采集在购物网站上可用。页面内容仅在本地处理，绝不上传'], p2note: '主机权限覆盖所有网站，以便 Pin 按钮在您浏览的任何商店都可用。它仅用于按您的请求提取商品信息——绝不在后台监视您的浏览行为。',
+    h3: '数据存储', p3: '采集的快照通过 <code>chrome.storage.local</code> 存储在浏览器本地。您可以随时在仪表盘中导出或删除它们。卸载扩展时数据会自动删除。',
+    h4: '授权激活与网络', p4: '采集功能无需任何网络连接。如果您激活 Pro 授权，VKT Item Pin 会向我们的授权服务器（api.annmax1983.com）发送您的授权密钥、设备 ID 和基本浏览器信息（浏览器版本、语言、时区）以验证授权。绝不会发送任何页面内容或采集数据。',
+    h5: '第三方链接', p5: '扩展底部链接指向我们的官网、GitHub 仓库和自愿的 Ko-fi 支持页面。访问这些网站适用其各自的隐私政策。',
+    h6: '联系方式', p6: '如有疑问，请在 <a href="https://github.com/annmax1983/ItemPin">GitHub</a> 上提交 Issue。',
+    rights: '保留所有权利。', gh: 'GitHub 仓库'
+  },
+  ja: {
+    title: '🔒 プライバシーポリシー', updated: '最終更新：2026年9月',
+    highlight: '<strong>要約：</strong>VKT Item Pin は商品スナップショット（タイトル・価格・型番・リンク・画像）を<strong>ブラウザ内にのみ</strong>保存します。拡張機能を操作した際にページコンテンツをローカルで読み取り商品情報を抽出しますが、アップロードは一切ありません。唯一のネットワークリクエストは任意のProライセンス認証で、ライセンスキーと基本的なブラウザ情報をライセンスサーバーに送信します。',
+    h1: 'データ収集', p1: 'VKT Item Pin は以下の情報を<strong>収集・アップロードしません</strong>：', l1: ['閲覧履歴、または拡張機能を操作していないページへのアクセス', '使用分析またはテレメトリ', 'Cookie または追跡識別子', '収集したデータ — スナップショットはローカル保存のみで、サーバーには送信されません'],
+    h2: '権限', p2: 'VKT Item Pin はショッピングページで商品スナップショットを取得するために以下の権限を使用します：', l2: ['<strong>storage</strong> — 収集したスナップショットと設定を <code>chrome.storage.local</code> にローカル保存します。', '<strong>activeTab</strong> — Pinボタンにホバーまたは収集を実行した時のみ現在のタブにアクセスします。', '<strong>scripting</strong> — 閲覧中のページから商品情報（タイトル・価格・型番）を読み取るため、必要時に抽出コードを注入します。', '<strong>ホストアクセス</strong> — ショッピングサイトでPinボタンとワンクリック収集を機能させるためのものです。ページコンテンツはローカルでのみ処理され、アップロードはされません。'], p2note: 'ホストアクセスは全サイトを対象とし、閲覧するどのストアでもPinボタンが機能するようにするためのものです。ユーザーの要求に応じて商品情報を抽出するためにのみ使用され、バックグラウンドで閲覧を監視することはありません。',
+    h3: 'データ保存', p3: '収集したスナップショットは <code>chrome.storage.local</code> でローカル保存されます。ダッシュボードからいつでもエクスポート・削除できます。アンインストール時にデータは削除されます。',
+    h4: 'ライセンス認証とネットワーク', p4: '収集機能にはネットワーク接続は不要です。Proライセンスを認証する場合、VKT Item Pin はライセンスキー、デバイスID、基本的なブラウザ情報（バージョン、言語、タイムゾーン）をライセンスサーバー（api.annmax1983.com）に送信します。ページコンテンツや収集データが送信されることはありません。',
+    h5: 'サードパーティリンク', p5: '拡張機能のフッターは公式サイト・GitHubリポジトリ・任意のKo-fiサポートページにリンクしています。それらのサイトの訪問には各サイトのプライバシーポリシーが適用されます。',
+    h6: 'お問い合わせ', p6: 'ご質問は <a href="https://github.com/annmax1983/ItemPin">GitHub</a> で Issue を作成してください。',
+    rights: '全著作権所有。', gh: 'GitHub リポジトリ'
+  },
+  de: {
+    title: '🔒 Datenschutzrichtlinie', updated: 'Letzte Aktualisierung: September 2026',
+    highlight: '<strong>Kurzfassung:</strong> VKT Item Pin speichert Produkt-Snapshots (Titel, Preis, Modell, Link, Bild) <strong>nur in Ihrem Browser</strong>. Seiteninhalte werden bei Interaktion mit der Erweiterung lokal gelesen, um Produktinformationen zu extrahieren — niemals hochgeladen. Die einzige Netzwerkanfrage ist die optionale Pro-Lizenzaktivierung, die Ihren Lizenzschlüssel und grundlegende Browserinformationen an den Lizenzserver sendet.',
+    h1: 'Datenerfassung', p1: 'VKT Item Pin <strong>erfasst oder überträgt</strong> keine der folgenden Daten:', l1: ['Browserverlauf oder Seiten, die Sie ohne Interaktion mit der Erweiterung besuchen', 'Nutzungsanalysen oder Telemetrie', 'Cookies oder Tracking-Kennungen', 'Ihre erfassten Daten — Snapshots werden lokal gespeichert und nie an einen Server gesendet'],
+    h2: 'Berechtigungen', p2: 'VKT Item Pin verwendet diese Berechtigungen, um Produkt-Snapshots auf Einkaufsseiten zu erfassen:', l2: ['<strong>storage</strong> — Speichert erfasste Snapshots und Einstellungen lokal in <code>chrome.storage.local</code>.', '<strong>activeTab</strong> — Greift nur auf den aktuellen Tab zu, wenn Sie die Pin-Schaltfläche verwenden oder eine Erfassung auslösen.', '<strong>scripting</strong> — Injiziert bei Bedarf den Extraktionscode, um Produktinformationen (Titel, Preis, Modell) von der angezeigten Seite zu lesen.', '<strong>Host-Zugriff</strong> — Ermöglicht Pin-Schaltfläche und Ein-Klick-Erfassung auf Shopping-Websites. Seiteninhalte werden ausschließlich lokal verarbeitet; nichts wird hochgeladen.'], p2note: 'Der Host-Zugriff umfasst alle Websites, damit die Pin-Schaltfläche in jedem Shop funktioniert. Er wird ausschließlich verwendet, um auf Ihre Anfrage hin Produktinformationen zu extrahieren — niemals, um Ihr Surfen im Hintergrund zu überwachen.',
+    h3: 'Datenspeicherung', p3: 'Erfasste Snapshots werden lokal im Browser über <code>chrome.storage.local</code> gespeichert. Sie können sie jederzeit über das Dashboard exportieren oder löschen. Beim Deinstallieren der Erweiterung werden alle Daten gelöscht.',
+    h4: 'Lizenzaktivierung und Netzwerk', p4: 'Die Erfassung funktioniert ohne Netzwerkverbindung. Wenn Sie eine Pro-Lizenz aktivieren, sendet VKT Item Pin Ihren Lizenzschlüssel, eine Geräte-ID und grundlegende Browserinformationen (Browserversion, Sprache, Zeitzone) an unseren Lizenzserver (api.annmax1983.com). Seiteninhalte oder erfasste Daten werden niemals gesendet.',
+    h5: 'Links von Drittanbietern', p5: 'Die Fußzeile der Erweiterung verlinkt auf unsere Website, das GitHub-Repository und eine freiwillige Ko-fi-Supportseite. Für den Besuch dieser Websites gelten deren eigene Datenschutzrichtlinien.',
+    h6: 'Kontakt', p6: 'Bei Fragen erstellen Sie bitte ein Issue auf <a href="https://github.com/annmax1983/ItemPin">GitHub</a>.',
+    rights: 'Alle Rechte vorbehalten.', gh: 'GitHub-Repository'
+  },
+  es: {
+    title: '🔒 Política de Privacidad', updated: 'Última actualización: septiembre de 2026',
+    highlight: '<strong>Resumen:</strong> VKT Item Pin guarda las capturas de productos (título, precio, modelo, enlace, imagen) <strong>solo en tu navegador</strong>. El contenido de las páginas se lee localmente para extraer la información del producto cuando interactúas con la extensión — nunca se sube. La única solicitud de red es la activación opcional de la licencia Pro, que envía tu clave de licencia e información básica del navegador al servidor de licencias.',
+    h1: 'Recopilación de Datos', p1: 'VKT Item Pin <strong>no</strong> recopila ni sube ninguna de las siguientes cosas:', l1: ['Historial de navegación o páginas visitadas sin interactuar con la extensión', 'Analíticas de uso o telemetría', 'Cookies o identificadores de seguimiento', 'Tus datos capturados — las capturas se almacenan localmente y nunca se envían a ningún servidor'],
+    h2: 'Permisos', p2: 'VKT Item Pin usa estos permisos para capturar productos en páginas de compras:', l2: ['<strong>storage</strong> — Guarda las capturas y ajustes localmente en <code>chrome.storage.local</code>.', '<strong>activeTab</strong> — Accede a la pestaña actual solo cuando usas el botón Pin o inicias una captura.', '<strong>scripting</strong> — Inyecta el código de extracción a petición para leer la información del producto (título, precio, modelo) de la página que estás viendo.', '<strong>Acceso a hosts</strong> — Permite que el botón Pin y la captura con un clic funcionen en tiendas. El contenido de las páginas se procesa solo localmente; nada se sube.'], p2note: 'El acceso a hosts cubre todos los sitios para que el botón Pin funcione en cualquier tienda. Se usa únicamente para extraer información del producto a petición tuya — nunca para monitorear tu navegación en segundo plano.',
+    h3: 'Almacenamiento', p3: 'Las capturas se almacenan localmente con <code>chrome.storage.local</code>. Puedes exportarlas o borrarlas en cualquier momento desde el panel. Todos los datos se eliminan al desinstalar la extensión.',
+    h4: 'Activación de licencia y red', p4: 'La captura funciona sin conexión de red. Si activas una licencia Pro, VKT Item Pin envía tu clave de licencia, una ID de dispositivo e información básica del navegador (versión, idioma, zona horaria) a nuestro servidor de licencias (api.annmax1983.com). Nunca se envía contenido de páginas ni datos capturados.',
+    h5: 'Enlaces de Terceros', p5: 'El pie de la extensión enlaza a nuestro sitio web, repositorio de GitHub y una página de soporte voluntaria en Ko-fi. La visita a esos sitios está sujeta a sus propias políticas de privacidad.',
+    h6: 'Contacto', p6: 'Si tiene preguntas, abra un issue en <a href="https://github.com/annmax1983/ItemPin">GitHub</a>.',
+    rights: 'Todos los derechos reservados.', gh: 'Repositorio GitHub'
+  },
+  fr: {
+    title: '🔒 Politique de Confidentialité', updated: 'Dernière mise à jour : septembre 2026',
+    highlight: '<strong>Résumé :</strong> VKT Item Pin enregistre les instantanés de produits (titre, prix, modèle, lien, image) <strong>uniquement dans votre navigateur</strong>. Le contenu des pages est lu localement pour extraire les informations du produit lorsque vous interagissez avec l\'extension — jamais téléchargé. La seule requête réseau est l\'activation facultative de la licence Pro, qui envoie votre clé de licence et des informations de base sur le navigateur au serveur de licences.',
+    h1: 'Collecte de Données', p1: 'VKT Item Pin ne collecte <strong>ni ne télécharge</strong> aucune des informations suivantes :', l1: ['Historique de navigation ou pages consultées sans interaction avec l\'extension', 'Analyses d\'utilisation ou télémétrie', 'Cookies ou identifiants de suivi', 'Vos données capturées — les instantanés sont stockés localement et jamais envoyés à un serveur'],
+    h2: 'Permissions', p2: 'VKT Item Pin utilise ces permissions pour capturer des produits sur les pages marchandes :', l2: ['<strong>storage</strong> — Enregistre les instantanés et paramètres localement dans <code>chrome.storage.local</code>.', '<strong>activeTab</strong> — N\'accède à l\'onglet actuel que lorsque vous utilisez le bouton Pin ou lancez une capture.', '<strong>scripting</strong> — Injecte le code d\'extraction à la demande pour lire les informations produit (titre, prix, modèle) de la page consultée.', '<strong>Accès aux hôtes</strong> — Permet au bouton Pin et à la capture en un clic de fonctionner sur les sites marchands. Le contenu des pages est traité localement uniquement ; rien n\'est téléchargé.'], p2note: 'L\'accès aux hôtes couvre tous les sites afin que le bouton Pin fonctionne sur toute boutique. Il sert uniquement à extraire les informations produit à votre demande — jamais à surveiller votre navigation en arrière-plan.',
+    h3: 'Stockage', p3: 'Les instantanés sont stockés localement via <code>chrome.storage.local</code>. Vous pouvez les exporter ou les supprimer à tout moment depuis le tableau de bord. Toutes les données sont supprimées lors de la désinstallation de l\'extension.',
+    h4: 'Activation de la licence et réseau', p4: 'La capture fonctionne sans connexion réseau. Si vous activez une licence Pro, VKT Item Pin envoie votre clé de licence, un identifiant d\'appareil et des informations de base sur le navigateur (version, langue, fuseau horaire) à notre serveur de licences (api.annmax1983.com). Aucun contenu de page ni donnée capturée n\'est jamais envoyé.',
+    h5: 'Liens de Tiers', p5: 'Le pied de page de l\'extension renvoie vers notre site web, le dépôt GitHub et une page de soutien volontaire Ko-fi. La visite de ces sites est soumise à leurs propres politiques de confidentialité.',
+    h6: 'Contact', p6: 'Pour toute question, ouvrez un issue sur <a href="https://github.com/annmax1983/ItemPin">GitHub</a>.',
+    rights: 'Tous droits réservés.', gh: 'Dépôt GitHub'
+  }
+};
+
+function detectLang() {
+  const raw = (navigator.language || 'en');
+  const map = { 'zh-TW': 'zh-CN', 'zh-Hans': 'zh-CN' };
+  const mapped = map[raw] || raw;
+  const base = mapped.split('-')[0].toLowerCase();
+  if (I18N[mapped]) return mapped;
+  return I18N[base] ? base : 'en';
+}
+
+function apply(t) {
+  document.title = t.title.replace(/🔒\s*/, '') + ' - VKT Item Pin';
+  document.getElementById('title').textContent = t.title;
+  document.getElementById('updated').textContent = t.updated;
+  document.getElementById('highlight').innerHTML = t.highlight;
+  document.getElementById('h1').textContent = t.h1;
+  document.getElementById('p1').innerHTML = t.p1;
+  document.getElementById('l1').innerHTML = t.l1.map(i => '<li>' + i + '</li>').join('');
+  document.getElementById('h2').textContent = t.h2;
+  document.getElementById('p2').innerHTML = t.p2;
+  document.getElementById('l2').innerHTML = t.l2.map(i => '<li>' + i + '</li>').join('');
+  document.getElementById('p2note').innerHTML = t.p2note;
+  document.getElementById('h3').textContent = t.h3;
+  document.getElementById('p3').innerHTML = t.p3;
+  document.getElementById('h4').textContent = t.h4;
+  document.getElementById('p4').innerHTML = t.p4;
+  document.getElementById('h5').textContent = t.h5;
+  document.getElementById('p5').innerHTML = t.p5;
+  document.getElementById('h6').textContent = t.h6;
+  document.getElementById('p6').innerHTML = t.p6;
+  document.getElementById('rights').textContent = t.rights;
+  document.getElementById('gh').textContent = t.gh;
+  document.documentElement.lang = detectLang();
+}
+
+apply(I18N[detectLang()]);
+</script>
+</body>
+</html>
