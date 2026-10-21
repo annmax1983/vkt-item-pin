@@ -94,7 +94,7 @@ Comparing products across shopping sites usually means dozens of open tabs and c
 
 ### Track Prices
 
-- Just visit a product you already pinned — the price is recorded automatically, once per day (tracked products never count against the free limit)
+- Just visit a product you already pinned — the price is recorded automatically, once per day (saved products count toward the 50-product free limit; revisiting an existing product never adds a record or uses another slot)
 - Set a **target price** in the dashboard; when a visit brings the price to or below it, you get a desktop notification. It fires once per crossing — no repeated nagging
 - Open the dashboard for the trend chart, the 30-day drop summary, or **Compare** (Pro) to overlay multiple products
 - Add a **note** and **tags** in the dashboard to remember why an item is worth waiting for
@@ -121,7 +121,7 @@ Revisit the same product → price recorded automatically (1 point / day)
 Dropped to your target? desktop notification → trend chart in dashboard
 ```
 
-All extraction and storage happen locally in your browser. The only network request is **optional** — when you activate a Pro license key, the extension contacts the license server with your key and basic browser metadata (browser, language, timezone). No webpage content is ever read or uploaded.
+All extraction and storage happen locally in your browser. Network access is limited to two optional cases: (1) when you activate or validate a Pro license key, the extension contacts the license server with your key and basic browser metadata (browser, language, timezone); (2) when the popup or dashboard shows a saved product thumbnail, your browser loads that image directly from the original store's URL. No webpage content or captured data is ever uploaded.
 
 ---
 
@@ -131,7 +131,7 @@ All extraction and storage happen locally in your browser. The only network requ
 - `scripting` + `activeTab` — Inject the Pin button / extract fields only while you interact with the page.
 - `notifications` — Only used for local target-price alerts; nothing is sent anywhere.
 - `<all_urls>` — Lets the extension work on every shopping site. It never reads or uploads page content in the background.
-- No tracking, no analytics. The only network request is license activation/validation when you use a Pro license key.
+- No tracking, no analytics. Network requests are limited to license activation/validation and product thumbnails loaded from the store that hosts them.
 
 ---
 

@@ -82,7 +82,7 @@ Comparar productos entre tiendas suele significar decenas de pestañas abiertas 
 
 ### Seguir precios
 
-- Abre de nuevo un producto ya guardado: el precio se registra solo, un punto por día como máximo (los productos seguidos nunca consumen el límite gratuito)
+- Abre de nuevo un producto ya guardado: el precio se registra solo, un punto por día como máximo (el plan gratuito permite guardar hasta 50 productos; volver a registrar el precio de un producto ya guardado no añade un registro ni consume otra plaza)
 - Define un **precio objetivo** en el panel: cuando una visita lleve el precio a ese valor o por debajo, verás una notificación del sistema, una sola vez por cruce y sin repetirse
 - Abre el panel para ver la gráfica de tendencia, el resumen de bajadas de 30 días, o usa **Comparar** (Pro) para superponer varios productos
 - Usa **nota** y **etiquetas** para recordar por qué merece la pena esperar
@@ -99,7 +99,7 @@ Comparar productos entre tiendas suele significar decenas de pestañas abiertas 
 - `scripting` + `activeTab` — Inyectan el botón Pin / extraen campos solo mientras interactúas con la página.
 - `notifications` — Solo se usa para las alertas locales de precio objetivo; no se envía nada a ningún sitio.
 - `<all_urls>` — Permite funcionar en cualquier tienda. Nunca lee ni sube contenido en segundo plano.
-- Sin rastreo ni analíticas. La única petición de red es la activación/validación de la licencia Pro.
+- Sin rastreo ni analíticas. Las solicitudes de red se limitan a la activación/validación de la licencia Pro y a las miniaturas de productos, que se cargan directamente desde el sitio original.
 
 ---
 

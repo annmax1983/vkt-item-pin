@@ -92,7 +92,7 @@ Comparer des produits entre sites marchands, c'est souvent des dizaines d'onglet
 
 ### Suivre les prix
 
-- Rouvrez simplement une fiche déjà enregistrée : le prix est relevé automatiquement, un point par jour maximum (les produits suivis ne consomment jamais le quota gratuit)
+- Rouvrez simplement une fiche déjà enregistrée : le prix est relevé automatiquement, un point par jour maximum (le plan gratuit permet d'enregistrer jusqu'à 50 produits ; relever à nouveau le prix d'un produit déjà enregistré n'ajoute aucun enregistrement et ne consomme aucune place supplémentaire)
 - Définissez un **prix cible** dans le tableau de bord : quand une visite amène le prix à ce niveau ou en dessous, une notification système s'affiche, une seule fois par franchissement et sans répétition
 - Ouvrez le tableau de bord pour le graphique de tendance et le bilan des baisses sur 30 jours, ou utilisez **Comparer** (Pro) pour superposer plusieurs produits
 - Utilisez **note** et **étiquettes** pour garder en tête pourquoi le produit vaut l'attente
@@ -109,7 +109,7 @@ Comparer des produits entre sites marchands, c'est souvent des dizaines d'onglet
 - `scripting` + `activeTab` — Injectent le bouton Pin / extraient les champs uniquement pendant votre interaction.
 - `notifications` — Utilisée uniquement pour les alertes locales de prix cible ; rien n'est envoyé nulle part.
 - `<all_urls>` — Permet de fonctionner sur tous les sites marchands. Ne lit ni n'envoie jamais de contenu en arrière-plan.
-- Aucun tracking, aucune analytics. La seule requête réseau est l'activation/validation de la licence Pro.
+- Aucun tracking, aucune analytics. Les requêtes réseau se limitent à l'activation/validation de la licence Pro et aux vignettes de produits, chargées directement depuis le site d'origine.
 
 ---
 

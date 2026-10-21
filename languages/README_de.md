@@ -82,7 +82,7 @@ Produktvergleiche über Einkaufsseiten hinweg bedeuten meist Dutzende offene Tab
 
 ### Preise verfolgen
 
-- Ein bereits gespeichertes Produkt einfach erneut öffnen – der Preis wird automatisch erfasst, höchstens ein Punkt pro Tag (verfolgte Produkte zählen nie gegen das Gratislimit)
+- Ein bereits gespeichertes Produkt einfach erneut öffnen – der Preis wird automatisch erfasst, höchstens ein Punkt pro Tag (der Gratisplan erlaubt bis zu 50 gespeicherte Produkte; beim erneuten Erfassen eines bereits gespeicherten Produkts wird kein neuer Eintrag angelegt und kein weiterer Platz belegt)
 - Im Dashboard einen **Zielpreis** setzen: Bringt ein Besuch den Preis auf oder unter diesen Wert, erscheint eine Desktop-Benachrichtigung – einmal pro Überschreitung, ohne Wiederholungen
 - Dashboard öffnen für Trend-Chart und 30-Tage-Bilanz oder **Vergleichen** (Pro) nutzen, um mehrere Produkte zu überlagern
 - **Notiz** und **Tags** festhalten, warum sich Warten lohnt
@@ -99,7 +99,7 @@ Produktvergleiche über Einkaufsseiten hinweg bedeuten meist Dutzende offene Tab
 - `scripting` + `activeTab` — Injizieren die Pin-Schaltfläche / extrahieren Felder nur bei Interaktion.
 - `notifications` — Wird ausschließlich für lokale Zielpreis-Alarme genutzt. Es wird nichts gesendet.
 - `<all_urls>` — Ermöglicht den Einsatz auf jeder Einkaufsseite. Liest oder lädt nie im Hintergrund Inhalte hoch.
-- Kein Tracking, keine Analyse. Die einzige Netzwerkanfrage ist die Lizenzaktivierung/-prüfung bei Pro-Schlüsseln.
+- Kein Tracking, keine Analyse. Netzwerkanfragen beschränken sich auf die Lizenzaktivierung/-prüfung und auf Produkt-Vorschaubilder, die direkt vom jeweiligen Shop geladen werden.
 
 ---
 

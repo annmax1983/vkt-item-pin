@@ -1,185 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VKT Item Pin — Privacy Policy</title>
+<meta name="description" content="VKT Item Pin privacy policy: what is stored on your device, when the extension uses the network, and how to delete your data.">
+<link rel="icon" href="icons/icon128.png">
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    color: #1e293b;
-    background: #f8fafc;
-    line-height: 1.7;
-  }
-  .container { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-  h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; color: #2563eb; }
-  .updated { font-size: 13px; color: #94a3b8; margin-bottom: 32px; }
-  .highlight {
-    background: #ecfdf5;
-    border: 1px solid #a7f3d0;
-    border-radius: 8px;
-    padding: 16px 20px;
-    margin: 20px 0;
-  }
-  .highlight strong { color: #065f46; }
-  h2 { font-size: 18px; font-weight: 600; margin: 28px 0 12px; color: #334155; }
-  p { margin-bottom: 12px; font-size: 15px; color: #475569; }
-  ul { margin: 0 0 12px 20px; }
-  li { margin-bottom: 6px; font-size: 15px; color: #475569; }
-  code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
-  .footer-link {
-    display: inline-block; margin-bottom: 24px;
-    color: #2563eb; text-decoration: none; font-size: 14px;
-  }
-  .footer-link:hover { text-decoration: underline; }
-  footer {
-    margin-top: 40px; padding-top: 20px; border-top: 1px solid #e2e8f0;
-    text-align: center; font-size: 13px; color: #94a3b8;
-  }
-  footer a { color: #2563eb; text-decoration: none; }
+:root{
+  --accent:#b91c1c;
+  --accent-2:#f97316;
+  --bg:#f5f8fc;
+  --surface:#ffffff;
+  --ink:#20304a;
+  --body:#4b5870;
+  --muted:#64718a;
+  --line:#e2e8f2;
+  --tint:#eef3fb;
+  --tint:color-mix(in srgb, var(--accent) 8%, #ffffff);
+  --tint-strong:#e5edfa;
+  --tint-strong:color-mix(in srgb, var(--accent) 14%, #ffffff);
+  --shadow:0 18px 45px rgba(32,48,74,.10);
+  --shadow-soft:0 8px 24px rgba(32,48,74,.06);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{
+  margin:0;
+  color:var(--body);
+  background:radial-gradient(900px 420px at 100% -8%, color-mix(in srgb, var(--accent-2) 12%, #ffffff) 0%, rgba(255,255,255,0) 70%), var(--bg);
+  font-family:"Segoe UI Variable Text","Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+img{display:block;max-width:100%}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+button,select{font:inherit}
+[hidden]{display:none !important}
+::selection{background:color-mix(in srgb, var(--accent) 22%, #ffffff);color:var(--ink)}
+:focus-visible{outline:2px solid color-mix(in srgb, var(--accent) 55%, #ffffff);outline-offset:3px}
+.wrap{width:min(1120px, calc(100% - 40px));margin:0 auto}
+.topbar{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.topbar-inner{display:flex;align-items:center;gap:18px;height:70px}
+.brand{display:flex;align-items:center;gap:11px;color:var(--ink);font-size:16px;font-weight:750;letter-spacing:-.015em;white-space:nowrap}
+.brand:hover{text-decoration:none}
+.brand img{width:32px;height:32px;border-radius:9px;background:#fff;border:1px solid var(--line)}
+.nav-links{display:flex;align-items:center;gap:20px;margin-left:auto;font-size:13.5px;font-weight:650}
+.nav-links a{color:var(--muted)}
+.nav-links a:hover{color:var(--accent);text-decoration:none}
+.top-actions{display:flex;align-items:center;gap:9px;margin-left:auto}
+.nav-links + .top-actions{margin-left:0}
+.icon-btn{width:38px;height:38px;display:grid;place-items:center;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--muted)}
+.icon-btn:hover{color:var(--accent);border-color:color-mix(in srgb, var(--accent) 26%, var(--line));text-decoration:none}
+.lang{
+  appearance:none;-webkit-appearance:none;
+  border:1px solid var(--line);
+  background-color:#fff;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364718a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 10px center;
+  background-size:12px;
+  color:var(--ink);
+  border-radius:10px;
+  padding:9px 32px 9px 11px;
+  font-size:13px;
+  font-weight:600;
+  cursor:pointer;
+  max-width:150px;
+}
+.lang:hover{border-color:color-mix(in srgb, var(--accent) 26%, var(--line))}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:0 20px;border-radius:12px;border:1px solid transparent;font-weight:700;font-size:14.5px;line-height:1.2;transition:transform .18s ease, box-shadow .18s ease, background-color .18s ease, border-color .18s ease}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 12px 26px color-mix(in srgb, var(--accent) 26%, transparent)}
+.btn-primary:hover{background:color-mix(in srgb, var(--accent) 90%, var(--ink));box-shadow:0 15px 30px color-mix(in srgb, var(--accent) 30%, transparent)}
+.btn-secondary{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn-secondary:hover{border-color:color-mix(in srgb, var(--accent) 28%, var(--line))}
+.btn-quiet{background:transparent;color:var(--muted);padding:0 8px}
+.btn-quiet:hover{color:var(--accent)}
+.site-footer{margin-top:48px;border-top:1px solid var(--line);background:rgba(255,255,255,.8);padding:32px 0}
+.footer-inner{display:flex;flex-wrap:wrap;gap:20px 32px;align-items:center;justify-content:space-between}
+.footer-brand{display:flex;align-items:center;gap:11px;color:var(--ink);font-size:14px;font-weight:700}
+.footer-brand img{width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:#fff}
+.footer-brand .copy{display:block;color:var(--muted);font-size:12px;font-weight:500;line-height:1.4;margin-top:1px}
+.footer-links{display:flex;flex-wrap:wrap;gap:9px 18px;align-items:center;font-size:13px;font-weight:600}
+.footer-links a{color:var(--muted)}
+.footer-links a:hover{color:var(--accent);text-decoration:none}
+@media (max-width:900px){
+  .nav-links{display:none}
+  .topbar-inner{height:62px}
+  .wrap{width:calc(100% - 32px)}
+}
+@media (max-width:560px){
+  .brand span{display:none}
+  .lang{max-width:124px}
+  .site-footer{padding:26px 0}
+  .footer-inner{align-items:flex-start;flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none !important;animation:none !important}
+}
+
+.policy-hero{padding:42px 0 8px}
+.policy-hero-card{position:relative;overflow:hidden;background:linear-gradient(135deg,#ffffff 0%, color-mix(in srgb, var(--accent) 7%, #ffffff) 58%, color-mix(in srgb, var(--accent-2) 16%, #ffffff) 100%);border:1px solid var(--line);border-radius:26px;padding:42px 46px 36px;box-shadow:var(--shadow)}
+.policy-hero-card::after{content:"";position:absolute;width:360px;height:360px;right:-110px;top:-160px;border-radius:50%;border:1px solid color-mix(in srgb, var(--accent) 22%, #ffffff);box-shadow:0 0 0 48px color-mix(in srgb, var(--accent) 5%, transparent);pointer-events:none}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.72);border:1px solid color-mix(in srgb, var(--accent) 22%, var(--line));color:var(--accent);font-size:11.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase}
+.policy-hero h1{position:relative;z-index:1;margin:16px 0 0;color:var(--ink);font-size:clamp(34px,4.4vw,50px);line-height:1.06;letter-spacing:-.035em;font-weight:800}
+.policy-hero h1 .h1-sub{color:var(--accent);font-weight:780}
+.summary{position:relative;z-index:1;max-width:860px;margin:16px 0 20px;color:var(--body);font-size:15.5px;line-height:1.75}
+.summary strong{color:var(--ink);font-weight:700}
+.chips{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:7px;padding:6px 11px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.8);color:var(--ink);font-size:12.5px;font-weight:650}
+.chip::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent-2)}
+.updated{position:relative;z-index:1;display:flex;align-items:center;gap:7px;margin:18px 0 0;color:var(--muted);font-size:12.5px;font-weight:550}
+.updated svg{color:var(--accent)}
+.policy-layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:28px;align-items:start;padding:32px 0 38px}
+.toc{position:sticky;top:92px;max-height:calc(100vh - 120px);overflow:auto;background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:var(--shadow-soft)}
+.toc-title{margin:2px 0 10px;color:var(--ink);font-size:11px;font-weight:800;letter-spacing:.11em;text-transform:uppercase}
+#p-toc{display:grid;gap:2px}
+#p-toc a{display:grid;grid-template-columns:24px minmax(0,1fr);gap:7px;align-items:baseline;padding:7px 9px;border-radius:9px;border:1px solid transparent;color:var(--muted);font-size:12.8px;line-height:1.38}
+#p-toc a span{color:color-mix(in srgb, var(--accent) 58%, var(--muted));font-size:10px;font-weight:800;letter-spacing:.06em}
+#p-toc a:hover{background:var(--tint);color:var(--ink);text-decoration:none}
+#p-toc a.active{background:var(--tint);border-color:color-mix(in srgb, var(--accent) 18%, var(--line));color:var(--ink)}
+#p-toc a.active span{color:var(--accent)}
+.policy-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px 32px;box-shadow:var(--shadow-soft)}
+.policy-card + .policy-card{margin-top:15px}
+.policy-card h2{display:flex;align-items:baseline;gap:11px;margin:0 0 16px;color:var(--ink);font-size:21px;line-height:1.3;letter-spacing:-.015em;font-weight:760}
+.policy-num{flex:none;padding:3px 7px;border-radius:7px;background:var(--tint);color:var(--accent);font-size:10.5px;font-weight:800;letter-spacing:.06em}
+.policy-body{color:var(--body);font-size:15px;line-height:1.75;overflow-wrap:anywhere}
+.policy-body p{margin:0 0 14px}
+.policy-body p:last-child{margin-bottom:0}
+.policy-body strong{color:var(--ink);font-weight:700}
+.policy-body em{color:var(--body)}
+.policy-body a{color:var(--accent);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+.policy-body a:hover{color:color-mix(in srgb, var(--accent) 80%, var(--ink))}
+.policy-body code{display:inline;padding:1px 6px;border:1px solid var(--line);border-radius:6px;background:#f3f6fb;color:var(--ink);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.86em}
+.policy-body ul{display:grid;gap:8px;margin:0 0 15px;padding:0;list-style:none}
+.policy-body ul:last-child{margin-bottom:0}
+.policy-body li{position:relative;padding-left:21px}
+.policy-body li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:2px;background:var(--accent-2)}
+.policy-body h3{margin:21px 0 8px;color:var(--ink);font-size:15.5px;line-height:1.4;font-weight:750}
+.policy-body h3:first-child{margin-top:0}
+.policy-body .note{margin:15px 0 0;padding:13px 15px;border-left:3px solid var(--accent);border-radius:10px;background:var(--tint);color:var(--body);font-size:13.5px;line-height:1.65}
+.table-wrap{margin:15px 0;overflow-x:auto;border:1px solid var(--line);border-radius:12px}
+.policy-body table{width:100%;min-width:480px;border-collapse:collapse;font-size:13.5px;line-height:1.55}
+.policy-body th{padding:10px 13px;border-bottom:1px solid var(--line);background:#f4f7fc;color:var(--ink);text-align:left;font-weight:700}
+.policy-body td{padding:10px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+.policy-body th:first-child,.policy-body td:first-child{min-width:150px}
+.policy-body tr:last-child td{border-bottom:none}
+.policy-body table code{white-space:nowrap}
+@media (max-width:900px){
+  .policy-hero{padding:26px 0 4px}
+  .policy-hero-card{padding:30px 24px 28px;border-radius:22px}
+  .policy-layout{grid-template-columns:1fr;gap:16px;padding:22px 0 30px}
+  .toc{position:static;max-height:none;padding:14px}
+  #p-toc{grid-template-columns:1fr 1fr}
+  .policy-card{padding:23px 20px}
+  .policy-card h2{font-size:19px}
+}
+@media (max-width:600px){
+  #p-toc{grid-template-columns:1fr}
+  .policy-card{padding:21px 17px}
+  .policy-body{font-size:14.5px}
+}
 </style>
 </head>
 <body>
-<div class="container">
-  <a class="footer-link" href="https://annmax1983.github.io/ItemPin/">← VKT Item Pin</a>
-  <h1 id="title"></h1>
-  <p class="updated" id="updated"></p>
-
-  <div class="highlight" id="highlight"></div>
-
-  <h2 id="h1"></h2>
-  <p id="p1"></p>
-  <ul id="l1"></ul>
-
-  <h2 id="h2"></h2>
-  <p id="p2"></p>
-  <ul id="l2"></ul>
-  <p id="p2note"></p>
-
-  <h2 id="h3"></h2>
-  <p id="p3"></p>
-
-  <h2 id="h4"></h2>
-  <p id="p4"></p>
-
-  <h2 id="h5"></h2>
-  <p id="p5"></p>
-
-  <h2 id="h6"></h2>
-  <p id="p6"></p>
-
-  <footer>
-    <p>&copy; 2026 VKT Item Pin. <span id="rights"></span></p>
-    <p><a href="https://github.com/annmax1983/ItemPin" id="gh"></a></p>
-  </footer>
-</div>
-
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html"><img src="icons/icon128.png" alt="" width="32" height="32"><span>VKT Item Pin</span></a>
+    <div class="top-actions">
+      <a class="icon-btn" href="https://github.com/annmax1983/ItemPin" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.05-.01-1.9-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.4 9.4 0 0 1 12 5.96c.85 0 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
+      <select class="lang" id="p-lang" aria-label="Language"><option value="en">English</option><option value="zh">简体中文</option><option value="ja">日本語</option><option value="de">Deutsch</option><option value="es">Español</option><option value="fr">Français</option></select>
+      <a class="icon-btn" href="index.html" aria-label="Home" title="Home"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v10h12V10"/></svg></a>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="policy-hero">
+    <div class="wrap">
+      <div class="policy-hero-card">
+        <span class="eyebrow" id="p-eyebrow">Privacy Policy</span>
+        <h1><span id="p-h1">VKT Item Pin</span> <span class="h1-sub" id="p-h1-sub">Privacy Policy</span></h1>
+        <p class="summary" id="p-summary"><strong>Short version:</strong> VKT Item Pin saves product snapshots (title, price, model, link, image) <strong>only in your browser</strong>. Page content is read locally to extract product information — when you capture a product, and again when you reopen a product page you have already saved so its price history stays current. Nothing is ever uploaded. Network access is limited to the optional Pro license activation (which sends your license key and basic browser info to the license server) and to saved product thumbnails, which the popup and dashboard load directly from the original store's URL.</p>
+        <div class="chips" id="p-chips"><span class="chip">Runs on your device</span><span class="chip">No analytics</span><span class="chip">No account</span><span class="chip">Licence optional</span></div>
+        <p class="updated"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span id="p-updated">Last updated: October 2026</span></p>
+      </div>
+    </div>
+  </section>
+  <div class="wrap policy-layout">
+    <aside class="toc">
+      <p class="toc-title" id="p-toc-title">On this page</p>
+      <nav id="p-toc" aria-label="On this page">
+<a href="#section-1"><span>01</span>Data Collection</a>
+<a href="#section-2"><span>02</span>Permissions</a>
+<a href="#section-3"><span>03</span>Data Storage</a>
+<a href="#section-4"><span>04</span>License Activation &amp; Network</a>
+<a href="#section-5"><span>05</span>Third-Party Links</a>
+<a href="#section-6"><span>06</span>Data retention &amp; deletion</a>
+<a href="#section-7"><span>07</span>Changes to this policy</a>
+<a href="#section-8"><span>08</span>Contact</a>
+      </nav>
+    </aside>
+    <div id="p-sections">
+<article class="policy-card" id="section-1"><h2><span class="policy-num">01</span>Data Collection</h2><div class="policy-body"><p>VKT Item Pin does <strong>not</strong> collect or upload any of the following:</p><ul><li>Browsing history, or the content of pages you have not saved to ItemPin</li><li>Usage analytics or telemetry</li><li>Cookies or tracking identifiers</li><li>Your captured data — snapshots are stored locally and never sent to any server</li></ul></div></article>
+<article class="policy-card" id="section-2"><h2><span class="policy-num">02</span>Permissions</h2><div class="policy-body"><p>VKT Item Pin uses these permissions to capture product snapshots on shopping pages:</p><ul><li><strong>storage</strong> — Saves your captured product snapshots and settings locally in <code>chrome.storage.local</code>.</li><li><strong>activeTab</strong> — Accesses the current tab only when you hover the Pin button or trigger a capture.</li><li><strong>scripting</strong> — Injects the extraction code on demand to read product information (title, price, model) from the page you are viewing.</li><li><strong>Host access</strong> — Lets the Pin button and one-click capture work on shopping sites. Page content is processed locally only; nothing is uploaded.</li><li><strong>notifications</strong> — Shows a local system notification when a tracked product reaches the target price you set. No server is involved.</li></ul><div class="note">Host access covers all sites so the Pin button works on any shop you browse. It is used solely to extract product information — at your request, or automatically for product pages already in your library — never to monitor your browsing in the background.</div></div></article>
+<article class="policy-card" id="section-3"><h2><span class="policy-num">03</span>Data Storage</h2><div class="policy-body"><p>Captured snapshots are stored locally in your browser using <code>chrome.storage.local</code>. You can export or delete them anytime from the dashboard. A saved product page you visit again has its price refreshed automatically (at most one price point per day), still entirely on your device. All data is deleted when you uninstall the extension.</p></div></article>
+<article class="policy-card" id="section-4"><h2><span class="policy-num">04</span>License Activation &amp; Network</h2><div class="policy-body"><p>Free use works without any required network connection for capturing. If you activate a Pro license, VKT Item Pin sends your license key, a random install identifier, and basic browser info (browser version, language, timezone) to our license server (api.annmax1983.com) to validate the license. No page content or captured data is ever sent. Our license server records the IP address of these requests solely for rate limiting and abuse prevention — never for profiling, advertising, or sharing with third parties.</p></div></article>
+<article class="policy-card" id="section-5"><h2><span class="policy-num">05</span>Third-Party Links</h2><div class="policy-body"><p>The extension footer links to our website, GitHub repository, and a voluntary Ko-fi support page. Visiting those sites is subject to their own privacy policies.</p></div></article>
+<article class="policy-card" id="section-6"><h2><span class="policy-num">06</span>Data retention &amp; deletion</h2><div class="policy-body"><p>Your settings and content stay in your browser until you delete them in the extension or uninstall it. Uninstalling removes the extension's local data. Nothing is retained on our servers, because your content is never sent to them.</p></div></article>
+<article class="policy-card" id="section-7"><h2><span class="policy-num">07</span>Changes to this policy</h2><div class="policy-body"><p>If this policy changes, the revised version will be published on this page with a new date. Material changes will be noted in the extension's release notes.</p></div></article>
+<article class="policy-card" id="section-8"><h2><span class="policy-num">08</span>Contact</h2><div class="policy-body"><p>Questions about this policy? Email <a href="mailto:support@annmax1983.com">support@annmax1983.com</a> or open an issue on <a href="https://github.com/annmax1983/ItemPin" target="_blank" rel="noopener">GitHub</a>.</p></div></article>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <img src="icons/icon128.png" alt="" width="30" height="30">
+      <div>VKT Item Pin<span class="copy">© 2026 VKT Item Pin</span></div>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="index.html" id="p-footer-home">Home</a>
+      <a href="privacy-policy.html" id="p-footer-privacy">Privacy Policy</a>
+      <a href="https://github.com/annmax1983/ItemPin" target="_blank" rel="noopener" id="p-footer-github">GitHub</a>
+      <a href="https://annmax1983.com/extensions/itempin" target="_blank" rel="noopener" id="p-footer-site">Website</a>
+      <a href="mailto:support@annmax1983.com" id="p-footer-email">Email</a>
+    </nav>
+  </div>
+</footer>
 <script>
-const I18N = {
-  en: {
-    title: '🔒 Privacy Policy', updated: 'Last updated: October 2026',
-    highlight: '<strong>Short version:</strong> VKT Item Pin saves product snapshots (title, price, model, link, image) <strong>only in your browser</strong>. Page content is read locally to extract product information — when you capture a product, and again when you reopen a product page you have already saved so its price history stays current. Nothing is ever uploaded. The only network request is the optional Pro license activation, which sends your license key and basic browser info to the license server.',
-    h1: 'Data Collection', p1: 'VKT Item Pin does <strong>not</strong> collect or upload any of the following:', l1: ['Browsing history, or the content of pages you have not saved to ItemPin', 'Usage analytics or telemetry', 'Cookies or tracking identifiers', 'Your captured data — snapshots are stored locally and never sent to any server'],
-    h2: 'Permissions', p2: 'VKT Item Pin uses these permissions to capture product snapshots on shopping pages:', l2: ['<strong>storage</strong> — Saves your captured product snapshots and settings locally in <code>chrome.storage.local</code>.', '<strong>activeTab</strong> — Accesses the current tab only when you hover the Pin button or trigger a capture.', '<strong>scripting</strong> — Injects the extraction code on demand to read product information (title, price, model) from the page you are viewing.', '<strong>Host access</strong> — Lets the Pin button and one-click capture work on shopping sites. Page content is processed locally only; nothing is uploaded.', '<strong>notifications</strong> — Shows a local system notification when a tracked product reaches the target price you set. No server is involved.'], p2note: 'Host access covers all sites so the Pin button works on any shop you browse. It is used solely to extract product information — at your request, or automatically for product pages already in your library — never to monitor your browsing in the background.',
-    h3: 'Data Storage', p3: 'Captured snapshots are stored locally in your browser using <code>chrome.storage.local</code>. You can export or delete them anytime from the dashboard. A saved product page you visit again has its price refreshed automatically (at most one price point per day), still entirely on your device. All data is deleted when you uninstall the extension.',
-    h4: 'License Activation & Network', p4: 'Free use works without any required network connection for capturing. If you activate a Pro license, VKT Item Pin sends your license key, a random install identifier, and basic browser info (browser version, language, timezone) to our license server (api.annmax1983.com) to validate the license. No page content or captured data is ever sent. Our license server records the IP address of these requests solely for rate limiting and abuse prevention — never for profiling, advertising, or sharing with third parties.',
-    h5: 'Third-Party Links', p5: 'The extension footer links to our website, GitHub repository, and a voluntary Ko-fi support page. Visiting those sites is subject to their own privacy policies.',
-    h6: 'Contact', p6: 'If you have questions, please open an issue on <a href="https://github.com/annmax1983/ItemPin">GitHub</a>.',
-    rights: 'All rights reserved.', gh: 'GitHub Repository'
-  },
-  'zh-CN': {
-    title: '🔒 隐私条款', updated: '最后更新：2026 年 10 月',
-    highlight: '<strong>简要说明：</strong>VKT Item Pin 采集的商品快照（标题、价格、型号、链接、图片）<strong>仅保存在您的浏览器中</strong>。当您采集商品时，以及再次打开已收藏的商品页以刷新价格记录时，插件会在本地读取页面内容并提取商品信息——绝不上传任何数据。唯一的网络请求是可选的 Pro 授权激活，它会向授权服务器发送您的授权密钥和基本浏览器信息。',
-    h1: '数据收集', p1: 'VKT Item Pin <strong>不会</strong>收集或上传以下任何信息：', l1: ['浏览历史，或您未收藏到 ItemPin 的页面内容', '使用分析或遥测数据', 'Cookie 或跟踪标识符', '您采集的数据——快照仅存储在本地，绝不发送到任何服务器'],
-    h2: '权限说明', p2: 'VKT Item Pin 使用以下权限在购物页面上采集商品快照：', l2: ['<strong>storage</strong> — 将您采集的商品快照和设置保存在 <code>chrome.storage.local</code> 本地存储中', '<strong>activeTab</strong> — 仅在您悬停 Pin 按钮或触发采集时访问当前标签页', '<strong>scripting</strong> — 按需注入提取代码，从您正在浏览的页面读取商品信息（标题、价格、型号）', '<strong>主机权限</strong> — 让 Pin 按钮和一键采集在购物网站上可用。页面内容仅在本地处理，绝不上传', '<strong>notifications</strong> — 当已收藏的商品达到您设定的目标价时，在本地弹出系统通知，不经过任何服务器'], p2note: '主机权限覆盖所有网站，以便 Pin 按钮在您浏览的任何商店都可用。它仅用于提取商品信息——按您的请求采集，或对已收藏的商品页自动刷新价格——绝不在后台监视您的浏览行为。',
-    h3: '数据存储', p3: '采集的快照通过 <code>chrome.storage.local</code> 存储在浏览器本地。您可以随时在仪表盘中导出或删除它们。再次访问已收藏的商品页时，价格会自动刷新（每天最多记录一个价格点），全程只在您的设备上完成。卸载扩展时数据会自动删除。',
-    h4: '授权激活与网络', p4: '采集功能无需任何网络连接。如果您激活 Pro 授权，VKT Item Pin 会向我们的授权服务器（api.annmax1983.com）发送您的授权密钥、随机安装标识和基本浏览器信息（浏览器版本、语言、时区）以验证授权。绝不会发送任何页面内容或采集数据。',
-    h5: '第三方链接', p5: '扩展底部链接指向我们的官网、GitHub 仓库和自愿的 Ko-fi 支持页面。访问这些网站适用其各自的隐私政策。',
-    h6: '联系方式', p6: '如有疑问，请在 <a href="https://github.com/annmax1983/ItemPin">GitHub</a> 上提交 Issue。',
-    rights: '保留所有权利。', gh: 'GitHub 仓库'
-  },
-  ja: {
-    title: '🔒 プライバシーポリシー', updated: '最終更新：2026年10月',
-    highlight: '<strong>要約：</strong>VKT Item Pin は商品スナップショット（タイトル・価格・型番・リンク・画像）を<strong>ブラウザ内にのみ</strong>保存します。商品を収集した際、および保存済みの商品ページを再び開いて価格を更新する際に、ページコンテンツをローカルで読み取り商品情報を抽出しますが、アップロードは一切ありません。唯一のネットワークリクエストは任意のProライセンス認証で、ライセンスキーと基本的なブラウザ情報をライセンスサーバーに送信します。',
-    h1: 'データ収集', p1: 'VKT Item Pin は以下の情報を<strong>収集・アップロードしません</strong>：', l1: ['閲覧履歴、または ItemPin に保存していないページの内容', '使用分析またはテレメトリ', 'Cookie または追跡識別子', '収集したデータ — スナップショットはローカル保存のみで、サーバーには送信されません'],
-    h2: '権限', p2: 'VKT Item Pin はショッピングページで商品スナップショットを取得するために以下の権限を使用します：', l2: ['<strong>storage</strong> — 収集したスナップショットと設定を <code>chrome.storage.local</code> にローカル保存します。', '<strong>activeTab</strong> — Pinボタンにホバーまたは収集を実行した時のみ現在のタブにアクセスします。', '<strong>scripting</strong> — 閲覧中のページから商品情報（タイトル・価格・型番）を読み取るため、必要時に抽出コードを注入します。', '<strong>ホストアクセス</strong> — ショッピングサイトでPinボタンとワンクリック収集を機能させるためのものです。ページコンテンツはローカルでのみ処理され、アップロードはされません。', '<strong>notifications</strong> — 追跡中の商品が設定した目標価格に達したとき、ローカルでシステム通知を表示します。サーバーは関与しません。'], p2note: 'ホストアクセスは全サイトを対象とし、閲覧するどのストアでもPinボタンが機能するようにするためのものです。ユーザーの要求による抽出、およびライブラリ登録済みの商品ページの自動更新のためにのみ使用され、バックグラウンドで閲覧を監視することはありません。',
-    h3: 'データ保存', p3: '収集したスナップショットは <code>chrome.storage.local</code> でローカル保存されます。ダッシュボードからいつでもエクスポート・削除できます。保存済みの商品ページを再度開くと価格が自動で更新されます（1日につき最大1ポイント）。すべて端末内で完結します。アンインストール時にデータは削除されます。',
-    h4: 'ライセンス認証とネットワーク', p4: '収集機能にはネットワーク接続は不要です。Proライセンスを認証する場合、VKT Item Pin はライセンスキー、ランダムなインストール識別子、基本的なブラウザ情報（バージョン、言語、タイムゾーン）をライセンスサーバー（api.annmax1983.com）に送信します。ページコンテンツや収集データが送信されることはありません。 ライセンスサーバーはこれらのリクエストの IP アドレスを、レート制限と不正利用防止のみを目的として記録します。プロファイリング、広告、第三者提供には一切使用しません。',
-    h5: 'サードパーティリンク', p5: '拡張機能のフッターは公式サイト・GitHubリポジトリ・任意のKo-fiサポートページにリンクしています。それらのサイトの訪問には各サイトのプライバシーポリシーが適用されます。',
-    h6: 'お問い合わせ', p6: 'ご質問は <a href="https://github.com/annmax1983/ItemPin">GitHub</a> で Issue を作成してください。',
-    rights: '全著作権所有。', gh: 'GitHub リポジトリ'
-  },
-  de: {
-    title: '🔒 Datenschutzrichtlinie', updated: 'Letzte Aktualisierung: Oktober 2026',
-    highlight: '<strong>Kurzfassung:</strong> VKT Item Pin speichert Produkt-Snapshots (Titel, Preis, Modell, Link, Bild) <strong>nur in Ihrem Browser</strong>. Seiteninhalte werden lokal gelesen, um Produktinformationen zu extrahieren — beim Erfassen eines Produkts und erneut beim Öffnen einer bereits gespeicherten Produktseite, damit der Preisverlauf aktuell bleibt. Niemals hochgeladen. Die einzige Netzwerkanfrage ist die optionale Pro-Lizenzaktivierung, die Ihren Lizenzschlüssel und grundlegende Browserinformationen an den Lizenzserver sendet.',
-    h1: 'Datenerfassung', p1: 'VKT Item Pin <strong>erfasst oder überträgt</strong> keine der folgenden Daten:', l1: ['Browserverlauf oder Inhalte von Seiten, die Sie nicht in ItemPin gespeichert haben', 'Nutzungsanalysen oder Telemetrie', 'Cookies oder Tracking-Kennungen', 'Ihre erfassten Daten — Snapshots werden lokal gespeichert und nie an einen Server gesendet'],
-    h2: 'Berechtigungen', p2: 'VKT Item Pin verwendet diese Berechtigungen, um Produkt-Snapshots auf Einkaufsseiten zu erfassen:', l2: ['<strong>storage</strong> — Speichert erfasste Snapshots und Einstellungen lokal in <code>chrome.storage.local</code>.', '<strong>activeTab</strong> — Greift nur auf den aktuellen Tab zu, wenn Sie die Pin-Schaltfläche verwenden oder eine Erfassung auslösen.', '<strong>scripting</strong> — Injiziert bei Bedarf den Extraktionscode, um Produktinformationen (Titel, Preis, Modell) von der angezeigten Seite zu lesen.', '<strong>Host-Zugriff</strong> — Ermöglicht Pin-Schaltfläche und Ein-Klick-Erfassung auf Shopping-Websites. Seiteninhalte werden ausschließlich lokal verarbeitet; nichts wird hochgeladen.', '<strong>notifications</strong> — Zeigt eine lokale Systembenachrichtigung, wenn ein gespeichertes Produkt Ihren Zielpreis erreicht. Kein Server ist beteiligt.'], p2note: 'Der Host-Zugriff umfasst alle Websites, damit die Pin-Schaltfläche in jedem Shop funktioniert. Er wird ausschließlich verwendet, um Produktinformationen zu extrahieren — auf Ihre Anfrage oder automatisch für bereits gespeicherte Produktseiten — niemals, um Ihr Surfen im Hintergrund zu überwachen.',
-    h3: 'Datenspeicherung', p3: 'Erfasste Snapshots werden lokal im Browser über <code>chrome.storage.local</code> gespeichert. Sie können sie jederzeit über das Dashboard exportieren oder löschen. Beim erneuten Besuch einer gespeicherten Produktseite wird der Preis automatisch aktualisiert (höchstens ein Preispunkt pro Tag) – weiterhin ausschließlich auf Ihrem Gerät. Beim Deinstallieren der Erweiterung werden alle Daten gelöscht.',
-    h4: 'Lizenzaktivierung und Netzwerk', p4: 'Die Erfassung funktioniert ohne Netzwerkverbindung. Wenn Sie eine Pro-Lizenz aktivieren, sendet VKT Item Pin Ihren Lizenzschlüssel, eine zufällige Installationskennung und grundlegende Browserinformationen (Browserversion, Sprache, Zeitzone) an unseren Lizenzserver (api.annmax1983.com). Seiteninhalte oder erfasste Daten werden niemals gesendet. Unser Lizenzserver protokolliert die IP-Adresse dieser Anfragen ausschließlich zur Ratenbegrenzung und Missbrauchsabwehr – niemals für Profiling, Werbung oder Weitergabe an Dritte.',
-    h5: 'Links von Drittanbietern', p5: 'Die Fußzeile der Erweiterung verlinkt auf unsere Website, das GitHub-Repository und eine freiwillige Ko-fi-Supportseite. Für den Besuch dieser Websites gelten deren eigene Datenschutzrichtlinien.',
-    h6: 'Kontakt', p6: 'Bei Fragen erstellen Sie bitte ein Issue auf <a href="https://github.com/annmax1983/ItemPin">GitHub</a>.',
-    rights: 'Alle Rechte vorbehalten.', gh: 'GitHub-Repository'
-  },
-  es: {
-    title: '🔒 Política de Privacidad', updated: 'Última actualización: octubre de 2026',
-    highlight: '<strong>Resumen:</strong> VKT Item Pin guarda las capturas de productos (título, precio, modelo, enlace, imagen) <strong>solo en tu navegador</strong>. El contenido de las páginas se lee localmente para extraer la información del producto: al capturar un producto y, de nuevo, al reabrir una página de producto ya guardada para mantener su historial de precios al día. Nunca se sube. La única solicitud de red es la activación opcional de la licencia Pro, que envía tu clave de licencia e información básica del navegador al servidor de licencias.',
-    h1: 'Recopilación de Datos', p1: 'VKT Item Pin <strong>no</strong> recopila ni sube ninguna de las siguientes cosas:', l1: ['Historial de navegación o el contenido de páginas que no hayas guardado en ItemPin', 'Analíticas de uso o telemetría', 'Cookies o identificadores de seguimiento', 'Tus datos capturados — las capturas se almacenan localmente y nunca se envían a ningún servidor'],
-    h2: 'Permisos', p2: 'VKT Item Pin usa estos permisos para capturar productos en páginas de compras:', l2: ['<strong>storage</strong> — Guarda las capturas y ajustes localmente en <code>chrome.storage.local</code>.', '<strong>activeTab</strong> — Accede a la pestaña actual solo cuando usas el botón Pin o inicias una captura.', '<strong>scripting</strong> — Inyecta el código de extracción a petición para leer la información del producto (título, precio, modelo) de la página que estás viendo.', '<strong>Acceso a hosts</strong> — Permite que el botón Pin y la captura con un clic funcionen en tiendas. El contenido de las páginas se procesa solo localmente; nada se sube.', '<strong>notifications</strong> — Muestra una notificación local del sistema cuando un producto guardado alcanza el precio objetivo que fijaste. Sin servidores de por medio.'], p2note: 'El acceso a hosts cubre todos los sitios para que el botón Pin funcione en cualquier tienda. Se usa únicamente para extraer información del producto —a petición tuya o automáticamente en páginas de producto ya guardadas— nunca para monitorear tu navegación en segundo plano.',
-    h3: 'Almacenamiento', p3: 'Las capturas se almacenan localmente con <code>chrome.storage.local</code>. Puedes exportarlas o borrarlas en cualquier momento desde el panel. Cuando vuelves a visitar una página de producto guardada, su precio se actualiza automáticamente (como máximo un punto por día), siempre en tu dispositivo. Todos los datos se eliminan al desinstalar la extensión.',
-    h4: 'Activación de licencia y red', p4: 'La captura funciona sin conexión de red. Si activas una licencia Pro, VKT Item Pin envía tu clave de licencia, un identificador de instalación aleatorio e información básica del navegador (versión, idioma, zona horaria) a nuestro servidor de licencias (api.annmax1983.com). Nunca se envía contenido de páginas ni datos capturados. Nuestro servidor de licencias registra la dirección IP de estas solicitudes únicamente para limitar la tasa de peticiones y evitar abusos; nunca para elaborar perfiles, publicidad ni compartirla con terceros.',
-    h5: 'Enlaces de Terceros', p5: 'El pie de la extensión enlaza a nuestro sitio web, repositorio de GitHub y una página de soporte voluntaria en Ko-fi. La visita a esos sitios está sujeta a sus propias políticas de privacidad.',
-    h6: 'Contacto', p6: 'Si tiene preguntas, abra un issue en <a href="https://github.com/annmax1983/ItemPin">GitHub</a>.',
-    rights: 'Todos los derechos reservados.', gh: 'Repositorio GitHub'
-  },
-  fr: {
-    title: '🔒 Politique de Confidentialité', updated: 'Dernière mise à jour : octobre 2026',
-    highlight: '<strong>Résumé :</strong> VKT Item Pin enregistre les instantanés de produits (titre, prix, modèle, lien, image) <strong>uniquement dans votre navigateur</strong>. Le contenu des pages est lu localement pour extraire les informations du produit — lors de la capture d\'un produit, et de nouveau lorsque vous rouvrez une page produit déjà enregistrée afin que son historique de prix reste à jour. Rien n\'est jamais téléchargé. La seule requête réseau est l\'activation facultative de la licence Pro, qui envoie votre clé de licence et des informations de base sur le navigateur au serveur de licences.',
-    h1: 'Collecte de Données', p1: 'VKT Item Pin ne collecte <strong>ni ne télécharge</strong> aucune des informations suivantes :', l1: ['Historique de navigation ou contenu de pages que vous n\'avez pas enregistrées dans ItemPin', 'Analyses d\'utilisation ou télémétrie', 'Cookies ou identifiants de suivi', 'Vos données capturées — les instantanés sont stockés localement et jamais envoyés à un serveur'],
-    h2: 'Permissions', p2: 'VKT Item Pin utilise ces permissions pour capturer des produits sur les pages marchandes :', l2: ['<strong>storage</strong> — Enregistre les instantanés et paramètres localement dans <code>chrome.storage.local</code>.', '<strong>activeTab</strong> — N\'accède à l\'onglet actuel que lorsque vous utilisez le bouton Pin ou lancez une capture.', '<strong>scripting</strong> — Injecte le code d\'extraction à la demande pour lire les informations produit (titre, prix, modèle) de la page consultée.', '<strong>Accès aux hôtes</strong> — Permet au bouton Pin et à la capture en un clic de fonctionner sur les sites marchands. Le contenu des pages est traité localement uniquement ; rien n\'est téléchargé.', '<strong>notifications</strong> — Affiche une notification système locale lorsqu\'un produit suivi atteint le prix cible que vous avez défini. Aucun serveur n\'intervient.'], p2note: 'L\'accès aux hôtes couvre tous les sites afin que le bouton Pin fonctionne sur toute boutique. Il sert uniquement à extraire les informations produit — à votre demande, ou automatiquement sur les pages produit déjà enregistrées — jamais à surveiller votre navigation en arrière-plan.',
-    h3: 'Stockage', p3: 'Les instantanés sont stockés localement via <code>chrome.storage.local</code>. Vous pouvez les exporter ou les supprimer à tout moment depuis le tableau de bord. Lorsque vous revisitez une page produit enregistrée, son prix est actualisé automatiquement (au plus un point par jour), toujours sur votre appareil. Toutes les données sont supprimées lors de la désinstallation de l\'extension.',
-    h4: 'Activation de la licence et réseau', p4: 'La capture fonctionne sans connexion réseau. Si vous activez une licence Pro, VKT Item Pin envoie votre clé de licence, un identifiant d\'installation aléatoire et des informations de base sur le navigateur (version, langue, fuseau horaire) à notre serveur de licences (api.annmax1983.com). Aucun contenu de page ni donnée capturée n\'est jamais envoyé. Notre serveur de licences enregistre l\'adresse IP de ces requêtes uniquement pour limiter le débit et prévenir les abus — jamais pour du profilage, de la publicité ou un partage avec des tiers.',
-    h5: 'Liens de Tiers', p5: 'Le pied de page de l\'extension renvoie vers notre site web, le dépôt GitHub et une page de soutien volontaire Ko-fi. La visite de ces sites est soumise à leurs propres politiques de confidentialité.',
-    h6: 'Contact', p6: 'Pour toute question, ouvrez un issue sur <a href="https://github.com/annmax1983/ItemPin">GitHub</a>.',
-    rights: 'Tous droits réservés.', gh: 'Dépôt GitHub'
+const MODEL = {"langs":{"en":{"summary":"\u003cstrong\u003eShort version:\u003c/strong\u003e VKT Item Pin saves product snapshots (title, price, model, link, image) \u003cstrong\u003eonly in your browser\u003c/strong\u003e. Page content is read locally to extract product information — when you capture a product, and again when you reopen a product page you have already saved so its price history stays current. Nothing is ever uploaded. Network access is limited to the optional Pro license activation (which sends your license key and basic browser info to the license server) and to saved product thumbnails, which the popup and dashboard load directly from the original store's URL.","sections":[{"t":"Data Collection","html":"\u003cp\u003eVKT Item Pin does \u003cstrong\u003enot\u003c/strong\u003e collect or upload any of the following:\u003c/p\u003e\u003cul\u003e\u003cli\u003eBrowsing history, or the content of pages you have not saved to ItemPin\u003c/li\u003e\u003cli\u003eUsage analytics or telemetry\u003c/li\u003e\u003cli\u003eCookies or tracking identifiers\u003c/li\u003e\u003cli\u003eYour captured data — snapshots are stored locally and never sent to any server\u003c/li\u003e\u003c/ul\u003e"},{"t":"Permissions","html":"\u003cp\u003eVKT Item Pin uses these permissions to capture product snapshots on shopping pages:\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cstrong\u003estorage\u003c/strong\u003e — Saves your captured product snapshots and settings locally in \u003ccode\u003echrome.storage.local\u003c/code\u003e.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eactiveTab\u003c/strong\u003e — Accesses the current tab only when you hover the Pin button or trigger a capture.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003escripting\u003c/strong\u003e — Injects the extraction code on demand to read product information (title, price, model) from the page you are viewing.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eHost access\u003c/strong\u003e — Lets the Pin button and one-click capture work on shopping sites. Page content is processed locally only; nothing is uploaded.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003enotifications\u003c/strong\u003e — Shows a local system notification when a tracked product reaches the target price you set. No server is involved.\u003c/li\u003e\u003c/ul\u003e\u003cdiv class=\"note\"\u003eHost access covers all sites so the Pin button works on any shop you browse. It is used solely to extract product information — at your request, or automatically for product pages already in your library — never to monitor your browsing in the background.\u003c/div\u003e"},{"t":"Data Storage","html":"\u003cp\u003eCaptured snapshots are stored locally in your browser using \u003ccode\u003echrome.storage.local\u003c/code\u003e. You can export or delete them anytime from the dashboard. A saved product page you visit again has its price refreshed automatically (at most one price point per day), still entirely on your device. All data is deleted when you uninstall the extension.\u003c/p\u003e"},{"t":"License Activation & Network","html":"\u003cp\u003eFree use works without any required network connection for capturing. If you activate a Pro license, VKT Item Pin sends your license key, a random install identifier, and basic browser info (browser version, language, timezone) to our license server (api.annmax1983.com) to validate the license. No page content or captured data is ever sent. Our license server records the IP address of these requests solely for rate limiting and abuse prevention — never for profiling, advertising, or sharing with third parties.\u003c/p\u003e"},{"t":"Third-Party Links","html":"\u003cp\u003eThe extension footer links to our website, GitHub repository, and a voluntary Ko-fi support page. Visiting those sites is subject to their own privacy policies.\u003c/p\u003e"},{"t":"Data retention & deletion","html":"\u003cp\u003eYour settings and content stay in your browser until you delete them in the extension or uninstall it. Uninstalling removes the extension's local data. Nothing is retained on our servers, because your content is never sent to them.\u003c/p\u003e"},{"t":"Changes to this policy","html":"\u003cp\u003eIf this policy changes, the revised version will be published on this page with a new date. Material changes will be noted in the extension's release notes.\u003c/p\u003e"},{"t":"Contact","html":"\u003cp\u003eQuestions about this policy? Email \u003ca href=\"mailto:support@annmax1983.com\"\u003esupport@annmax1983.com\u003c/a\u003e or open an issue on \u003ca href=\"https://github.com/annmax1983/ItemPin\" target=\"_blank\" rel=\"noopener\"\u003eGitHub\u003c/a\u003e.\u003c/p\u003e"}]},"zh":{"summary":"\u003cstrong\u003e简要说明：\u003c/strong\u003eVKT Item Pin 采集的商品快照（标题、价格、型号、链接、图片）\u003cstrong\u003e仅保存在您的浏览器中\u003c/strong\u003e。当您采集商品时，以及再次打开已收藏的商品页以刷新价格记录时，插件会在本地读取页面内容并提取商品信息——绝不上传任何数据。网络访问仅限可选的 Pro 授权激活（向授权服务器发送授权密钥和基本浏览器信息），以及弹窗和仪表盘显示已保存商品缩略图时直接从原商店的图片地址加载。","sections":[{"t":"数据收集","html":"\u003cp\u003eVKT Item Pin \u003cstrong\u003e不会\u003c/strong\u003e收集或上传以下任何信息：\u003c/p\u003e\u003cul\u003e\u003cli\u003e浏览历史，或您未收藏到 ItemPin 的页面内容\u003c/li\u003e\u003cli\u003e使用分析或遥测数据\u003c/li\u003e\u003cli\u003eCookie 或跟踪标识符\u003c/li\u003e\u003cli\u003e您采集的数据——快照仅存储在本地，绝不发送到任何服务器\u003c/li\u003e\u003c/ul\u003e"},{"t":"权限说明","html":"\u003cp\u003eVKT Item Pin 使用以下权限在购物页面上采集商品快照：\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cstrong\u003estorage\u003c/strong\u003e — 将您采集的商品快照和设置保存在 \u003ccode\u003echrome.storage.local\u003c/code\u003e 本地存储中\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eactiveTab\u003c/strong\u003e — 仅在您悬停 Pin 按钮或触发采集时访问当前标签页\u003c/li\u003e\u003cli\u003e\u003cstrong\u003escripting\u003c/strong\u003e — 按需注入提取代码，从您正在浏览的页面读取商品信息（标题、价格、型号）\u003c/li\u003e\u003cli\u003e\u003cstrong\u003e主机权限\u003c/strong\u003e — 让 Pin 按钮和一键采集在购物网站上可用。页面内容仅在本地处理，绝不上传\u003c/li\u003e\u003cli\u003e\u003cstrong\u003enotifications\u003c/strong\u003e — 当已收藏的商品达到您设定的目标价时，在本地弹出系统通知，不经过任何服务器\u003c/li\u003e\u003c/ul\u003e\u003cdiv class=\"note\"\u003e主机权限覆盖所有网站，以便 Pin 按钮在您浏览的任何商店都可用。它仅用于提取商品信息——按您的请求采集，或对已收藏的商品页自动刷新价格——绝不在后台监视您的浏览行为。\u003c/div\u003e"},{"t":"数据存储","html":"\u003cp\u003e采集的快照通过 \u003ccode\u003echrome.storage.local\u003c/code\u003e 存储在浏览器本地。您可以随时在仪表盘中导出或删除它们。再次访问已收藏的商品页时，价格会自动刷新（每天最多记录一个价格点），全程只在您的设备上完成。卸载扩展时数据会自动删除。\u003c/p\u003e"},{"t":"授权激活与网络","html":"\u003cp\u003e采集功能无需任何网络连接。如果您激活 Pro 授权，VKT Item Pin 会向我们的授权服务器（api.annmax1983.com）发送您的授权密钥、随机安装标识和基本浏览器信息（浏览器版本、语言、时区）以验证授权。绝不会发送任何页面内容或采集数据。\u003c/p\u003e"},{"t":"第三方链接","html":"\u003cp\u003e扩展底部链接指向我们的官网、GitHub 仓库和自愿的 Ko-fi 支持页面。访问这些网站适用其各自的隐私政策。\u003c/p\u003e"},{"t":"数据保留与删除","html":"\u003cp\u003e你的设置和内容保存在浏览器中，直到你在扩展内删除它们或卸载扩展。卸载会清除扩展的本地数据。我们的服务器不保留任何内容，因为你的内容从不会发送到那里。\u003c/p\u003e"},{"t":"政策变更","html":"\u003cp\u003e如果本政策发生变更，修订后的版本会发布在本页并更新日期。重要变更会在扩展的版本说明中注明。\u003c/p\u003e"},{"t":"联系我们","html":"\u003cp\u003e对本政策有疑问？请发邮件至 \u003ca href=\"mailto:support@annmax1983.com\"\u003esupport@annmax1983.com\u003c/a\u003e，或在 \u003ca href=\"https://github.com/annmax1983/ItemPin\" target=\"_blank\" rel=\"noopener\"\u003eGitHub\u003c/a\u003e 提交 issue。\u003c/p\u003e"}]},"ja":{"summary":"\u003cstrong\u003e要約：\u003c/strong\u003eVKT Item Pin は商品スナップショット（タイトル・価格・型番・リンク・画像）を\u003cstrong\u003eブラウザ内にのみ\u003c/strong\u003e保存します。商品を収集した際、および保存済みの商品ページを再び開いて価格を更新する際に、ページコンテンツをローカルで読み取り商品情報を抽出しますが、アップロードは一切ありません。ネットワーク通信は、任意のProライセンス認証（ライセンスキーと基本的なブラウザ情報をライセンスサーバーへ送信）と、ポップアップやダッシュボードで保存済み商品のサムネイルを元のストアの画像URLから直接読み込む場合に限られます。","sections":[{"t":"データ収集","html":"\u003cp\u003eVKT Item Pin は以下の情報を\u003cstrong\u003e収集・アップロードしません\u003c/strong\u003e：\u003c/p\u003e\u003cul\u003e\u003cli\u003e閲覧履歴、または ItemPin に保存していないページの内容\u003c/li\u003e\u003cli\u003e使用分析またはテレメトリ\u003c/li\u003e\u003cli\u003eCookie または追跡識別子\u003c/li\u003e\u003cli\u003e収集したデータ — スナップショットはローカル保存のみで、サーバーには送信されません\u003c/li\u003e\u003c/ul\u003e"},{"t":"権限","html":"\u003cp\u003eVKT Item Pin はショッピングページで商品スナップショットを取得するために以下の権限を使用します：\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cstrong\u003estorage\u003c/strong\u003e — 収集したスナップショットと設定を \u003ccode\u003echrome.storage.local\u003c/code\u003e にローカル保存します。\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eactiveTab\u003c/strong\u003e — Pinボタンにホバーまたは収集を実行した時のみ現在のタブにアクセスします。\u003c/li\u003e\u003cli\u003e\u003cstrong\u003escripting\u003c/strong\u003e — 閲覧中のページから商品情報（タイトル・価格・型番）を読み取るため、必要時に抽出コードを注入します。\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eホストアクセス\u003c/strong\u003e — ショッピングサイトでPinボタンとワンクリック収集を機能させるためのものです。ページコンテンツはローカルでのみ処理され、アップロードはされません。\u003c/li\u003e\u003cli\u003e\u003cstrong\u003enotifications\u003c/strong\u003e — 追跡中の商品が設定した目標価格に達したとき、ローカルでシステム通知を表示します。サーバーは関与しません。\u003c/li\u003e\u003c/ul\u003e\u003cdiv class=\"note\"\u003eホストアクセスは全サイトを対象とし、閲覧するどのストアでもPinボタンが機能するようにするためのものです。ユーザーの要求による抽出、およびライブラリ登録済みの商品ページの自動更新のためにのみ使用され、バックグラウンドで閲覧を監視することはありません。\u003c/div\u003e"},{"t":"データ保存","html":"\u003cp\u003e収集したスナップショットは \u003ccode\u003echrome.storage.local\u003c/code\u003e でローカル保存されます。ダッシュボードからいつでもエクスポート・削除できます。保存済みの商品ページを再度開くと価格が自動で更新されます（1日につき最大1ポイント）。すべて端末内で完結します。アンインストール時にデータは削除されます。\u003c/p\u003e"},{"t":"ライセンス認証とネットワーク","html":"\u003cp\u003e収集機能にはネットワーク接続は不要です。Proライセンスを認証する場合、VKT Item Pin はライセンスキー、ランダムなインストール識別子、基本的なブラウザ情報（バージョン、言語、タイムゾーン）をライセンスサーバー（api.annmax1983.com）に送信します。ページコンテンツや収集データが送信されることはありません。 ライセンスサーバーはこれらのリクエストの IP アドレスを、レート制限と不正利用防止のみを目的として記録します。プロファイリング、広告、第三者提供には一切使用しません。\u003c/p\u003e"},{"t":"サードパーティリンク","html":"\u003cp\u003e拡張機能のフッターは公式サイト・GitHubリポジトリ・任意のKo-fiサポートページにリンクしています。それらのサイトの訪問には各サイトのプライバシーポリシーが適用されます。\u003c/p\u003e"},{"t":"データの保存期間と削除","html":"\u003cp\u003e設定とコンテンツは、拡張機能内で削除するかアンインストールするまでブラウザに保存されます。アンインストールすると拡張機能のローカルデータは削除されます。コンテンツがサーバーへ送信されることはないため、当方のサーバーには何も保持されません。\u003c/p\u003e"},{"t":"ポリシーの変更","html":"\u003cp\u003eこのポリシーを変更する場合は、改訂版をこのページに新しい日付で掲載します。重要な変更は拡張機能のリリースノートにも記載します。\u003c/p\u003e"},{"t":"お問い合わせ","html":"\u003cp\u003eこのポリシーについてのご質問は、\u003ca href=\"mailto:support@annmax1983.com\"\u003esupport@annmax1983.com\u003c/a\u003e へメールするか、\u003ca href=\"https://github.com/annmax1983/ItemPin\" target=\"_blank\" rel=\"noopener\"\u003eGitHub\u003c/a\u003e で issue を作成してください。\u003c/p\u003e"}]},"de":{"summary":"\u003cstrong\u003eKurzfassung:\u003c/strong\u003e VKT Item Pin speichert Produkt-Snapshots (Titel, Preis, Modell, Link, Bild) \u003cstrong\u003enur in Ihrem Browser\u003c/strong\u003e. Seiteninhalte werden lokal gelesen, um Produktinformationen zu extrahieren — beim Erfassen eines Produkts und erneut beim Öffnen einer bereits gespeicherten Produktseite, damit der Preisverlauf aktuell bleibt. Niemals hochgeladen. Netzwerkzugriffe beschränken sich auf die optionale Pro-Lizenzaktivierung (sendet Ihren Lizenzschlüssel und grundlegende Browserinformationen an den Lizenzserver) sowie auf Produkt-Vorschaubilder, die Popup und Dashboard direkt von der Bild-URL des jeweiligen Shops laden.","sections":[{"t":"Datenerfassung","html":"\u003cp\u003eVKT Item Pin \u003cstrong\u003eerfasst oder überträgt\u003c/strong\u003e keine der folgenden Daten:\u003c/p\u003e\u003cul\u003e\u003cli\u003eBrowserverlauf oder Inhalte von Seiten, die Sie nicht in ItemPin gespeichert haben\u003c/li\u003e\u003cli\u003eNutzungsanalysen oder Telemetrie\u003c/li\u003e\u003cli\u003eCookies oder Tracking-Kennungen\u003c/li\u003e\u003cli\u003eIhre erfassten Daten — Snapshots werden lokal gespeichert und nie an einen Server gesendet\u003c/li\u003e\u003c/ul\u003e"},{"t":"Berechtigungen","html":"\u003cp\u003eVKT Item Pin verwendet diese Berechtigungen, um Produkt-Snapshots auf Einkaufsseiten zu erfassen:\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cstrong\u003estorage\u003c/strong\u003e — Speichert erfasste Snapshots und Einstellungen lokal in \u003ccode\u003echrome.storage.local\u003c/code\u003e.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eactiveTab\u003c/strong\u003e — Greift nur auf den aktuellen Tab zu, wenn Sie die Pin-Schaltfläche verwenden oder eine Erfassung auslösen.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003escripting\u003c/strong\u003e — Injiziert bei Bedarf den Extraktionscode, um Produktinformationen (Titel, Preis, Modell) von der angezeigten Seite zu lesen.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eHost-Zugriff\u003c/strong\u003e — Ermöglicht Pin-Schaltfläche und Ein-Klick-Erfassung auf Shopping-Websites. Seiteninhalte werden ausschließlich lokal verarbeitet; nichts wird hochgeladen.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003enotifications\u003c/strong\u003e — Zeigt eine lokale Systembenachrichtigung, wenn ein gespeichertes Produkt Ihren Zielpreis erreicht. Kein Server ist beteiligt.\u003c/li\u003e\u003c/ul\u003e\u003cdiv class=\"note\"\u003eDer Host-Zugriff umfasst alle Websites, damit die Pin-Schaltfläche in jedem Shop funktioniert. Er wird ausschließlich verwendet, um Produktinformationen zu extrahieren — auf Ihre Anfrage oder automatisch für bereits gespeicherte Produktseiten — niemals, um Ihr Surfen im Hintergrund zu überwachen.\u003c/div\u003e"},{"t":"Datenspeicherung","html":"\u003cp\u003eErfasste Snapshots werden lokal im Browser über \u003ccode\u003echrome.storage.local\u003c/code\u003e gespeichert. Sie können sie jederzeit über das Dashboard exportieren oder löschen. Beim erneuten Besuch einer gespeicherten Produktseite wird der Preis automatisch aktualisiert (höchstens ein Preispunkt pro Tag) – weiterhin ausschließlich auf Ihrem Gerät. Beim Deinstallieren der Erweiterung werden alle Daten gelöscht.\u003c/p\u003e"},{"t":"Lizenzaktivierung und Netzwerk","html":"\u003cp\u003eDie Erfassung funktioniert ohne Netzwerkverbindung. Wenn Sie eine Pro-Lizenz aktivieren, sendet VKT Item Pin Ihren Lizenzschlüssel, eine zufällige Installationskennung und grundlegende Browserinformationen (Browserversion, Sprache, Zeitzone) an unseren Lizenzserver (api.annmax1983.com). Seiteninhalte oder erfasste Daten werden niemals gesendet. Unser Lizenzserver protokolliert die IP-Adresse dieser Anfragen ausschließlich zur Ratenbegrenzung und Missbrauchsabwehr – niemals für Profiling, Werbung oder Weitergabe an Dritte.\u003c/p\u003e"},{"t":"Links von Drittanbietern","html":"\u003cp\u003eDie Fußzeile der Erweiterung verlinkt auf unsere Website, das GitHub-Repository und eine freiwillige Ko-fi-Supportseite. Für den Besuch dieser Websites gelten deren eigene Datenschutzrichtlinien.\u003c/p\u003e"},{"t":"Aufbewahrung und Löschung","html":"\u003cp\u003eDeine Einstellungen und Inhalte bleiben im Browser, bis du sie in der Erweiterung löschst oder sie deinstallierst. Beim Deinstallieren werden die lokalen Daten der Erweiterung entfernt. Auf unseren Servern wird nichts aufbewahrt, weil deine Inhalte nie dorthin gesendet werden.\u003c/p\u003e"},{"t":"Änderungen dieser Erklärung","html":"\u003cp\u003eWenn sich diese Erklärung ändert, wird die überarbeitete Fassung mit einem neuen Datum auf dieser Seite veröffentlicht. Wesentliche Änderungen werden in den Versionshinweisen der Erweiterung genannt.\u003c/p\u003e"},{"t":"Kontakt","html":"\u003cp\u003eFragen zu dieser Erklärung? Schreib an \u003ca href=\"mailto:support@annmax1983.com\"\u003esupport@annmax1983.com\u003c/a\u003e oder öffne ein Issue auf \u003ca href=\"https://github.com/annmax1983/ItemPin\" target=\"_blank\" rel=\"noopener\"\u003eGitHub\u003c/a\u003e.\u003c/p\u003e"}]},"es":{"summary":"\u003cstrong\u003eResumen:\u003c/strong\u003e VKT Item Pin guarda las capturas de productos (título, precio, modelo, enlace, imagen) \u003cstrong\u003esolo en tu navegador\u003c/strong\u003e. El contenido de las páginas se lee localmente para extraer la información del producto: al capturar un producto y, de nuevo, al reabrir una página de producto ya guardada para mantener su historial de precios al día. Nunca se sube. El acceso a la red se limita a la activación opcional de la licencia Pro (que envía tu clave e información básica del navegador al servidor de licencias) y a las miniaturas de productos, que la ventana emergente y el panel cargan directamente desde la URL de la tienda original.","sections":[{"t":"Recopilación de Datos","html":"\u003cp\u003eVKT Item Pin \u003cstrong\u003eno\u003c/strong\u003e recopila ni sube ninguna de las siguientes cosas:\u003c/p\u003e\u003cul\u003e\u003cli\u003eHistorial de navegación o el contenido de páginas que no hayas guardado en ItemPin\u003c/li\u003e\u003cli\u003eAnalíticas de uso o telemetría\u003c/li\u003e\u003cli\u003eCookies o identificadores de seguimiento\u003c/li\u003e\u003cli\u003eTus datos capturados — las capturas se almacenan localmente y nunca se envían a ningún servidor\u003c/li\u003e\u003c/ul\u003e"},{"t":"Permisos","html":"\u003cp\u003eVKT Item Pin usa estos permisos para capturar productos en páginas de compras:\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cstrong\u003estorage\u003c/strong\u003e — Guarda las capturas y ajustes localmente en \u003ccode\u003echrome.storage.local\u003c/code\u003e.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eactiveTab\u003c/strong\u003e — Accede a la pestaña actual solo cuando usas el botón Pin o inicias una captura.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003escripting\u003c/strong\u003e — Inyecta el código de extracción a petición para leer la información del producto (título, precio, modelo) de la página que estás viendo.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eAcceso a hosts\u003c/strong\u003e — Permite que el botón Pin y la captura con un clic funcionen en tiendas. El contenido de las páginas se procesa solo localmente; nada se sube.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003enotifications\u003c/strong\u003e — Muestra una notificación local del sistema cuando un producto guardado alcanza el precio objetivo que fijaste. Sin servidores de por medio.\u003c/li\u003e\u003c/ul\u003e\u003cdiv class=\"note\"\u003eEl acceso a hosts cubre todos los sitios para que el botón Pin funcione en cualquier tienda. Se usa únicamente para extraer información del producto —a petición tuya o automáticamente en páginas de producto ya guardadas— nunca para monitorear tu navegación en segundo plano.\u003c/div\u003e"},{"t":"Almacenamiento","html":"\u003cp\u003eLas capturas se almacenan localmente con \u003ccode\u003echrome.storage.local\u003c/code\u003e. Puedes exportarlas o borrarlas en cualquier momento desde el panel. Cuando vuelves a visitar una página de producto guardada, su precio se actualiza automáticamente (como máximo un punto por día), siempre en tu dispositivo. Todos los datos se eliminan al desinstalar la extensión.\u003c/p\u003e"},{"t":"Activación de licencia y red","html":"\u003cp\u003eLa captura funciona sin conexión de red. Si activas una licencia Pro, VKT Item Pin envía tu clave de licencia, un identificador de instalación aleatorio e información básica del navegador (versión, idioma, zona horaria) a nuestro servidor de licencias (api.annmax1983.com). Nunca se envía contenido de páginas ni datos capturados. Nuestro servidor de licencias registra la dirección IP de estas solicitudes únicamente para limitar la tasa de peticiones y evitar abusos; nunca para elaborar perfiles, publicidad ni compartirla con terceros.\u003c/p\u003e"},{"t":"Enlaces de Terceros","html":"\u003cp\u003eEl pie de la extensión enlaza a nuestro sitio web, repositorio de GitHub y una página de soporte voluntaria en Ko-fi. La visita a esos sitios está sujeta a sus propias políticas de privacidad.\u003c/p\u003e"},{"t":"Conservación y eliminación de datos","html":"\u003cp\u003eTus ajustes y contenidos permanecen en el navegador hasta que los elimines en la extensión o la desinstales. Al desinstalarla se borran los datos locales de la extensión. No conservamos nada en nuestros servidores porque tus contenidos nunca se envían allí.\u003c/p\u003e"},{"t":"Cambios en esta política","html":"\u003cp\u003eSi esta política cambia, la versión revisada se publicará en esta página con una nueva fecha. Los cambios importantes se indicarán en las notas de la versión de la extensión.\u003c/p\u003e"},{"t":"Contacto","html":"\u003cp\u003e¿Preguntas sobre esta política? Escribe a \u003ca href=\"mailto:support@annmax1983.com\"\u003esupport@annmax1983.com\u003c/a\u003e o abre un issue en \u003ca href=\"https://github.com/annmax1983/ItemPin\" target=\"_blank\" rel=\"noopener\"\u003eGitHub\u003c/a\u003e.\u003c/p\u003e"}]},"fr":{"summary":"\u003cstrong\u003eRésumé :\u003c/strong\u003e VKT Item Pin enregistre les instantanés de produits (titre, prix, modèle, lien, image) \u003cstrong\u003euniquement dans votre navigateur\u003c/strong\u003e. Le contenu des pages est lu localement pour extraire les informations du produit — lors de la capture d'un produit, et de nouveau lorsque vous rouvrez une page produit déjà enregistrée afin que son historique de prix reste à jour. Rien n'est jamais téléchargé. L'accès réseau se limite à l'activation facultative de la licence Pro (qui envoie votre clé et des informations de base sur le navigateur au serveur de licences) et aux vignettes de produits, que le popup et le tableau de bord chargent directement depuis l'URL du site d'origine.","sections":[{"t":"Collecte de Données","html":"\u003cp\u003eVKT Item Pin ne collecte \u003cstrong\u003eni ne télécharge\u003c/strong\u003e aucune des informations suivantes :\u003c/p\u003e\u003cul\u003e\u003cli\u003eHistorique de navigation ou contenu de pages que vous n'avez pas enregistrées dans ItemPin\u003c/li\u003e\u003cli\u003eAnalyses d'utilisation ou télémétrie\u003c/li\u003e\u003cli\u003eCookies ou identifiants de suivi\u003c/li\u003e\u003cli\u003eVos données capturées — les instantanés sont stockés localement et jamais envoyés à un serveur\u003c/li\u003e\u003c/ul\u003e"},{"t":"Permissions","html":"\u003cp\u003eVKT Item Pin utilise ces permissions pour capturer des produits sur les pages marchandes :\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cstrong\u003estorage\u003c/strong\u003e — Enregistre les instantanés et paramètres localement dans \u003ccode\u003echrome.storage.local\u003c/code\u003e.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eactiveTab\u003c/strong\u003e — N'accède à l'onglet actuel que lorsque vous utilisez le bouton Pin ou lancez une capture.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003escripting\u003c/strong\u003e — Injecte le code d'extraction à la demande pour lire les informations produit (titre, prix, modèle) de la page consultée.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eAccès aux hôtes\u003c/strong\u003e — Permet au bouton Pin et à la capture en un clic de fonctionner sur les sites marchands. Le contenu des pages est traité localement uniquement ; rien n'est téléchargé.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003enotifications\u003c/strong\u003e — Affiche une notification système locale lorsqu'un produit suivi atteint le prix cible que vous avez défini. Aucun serveur n'intervient.\u003c/li\u003e\u003c/ul\u003e\u003cdiv class=\"note\"\u003eL'accès aux hôtes couvre tous les sites afin que le bouton Pin fonctionne sur toute boutique. Il sert uniquement à extraire les informations produit — à votre demande, ou automatiquement sur les pages produit déjà enregistrées — jamais à surveiller votre navigation en arrière-plan.\u003c/div\u003e"},{"t":"Stockage","html":"\u003cp\u003eLes instantanés sont stockés localement via \u003ccode\u003echrome.storage.local\u003c/code\u003e. Vous pouvez les exporter ou les supprimer à tout moment depuis le tableau de bord. Lorsque vous revisitez une page produit enregistrée, son prix est actualisé automatiquement (au plus un point par jour), toujours sur votre appareil. Toutes les données sont supprimées lors de la désinstallation de l'extension.\u003c/p\u003e"},{"t":"Activation de la licence et réseau","html":"\u003cp\u003eLa capture fonctionne sans connexion réseau. Si vous activez une licence Pro, VKT Item Pin envoie votre clé de licence, un identifiant d'installation aléatoire et des informations de base sur le navigateur (version, langue, fuseau horaire) à notre serveur de licences (api.annmax1983.com). Aucun contenu de page ni donnée capturée n'est jamais envoyé. Notre serveur de licences enregistre l'adresse IP de ces requêtes uniquement pour limiter le débit et prévenir les abus — jamais pour du profilage, de la publicité ou un partage avec des tiers.\u003c/p\u003e"},{"t":"Liens de Tiers","html":"\u003cp\u003eLe pied de page de l'extension renvoie vers notre site web, le dépôt GitHub et une page de soutien volontaire Ko-fi. La visite de ces sites est soumise à leurs propres politiques de confidentialité.\u003c/p\u003e"},{"t":"Conservation et suppression des données","html":"\u003cp\u003eVos réglages et contenus restent dans le navigateur jusqu'à ce que vous les supprimiez dans l'extension ou que vous la désinstalliez. La désinstallation efface les données locales de l'extension. Rien n'est conservé sur nos serveurs, car vos contenus ne leur sont jamais envoyés.\u003c/p\u003e"},{"t":"Modifications de cette politique","html":"\u003cp\u003eSi cette politique change, la version révisée sera publiée sur cette page avec une nouvelle date. Les changements importants seront signalés dans les notes de version de l'extension.\u003c/p\u003e"},{"t":"Contact","html":"\u003cp\u003eDes questions sur cette politique ? Écrivez à \u003ca href=\"mailto:support@annmax1983.com\"\u003esupport@annmax1983.com\u003c/a\u003e ou ouvrez un ticket sur \u003ca href=\"https://github.com/annmax1983/ItemPin\" target=\"_blank\" rel=\"noopener\"\u003eGitHub\u003c/a\u003e.\u003c/p\u003e"}]}},"staticOnly":false};
+const UI_ALL = {"en":{"privacyTitle":"Privacy Policy","home":"Home","onThisPage":"On this page","lastUpdated":"Last updated: October 2026","chips":["Runs on your device","No analytics","No account","Licence optional"],"permissionsTitle":"Permissions","permissionsIntro":"The extension requests only these permissions:","retentionTitle":"Data retention & deletion","retentionBody":"Your settings and content stay in your browser until you delete them in the extension or uninstall it. Uninstalling removes the extension's local data. Nothing is retained on our servers, because your content is never sent to them.","syncCaveat":"If you enabled a feature that uses your browser account's sync, a copy may remain in that account. You can manage or remove it in your browser's sync settings.","changesTitle":"Changes to this policy","changesBody":"If this policy changes, the revised version will be published on this page with a new date. Material changes will be noted in the extension's release notes.","contactTitle":"Contact","contactBody":"Questions about this policy? Email \u003ca href=\"mailto:support@annmax1983.com\"\u003esupport@annmax1983.com\u003c/a\u003e or open an issue on \u003ca href=\"{github}\" target=\"_blank\" rel=\"noopener\"\u003eGitHub\u003c/a\u003e.","footerHome":"Home","footerGithub":"GitHub","footerSite":"Website","footerEmail":"Email","index":{"navFeatures":"Features","navPlans":"Free & Premium","navPrivacy":"Privacy","navSupport":"Support","eyebrow":"Chrome & Edge extension","badgeFree":"Free + Premium","badgeLocal":"Runs locally","badgeNoTrack":"No tracking","badgeBrowsers":"Chrome & Edge","ctaGet":"Get the extension","ctaPrivacy":"Privacy policy","ctaSource":"View source","featuresTitle":"Everything it does","featuresLead":"The core features at a glance.","moreTitle":"Also included","proLabel":"Premium","freeLabel":"Free","premiumLabel":"Premium","planTitle":"Free vs Premium","planLead":"The free tier is a complete tool, not a trial. Premium is optional.","privacyTitle":"Private by design","privacyLead":"Your data stays on your device. No account, no analytics, no tracking. Read exactly what is stored and when the extension uses the network.","privacyPoints":["Local processing","No account","Optional licence"],"privacyCta":"Read the privacy policy","supportEyebrow":"Support the developer","supportHint":"If this extension helps you, you can buy me a coffee.","footerMore":"More extensions","footerPrivacy":"Privacy","footerGithub":"GitHub","footerSite":"Website"}},"zh":{"privacyTitle":"隐私政策","home":"首页","onThisPage":"本页目录","lastUpdated":"最后更新：2026 年 10 月","chips":["在你的设备上运行","无统计追踪","无需账号","授权可选"],"permissionsTitle":"权限说明","permissionsIntro":"扩展只请求以下权限：","retentionTitle":"数据保留与删除","retentionBody":"你的设置和内容保存在浏览器中，直到你在扩展内删除它们或卸载扩展。卸载会清除扩展的本地数据。我们的服务器不保留任何内容，因为你的内容从不会发送到那里。","syncCaveat":"如果你启用了使用浏览器账号同步的功能，该账号中可能保留一份副本，可在浏览器的同步设置中管理或删除。","changesTitle":"政策变更","changesBody":"如果本政策发生变更，修订后的版本会发布在本页并更新日期。重要变更会在扩展的版本说明中注明。","contactTitle":"联系我们","contactBody":"对本政策有疑问？请发邮件至 \u003ca href=\"mailto:support@annmax1983.com\"\u003esupport@annmax1983.com\u003c/a\u003e，或在 \u003ca href=\"{github}\" target=\"_blank\" rel=\"noopener\"\u003eGitHub\u003c/a\u003e 提交 issue。","footerHome":"首页","footerGithub":"GitHub","footerSite":"官网","footerEmail":"邮件","index":{"navFeatures":"功能","navPlans":"免费与高级版","navPrivacy":"隐私","navSupport":"支持","eyebrow":"Chrome 与 Edge 扩展","badgeFree":"免费 + 高级版","badgeLocal":"本地运行","badgeNoTrack":"无追踪","badgeBrowsers":"Chrome 与 Edge","ctaGet":"获取扩展","ctaPrivacy":"隐私政策","ctaSource":"查看源码","featuresTitle":"全部功能","featuresLead":"核心功能一览。","moreTitle":"还包括","proLabel":"高级版","freeLabel":"免费版","premiumLabel":"高级版","planTitle":"免费版与高级版","planLead":"免费版是完整工具，不是试用版。高级功能完全可选。","privacyTitle":"隐私优先","privacyLead":"你的数据留在设备上。无需账号，没有统计，没有追踪。了解具体存储了什么，以及扩展何时联网。","privacyPoints":["本地处理","无需账号","授权可选"],"privacyCta":"阅读隐私政策","supportEyebrow":"支持开发者","supportHint":"如果这个扩展对你有帮助，可以请我喝杯咖啡。","footerMore":"更多扩展","footerPrivacy":"隐私","footerGithub":"GitHub","footerSite":"官网"}},"ja":{"privacyTitle":"プライバシーポリシー","home":"ホーム","onThisPage":"目次","lastUpdated":"最終更新：2026年10月","chips":["端末上で動作","分析なし","アカウント不要","ライセンスは任意"],"permissionsTitle":"権限","permissionsIntro":"この拡張機能が要求する権限は次のとおりです：","retentionTitle":"データの保存期間と削除","retentionBody":"設定とコンテンツは、拡張機能内で削除するかアンインストールするまでブラウザに保存されます。アンインストールすると拡張機能のローカルデータは削除されます。コンテンツがサーバーへ送信されることはないため、当方のサーバーには何も保持されません。","syncCaveat":"ブラウザのアカウント同期を使う機能を有効にした場合、そのアカウントにコピーが残ることがあります。ブラウザの同期設定から管理・削除できます。","changesTitle":"ポリシーの変更","changesBody":"このポリシーを変更する場合は、改訂版をこのページに新しい日付で掲載します。重要な変更は拡張機能のリリースノートにも記載します。","contactTitle":"お問い合わせ","contactBody":"このポリシーについてのご質問は、\u003ca href=\"mailto:support@annmax1983.com\"\u003esupport@annmax1983.com\u003c/a\u003e へメールするか、\u003ca href=\"{github}\" target=\"_blank\" rel=\"noopener\"\u003eGitHub\u003c/a\u003e で issue を作成してください。","footerHome":"ホーム","footerGithub":"GitHub","footerSite":"公式サイト","footerEmail":"メール","index":{"navFeatures":"機能","navPlans":"無料とPremium","navPrivacy":"プライバシー","navSupport":"サポート","eyebrow":"Chrome & Edge 拡張機能","badgeFree":"無料 + Premium","badgeLocal":"端末上で動作","badgeNoTrack":"トラッキングなし","badgeBrowsers":"Chrome & Edge","ctaGet":"拡張機能を入手","ctaPrivacy":"プライバシーポリシー","ctaSource":"ソースを見る","featuresTitle":"すべての機能","featuresLead":"主な機能を一覧で。","moreTitle":"その他の機能","proLabel":"Premium","freeLabel":"無料版","premiumLabel":"Premium","planTitle":"無料版とPremium","planLead":"無料版は試用版ではなく、完成したツールです。Premium は任意です。","privacyTitle":"プライバシー優先","privacyLead":"データは端末上に残ります。アカウント、分析、トラッキングはありません。何が保存され、いつ通信するかを確認できます。","privacyPoints":["端末内で処理","アカウント不要","ライセンスは任意"],"privacyCta":"プライバシーポリシーを読む","supportEyebrow":"開発者を支援","supportHint":"この拡張機能が役に立ったら、コーヒーをごちそうしてください。","footerMore":"他の拡張機能","footerPrivacy":"プライバシー","footerGithub":"GitHub","footerSite":"公式サイト"}},"de":{"privacyTitle":"Datenschutzerklärung","home":"Startseite","onThisPage":"Auf dieser Seite","lastUpdated":"Zuletzt aktualisiert: Oktober 2026","chips":["Läuft auf deinem Gerät","Keine Analyse","Kein Konto","Lizenz optional"],"permissionsTitle":"Berechtigungen","permissionsIntro":"Die Erweiterung fordert nur diese Berechtigungen an:","retentionTitle":"Aufbewahrung und Löschung","retentionBody":"Deine Einstellungen und Inhalte bleiben im Browser, bis du sie in der Erweiterung löschst oder sie deinstallierst. Beim Deinstallieren werden die lokalen Daten der Erweiterung entfernt. Auf unseren Servern wird nichts aufbewahrt, weil deine Inhalte nie dorthin gesendet werden.","syncCaveat":"Wenn du eine Funktion mit der Kontosynchronisierung deines Browsers aktiviert hast, kann eine Kopie in diesem Konto verbleiben. Du kannst sie in den Synchronisierungseinstellungen deines Browsers verwalten oder löschen.","changesTitle":"Änderungen dieser Erklärung","changesBody":"Wenn sich diese Erklärung ändert, wird die überarbeitete Fassung mit einem neuen Datum auf dieser Seite veröffentlicht. Wesentliche Änderungen werden in den Versionshinweisen der Erweiterung genannt.","contactTitle":"Kontakt","contactBody":"Fragen zu dieser Erklärung? Schreib an \u003ca href=\"mailto:support@annmax1983.com\"\u003esupport@annmax1983.com\u003c/a\u003e oder öffne ein Issue auf \u003ca href=\"{github}\" target=\"_blank\" rel=\"noopener\"\u003eGitHub\u003c/a\u003e.","footerHome":"Startseite","footerGithub":"GitHub","footerSite":"Website","footerEmail":"E-Mail","index":{"navFeatures":"Funktionen","navPlans":"Free & Premium","navPrivacy":"Datenschutz","navSupport":"Support","eyebrow":"Chrome- und Edge-Erweiterung","badgeFree":"Free + Premium","badgeLocal":"Läuft lokal","badgeNoTrack":"Kein Tracking","badgeBrowsers":"Chrome & Edge","ctaGet":"Erweiterung holen","ctaPrivacy":"Datenschutzerklärung","ctaSource":"Quellcode ansehen","featuresTitle":"Alle Funktionen","featuresLead":"Die wichtigsten Funktionen im Überblick.","moreTitle":"Außerdem","proLabel":"Premium","freeLabel":"Free","premiumLabel":"Premium","planTitle":"Free vs. Premium","planLead":"Die kostenlose Version ist ein vollständiges Werkzeug, keine Testversion. Premium ist optional.","privacyTitle":"Privat by Design","privacyLead":"Deine Daten bleiben auf deinem Gerät. Kein Konto, keine Analyse, kein Tracking. Lies genau, was gespeichert wird und wann die Erweiterung das Netz nutzt.","privacyPoints":["Lokale Verarbeitung","Kein Konto","Lizenz optional"],"privacyCta":"Datenschutzerklärung lesen","supportEyebrow":"Unterstütze die Entwicklung","supportHint":"Wenn dir die Erweiterung hilft, spendier mir einen Kaffee.","footerMore":"Weitere Erweiterungen","footerPrivacy":"Datenschutz","footerGithub":"GitHub","footerSite":"Website"}},"es":{"privacyTitle":"Política de privacidad","home":"Inicio","onThisPage":"En esta página","lastUpdated":"Última actualización: octubre de 2026","chips":["Se ejecuta en tu dispositivo","Sin analíticas","Sin cuenta","Licencia opcional"],"permissionsTitle":"Permisos","permissionsIntro":"La extensión solo solicita estos permisos:","retentionTitle":"Conservación y eliminación de datos","retentionBody":"Tus ajustes y contenidos permanecen en el navegador hasta que los elimines en la extensión o la desinstales. Al desinstalarla se borran los datos locales de la extensión. No conservamos nada en nuestros servidores porque tus contenidos nunca se envían allí.","syncCaveat":"Si activaste una función que usa la sincronización de la cuenta del navegador, puede quedar una copia en esa cuenta. Puedes gestionarla o eliminarla en los ajustes de sincronización del navegador.","changesTitle":"Cambios en esta política","changesBody":"Si esta política cambia, la versión revisada se publicará en esta página con una nueva fecha. Los cambios importantes se indicarán en las notas de la versión de la extensión.","contactTitle":"Contacto","contactBody":"¿Preguntas sobre esta política? Escribe a \u003ca href=\"mailto:support@annmax1983.com\"\u003esupport@annmax1983.com\u003c/a\u003e o abre un issue en \u003ca href=\"{github}\" target=\"_blank\" rel=\"noopener\"\u003eGitHub\u003c/a\u003e.","footerHome":"Inicio","footerGithub":"GitHub","footerSite":"Sitio web","footerEmail":"Correo","index":{"navFeatures":"Funciones","navPlans":"Gratis y Premium","navPrivacy":"Privacidad","navSupport":"Apoyo","eyebrow":"Extensión para Chrome y Edge","badgeFree":"Gratis + Premium","badgeLocal":"Se ejecuta en local","badgeNoTrack":"Sin rastreo","badgeBrowsers":"Chrome y Edge","ctaGet":"Obtener la extensión","ctaPrivacy":"Política de privacidad","ctaSource":"Ver el código","featuresTitle":"Todo lo que hace","featuresLead":"Las funciones principales de un vistazo.","moreTitle":"También incluye","proLabel":"Premium","freeLabel":"Gratis","premiumLabel":"Premium","planTitle":"Gratis vs Premium","planLead":"La versión gratuita es una herramienta completa, no una prueba. Premium es opcional.","privacyTitle":"Privacidad por diseño","privacyLead":"Tus datos se quedan en tu dispositivo. Sin cuenta, sin analíticas y sin rastreo. Consulta qué se guarda y cuándo usa la red la extensión.","privacyPoints":["Procesamiento local","Sin cuenta","Licencia opcional"],"privacyCta":"Leer la política de privacidad","supportEyebrow":"Apoya al desarrollador","supportHint":"Si la extensión te resulta útil, invítame a un café.","footerMore":"Más extensiones","footerPrivacy":"Privacidad","footerGithub":"GitHub","footerSite":"Sitio web"}},"fr":{"privacyTitle":"Politique de confidentialité","home":"Accueil","onThisPage":"Sur cette page","lastUpdated":"Dernière mise à jour : octobre 2026","chips":["Fonctionne sur votre appareil","Aucune analyse","Sans compte","Licence facultative"],"permissionsTitle":"Autorisations","permissionsIntro":"L'extension ne demande que ces autorisations :","retentionTitle":"Conservation et suppression des données","retentionBody":"Vos réglages et contenus restent dans le navigateur jusqu'à ce que vous les supprimiez dans l'extension ou que vous la désinstalliez. La désinstallation efface les données locales de l'extension. Rien n'est conservé sur nos serveurs, car vos contenus ne leur sont jamais envoyés.","syncCaveat":"Si vous avez activé une fonction qui utilise la synchronisation du compte de votre navigateur, une copie peut subsister dans ce compte. Vous pouvez la gérer ou la supprimer dans les réglages de synchronisation du navigateur.","changesTitle":"Modifications de cette politique","changesBody":"Si cette politique change, la version révisée sera publiée sur cette page avec une nouvelle date. Les changements importants seront signalés dans les notes de version de l'extension.","contactTitle":"Contact","contactBody":"Des questions sur cette politique ? Écrivez à \u003ca href=\"mailto:support@annmax1983.com\"\u003esupport@annmax1983.com\u003c/a\u003e ou ouvrez un ticket sur \u003ca href=\"{github}\" target=\"_blank\" rel=\"noopener\"\u003eGitHub\u003c/a\u003e.","footerHome":"Accueil","footerGithub":"GitHub","footerSite":"Site web","footerEmail":"E-mail","index":{"navFeatures":"Fonctionnalités","navPlans":"Gratuit et Premium","navPrivacy":"Confidentialité","navSupport":"Soutien","eyebrow":"Extension Chrome et Edge","badgeFree":"Gratuit + Premium","badgeLocal":"Fonctionne en local","badgeNoTrack":"Aucun suivi","badgeBrowsers":"Chrome et Edge","ctaGet":"Obtenir l’extension","ctaPrivacy":"Politique de confidentialité","ctaSource":"Voir le code","featuresTitle":"Toutes les fonctionnalités","featuresLead":"Les fonctions essentielles en un coup d'œil.","moreTitle":"Également inclus","proLabel":"Premium","freeLabel":"Gratuit","premiumLabel":"Premium","planTitle":"Gratuit vs Premium","planLead":"La version gratuite est un outil complet, pas une version d'essai. Premium est facultatif.","privacyTitle":"Confidentiel par conception","privacyLead":"Vos données restent sur votre appareil. Sans compte, sans analyse, sans suivi. Découvrez ce qui est stocké et quand l'extension utilise le réseau.","privacyPoints":["Traitement local","Sans compte","Licence facultative"],"privacyCta":"Lire la politique de confidentialité","supportEyebrow":"Soutenir le développeur","supportHint":"Si l'extension vous aide, offrez-moi un café.","footerMore":"Plus d'extensions","footerPrivacy":"Confidentialité","footerGithub":"GitHub","footerSite":"Site web"}}};
+const CONFIG = {"name":"VKT Item Pin","github":"https://github.com/annmax1983/ItemPin","icon":"icons/icon128.png","site":"https://annmax1983.com/extensions/itempin"};
+const LANG_KEY = "vkt-itempin-lang";
+(function () {
+  "use strict";
+
+  var select = document.getElementById("p-lang");
+  var observer = null;
+  var ui = function (lang) { return UI_ALL[lang] || UI_ALL.en; };
+
+  function esc(value) {
+    return String(value == null ? "" : value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
   }
-};
 
-function detectLang() {
-  const raw = (navigator.language || 'en');
-  const map = { 'zh-TW': 'zh-CN', 'zh-Hans': 'zh-CN' };
-  const mapped = map[raw] || raw;
-  const base = mapped.split('-')[0].toLowerCase();
-  if (I18N[mapped]) return mapped;
-  return I18N[base] ? base : 'en';
-}
+  function setText(id, value) {
+    var el = document.getElementById(id);
+    if (el) el.textContent = value == null ? "" : value;
+  }
 
-function apply(t) {
-  document.title = t.title.replace(/🔒\s*/, '') + ' - VKT Item Pin';
-  document.getElementById('title').textContent = t.title;
-  document.getElementById('updated').textContent = t.updated;
-  document.getElementById('highlight').innerHTML = t.highlight;
-  document.getElementById('h1').textContent = t.h1;
-  document.getElementById('p1').innerHTML = t.p1;
-  document.getElementById('l1').innerHTML = t.l1.map(i => '<li>' + i + '</li>').join('');
-  document.getElementById('h2').textContent = t.h2;
-  document.getElementById('p2').innerHTML = t.p2;
-  document.getElementById('l2').innerHTML = t.l2.map(i => '<li>' + i + '</li>').join('');
-  document.getElementById('p2note').innerHTML = t.p2note;
-  document.getElementById('h3').textContent = t.h3;
-  document.getElementById('p3').innerHTML = t.p3;
-  document.getElementById('h4').textContent = t.h4;
-  document.getElementById('p4').innerHTML = t.p4;
-  document.getElementById('h5').textContent = t.h5;
-  document.getElementById('p5').innerHTML = t.p5;
-  document.getElementById('h6').textContent = t.h6;
-  document.getElementById('p6').innerHTML = t.p6;
-  document.getElementById('rights').textContent = t.rights;
-  document.getElementById('gh').textContent = t.gh;
-  document.documentElement.lang = detectLang();
-}
+  function detect() {
+    var codes = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "en"];
+    for (var i = 0; i < codes.length; i++) {
+      var code = String(codes[i] || "").toLowerCase();
+      if (code.indexOf("zh") === 0) return "zh";
+      if (code.indexOf("ja") === 0) return "ja";
+      if (code.indexOf("de") === 0) return "de";
+      if (code.indexOf("es") === 0) return "es";
+      if (code.indexOf("fr") === 0) return "fr";
+      if (code.indexOf("en") === 0) return "en";
+    }
+    return "en";
+  }
 
-apply(I18N[detectLang()]);
+  function initToc() {
+    if (observer) observer.disconnect();
+    var links = Array.prototype.slice.call(document.querySelectorAll("#p-toc a"));
+    var cards = Array.prototype.slice.call(document.querySelectorAll(".policy-card"));
+    if (!links.length || !cards.length || typeof IntersectionObserver === "undefined") return;
+
+    function activate(id) {
+      links.forEach(function (link) {
+        link.classList.toggle("active", link.getAttribute("href") === "#" + id);
+      });
+    }
+
+    observer = new IntersectionObserver(function (entries) {
+      var visible = entries.filter(function (entry) { return entry.isIntersecting; });
+      if (visible.length) activate(visible[0].target.id);
+    }, { rootMargin: "-18% 0px -68% 0px", threshold: [0, 1] });
+
+    cards.forEach(function (card) { observer.observe(card); });
+    if (links[0]) links[0].classList.add("active");
+  }
+
+  function render(lang) {
+    var data = MODEL.langs[lang];
+    if (!data) return;
+    var u = ui(lang);
+
+    document.documentElement.lang = lang === "zh" ? "zh-CN" : lang;
+    document.title = CONFIG.name + " — " + u.privacyTitle;
+
+    setText("p-home", u.home);
+    setText("p-eyebrow", u.privacyTitle);
+    setText("p-h1", CONFIG.name);
+    setText("p-h1-sub", u.privacyTitle);
+    setText("p-updated", u.lastUpdated);
+    setText("p-toc-title", u.onThisPage);
+
+    var summary = document.getElementById("p-summary");
+    if (summary) summary.innerHTML = data.summary || "";
+
+    var chips = document.getElementById("p-chips");
+    if (chips) {
+      chips.innerHTML = u.chips.map(function (chip) {
+        return '<span class="chip">' + esc(chip) + "</span>";
+      }).join("");
+    }
+
+    setText("p-footer-home", u.footerHome);
+    setText("p-footer-privacy", u.privacyTitle);
+    setText("p-footer-github", u.footerGithub);
+    setText("p-footer-site", u.footerSite);
+    setText("p-footer-email", u.footerEmail || "Email");
+
+    var toc = document.getElementById("p-toc");
+    var sections = document.getElementById("p-sections");
+    if (!toc || !sections) return;
+    toc.innerHTML = "";
+    sections.innerHTML = "";
+
+    data.sections.forEach(function (section, index) {
+      var number = String(index + 1).padStart(2, "0");
+      var id = "section-" + (index + 1);
+
+      var link = document.createElement("a");
+      link.href = "#" + id;
+      link.innerHTML = "<span>" + number + "</span>" + esc(section.t);
+      toc.appendChild(link);
+
+      var card = document.createElement("article");
+      card.className = "policy-card";
+      card.id = id;
+      card.innerHTML = '<h2><span class="policy-num">' + number + "</span>" + esc(section.t) + '</h2><div class="policy-body">' + section.html + "</div>";
+      sections.appendChild(card);
+    });
+
+    initToc();
+  }
+
+  function storedLang() {
+    try { return localStorage.getItem(LANG_KEY); } catch (error) { return null; }
+  }
+
+  function remember(lang) {
+    try { localStorage.setItem(LANG_KEY, lang); } catch (error) { /* storage can be blocked */ }
+  }
+
+  initToc();
+
+  if (select) {
+    var saved = storedLang();
+    var initial = saved && MODEL.langs[saved] ? saved : detect();
+    if (!MODEL.langs[initial]) initial = "en";
+    select.value = initial;
+    if (initial !== "en") render(initial);
+    select.addEventListener("change", function () {
+      remember(select.value);
+      render(select.value);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+})();
+
 </script>
 </body>
 </html>
