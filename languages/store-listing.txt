@@ -1,0 +1,233 @@
+================================================================
+VKT Item Pin — Chrome Web Store 文案（六语言纯文本版，v1.4.0）
+每个语言块：短描述一行 + 详细描述正文。
+复制对应语言块内文本即可，换行已保留。
+================================================================
+
+<<<<<<<<<< ENGLISH · SHORT >>>>>>>>>>
+
+Pin products from any shopping site: title, price, link and model saved locally with price history. Free 50, Pro unlimited.
+
+<<<<<<<<<< ENGLISH · DETAILED >>>>>>>>>>
+
+VKT Item Pin is a shopping research extension that captures product snapshots with one click: title, price, link, model, site and date are saved to a local library — with automatic price-history tracking.
+
+Comparing products across shopping sites usually means dozens of open tabs and copy-pasting into spreadsheets. Instead, just hover any product, click the 📌 Pin button, and keep a growing price-tracked library right in your browser.
+
+🎯 HOVER TO CAPTURE
+Hover a product on a product page or in a search-result grid, click Pin — title, price, link, model, site and date are extracted automatically. A preview panel lets you edit fields before saving, and "Pick" mode lets you click any element on the page to fill a missing field.
+
+📈 PRICE HISTORY + TARGET ALERTS
+Revisit a product you already pinned and the price is recorded for you — one point per day, no second click. Set a target price per item: the first visit at or below it shows a desktop notification, entirely local, with no server and no email. Tracked products never count against your free quota.
+
+🛒 24 SITE PRESETS + UNIVERSAL ENGINE
+Hand-tuned selectors cover 24 popular marketplaces worldwide, from global giants to regional favorites. Every other shop (Shopify, WooCommerce, independent stores) is covered by a universal engine: JSON-LD structured data → Open Graph tags → generic selectors → manual pick mode.
+
+🗂 DASHBOARD
+Search and organize your library by date or site, edit records, correct or remove bad price points, and view trend charts. Add a note and up to 10 tags per item — both searchable — and read a summary strip with the price drops of the last 30 days plus the total value of a single-currency library. One click jumps to Google Shopping, eBay or Amazon to check the same title elsewhere. Compare (Pro) overlays the price history of up to 6 products in one chart.
+
+💾 YOUR DATA, YOUR BROWSER
+Everything is stored locally via chrome.storage.local. Nothing is uploaded, no tracking, no analytics. Export/import a full JSON backup (notes, tags and target prices included), or export CSV (Pro) for spreadsheets. A storage monitor warns you before local storage gets full.
+
+🆓 FREE PLAN
+50 products, automatic price tracking on every revisit, target-price alerts, notes and tags, JSON backup, storage monitor, 6 languages.
+
+⭐ PRO
+Unlimited products, advanced filters (site / tag / date range / price range), CSV export with notes and target prices, multi-item compare (up to 6 products in one chart).
+
+🔒 PRIVACY FIRST
+All extraction and storage happen locally in your browser. The only network request is optional license validation: activation, plus a periodic re-check (at most once every 2 hours) while a Pro license is active. No webpage content is ever read or uploaded.
+
+🌍 English, 中文, 日本語, Español, Deutsch, Français.
+
+Works on Chrome, Edge and other Chromium-based browsers. Manifest V3, minimal permissions.
+
+<<<<<<<<<< 中文 · 简短 >>>>>>>>>>
+
+任意购物网站悬停即可收藏商品：标题、价格、链接、型号本地保存并生成价格走势。免费 50 条，Pro 无限制。
+
+<<<<<<<<<< 中文 · 详细 >>>>>>>>>>
+
+VKT Item Pin 是一款购物调研扩展，一键保存商品快照：标题、价格、链接、型号、站点与日期自动收入本地商品库，并自动追踪价格历史。
+
+跨网站比价通常意味着开几十个标签页、再复制粘贴到表格里。现在只需悬停任意商品、点击 📌 收藏按钮，一个持续增长的价格追踪库就在你的浏览器里建好了。
+
+🎯 悬停即收藏
+在商品详情页或搜索结果列表中悬停任意商品，点击 Pin —— 标题、价格、链接、型号、站点、日期自动提取。保存前可在预览面板中修改字段，"Pick" 模式可点击页面上的任意元素补全缺失字段。
+
+📈 价格历史 + 目标价提醒
+再次打开已收藏的商品页，价格自动记录，每天最多一个点，不用再点第二次。可为每件商品设目标价，第一次跌破时弹出系统通知——纯本地，不走服务器、不发邮件。已追踪的商品不计入免费额度。
+
+🛒 24 个站点预设 + 通用引擎
+针对全球 24 个主流购物站点手工调优了选择器，从国际大站到区域性热门商城均已覆盖。其他所有商店（Shopify、WooCommerce、独立站）由通用引擎覆盖：JSON-LD 结构化数据 → Open Graph 标签 → 通用选择器 → 手动 Pick 模式。
+
+🗂 仪表盘
+按日期或站点搜索整理商品库，编辑记录、修正或删除错误价格点、查看趋势图。每件商品可写备注、最多 10 个标签，均可搜索；顶部统计条显示近 30 天降价件数与单一币种资料库的合计价值；一键跳到 Google Shopping、eBay、Amazon 再搜同一款。Compare（Pro）可在一张图中叠加最多 6 个商品的价格历史。
+
+💾 数据归你，留在本地
+所有数据通过 chrome.storage.local 保存在本地，不上传、无跟踪、无统计。支持 JSON 全量备份导入导出（含备注、标签、目标价），CSV 导出（Pro）可直接用于表格软件。存储监控会在空间将满时提前提醒。
+
+🆓 免费版
+50 件商品、每次重访自动记价、目标价提醒、备注与标签、JSON 备份、存储监控、6 种语言。
+
+⭐ Pro 版
+无限商品、高级筛选（站点 / 标签 / 日期范围 / 价格区间）、CSV 导出（含备注与目标价）、多商品对比（一张图最多 6 条曲线）。
+
+🔒 隐私优先
+所有提取与存储都在你的浏览器本地完成。唯一的网络请求是可选的 Pro 许可证校验（激活时，以及激活后每 2 小时最多一次的周期复验），绝不读取或上传任何网页内容。
+
+🌍 支持英语、中文、日语、西班牙语、德语、法语。
+
+支持 Chrome、Edge 及其他 Chromium 内核浏览器。Manifest V3，最小权限。
+
+<<<<<<<<<< 日本語 · 短い >>>>>>>>>>
+
+どのショッピングサイトでも商品をピン留め：タイトル・価格・リンク・型番をローカル保存し価格履歴を記録。無料50件、Pro無制限。
+
+<<<<<<<<<< 日本語 · 詳細 >>>>>>>>>>
+
+VKT Item Pin は、ワンクリックで商品情報を保存できるショッピングリサーチ拡張機能です。タイトル・価格・リンク・型番・サイト・日付をローカルライブラリに記録し、価格履歴を自動で追跡します。
+
+複数の通販サイトで商品を比較するには、通常たくさんのタブを開いて表にコピペする必要があります。VKT Item Pin なら、商品にカーソルを合わせて 📌 ピンボタンを押すだけ。価格追跡付きのライブラリがブラウザの中で育っていきます。
+
+🎯 ホバーして保存
+商品ページでも検索結果でも、商品にカーソルを合わせて Pin をクリック——タイトル・価格・リンク・型番・サイト・日付を自動抽出。保存前にプレビューパネルで編集でき、「Pick」モードでページ上の任意の要素をクリックして未入力フィールドを補完できます。
+
+📈 価格履歴 + 目標価格アラート
+保存済みの商品ページを開くだけで価格を自動記録（1 日 1 ポイントまで、再クリック不要）。商品ごとに目標価格を設定でき、初めて下回ったときにデスクトップ通知を表示——サーバーもメールも使わず、すべてローカルで完結します。追跡済み商品は無料枠にカウントされません。
+
+🛒 24 サイト preset + 汎用エンジン
+世界の主要マーケットプレイス 24 サイトに専用セレクタを用意し、国際的な大手から地域で人気のショップまで対応。それ以外のショップ（Shopify・WooCommerce・個人店舗）は汎用エンジンが対応：JSON-LD 構造化データ → Open Graph タグ → 汎用セレクタ → 手動 Pick モード。
+
+🗂 ダッシュボード
+日付やサイト別にライブラリを検索・整理、レコードの編集、誤った価格ポイントの修正・削除、トレンドチャートの表示。商品ごとにメモと最大 10 個のタグを付けられ、どちらも検索対象。上部の集計バーに直近 30 日の値下げ件数と単一通貨ライブラリの合計額を表示。ワンクリックで Google ショッピング・eBay・Amazon を同じ商品名で検索できます。Compare（Pro）なら最大 6 商品の価格履歴を 1 つのチャートに重ねて表示できます。
+
+💾 データはあなたのブラウザの中に
+すべて chrome.storage.local にローカル保存。アップロードなし、トラッキングなし、アナリティクスなし。JSON フルバックアップの入出力（メモ・タグ・目標価格を含む）、スプレッドシート向け CSV エクスポート（Pro）に対応。ストレージモニターが容量不足を事前に警告します。
+
+🆓 無料プラン
+50 商品、再訪時の自動記録、目標価格アラート、メモとタグ、JSON バックアップ、ストレージモニター、6 言語対応。
+
+⭐ Pro
+商品数無制限、高度なフィルタ（サイト / タグ / 期間 / 価格帯）、CSV エクスポート（メモ・目標価格を含む）、複数商品比較（1 チャートに最大 6 本）。
+
+🔒 プライバシー最優先
+抽出も保存もすべてブラウザ内で完結。唯一のネットワーク通信は任意の Pro ライセンス検証のみ（認証時、および有効化後は最大 2 時間に 1 回の再確認）。ウェブページの内容を読み取ったり送信したりすることは一切ありません。
+
+🌍 英語・中国語・日本語・スペイン語・ドイツ語・フランス語対応。
+
+Chrome、Edge など Chromium 系ブラウザに対応。Manifest V3、最小限の権限。
+
+<<<<<<<<<< ESPAÑOL · CORTA >>>>>>>>>>
+
+Fija productos de cualquier tienda: título, precio, enlace y modelo en local con historial de precios. Gratis 50, Pro ilimitado.
+
+<<<<<<<<<< ESPAÑOL · DETALLADA >>>>>>>>>>
+
+VKT Item Pin es una extensión de investigación de compras que guarda fichas de producto con un clic: título, precio, enlace, modelo, sitio y fecha se guardan en una biblioteca local, con seguimiento automático del historial de precios.
+
+Comparar productos entre tiendas suele significar decenas de pestañas abiertas y copiar y pegar en hojas de cálculo. Con VKT Item Pin, solo pasa el cursor sobre un producto, pulsa el botón 📌 y crea una biblioteca con seguimiento de precios directamente en tu navegador.
+
+🎯 PASA EL CURSOR Y GUARDA
+En páginas de producto o en cuadrículas de resultados, pasa el cursor y pulsa Pin: título, precio, enlace, modelo, sitio y fecha se extraen automáticamente. El panel de vista previa permite editar los campos antes de guardar, y el modo «Pick» te deja hacer clic en cualquier elemento de la página para rellenar un campo que falte.
+
+📈 HISTORIAL DE PRECIOS + AVISOS DE PRECIO OBJETIVO
+Vuelve a abrir un producto ya fijado y el precio se registra solo: un punto por día, sin un segundo clic. Define un precio objetivo por producto y la primera visita que lo alcance mostrará una notificación del sistema, totalmente local, sin servidor ni correo. Los productos ya seguidos no consumen tu cuota gratuita.
+
+🛒 24 SITIOS PREDEFINIDOS + MOTOR UNIVERSAL
+Selectores afinados a mano para 24 de los marketplaces más populares del mundo, desde los gigantes internacionales hasta los favoritos regionales. El resto de tiendas (Shopify, WooCommerce, tiendas independientes) las cubre un motor universal: datos estructurados JSON-LD → etiquetas Open Graph → selectores genéricos → modo de selección manual.
+
+🗂 PANEL DE CONTROL
+Busca y organiza tu biblioteca por fecha o sitio, edita registros, corrige o elimina puntos de precio erróneos y consulta los gráficos de tendencia. Añade una nota y hasta 10 etiquetas por producto, ambas buscables, y consulta la franja resumen con las bajadas de los últimos 30 días y el valor total de una biblioteca de una sola moneda. Un clic salta a Google Shopping, eBay o Amazon para buscar el mismo título. Comparar (Pro) superpone el historial de hasta 6 productos en un solo gráfico.
+
+💾 TUS DATOS, EN TU NAVEGADOR
+Todo se guarda localmente con chrome.storage.local. Nada se sube, sin rastreo, sin analíticas. Exporta e importa una copia de seguridad JSON completa (con notas, etiquetas y precios objetivo) o exporta CSV (Pro) para hojas de cálculo. Un monitor de almacenamiento te avisa antes de quedarte sin espacio.
+
+🆓 PLAN GRATUITO
+50 productos, registro automático en cada visita, avisos de precio objetivo, notas y etiquetas, copia JSON, monitor de almacenamiento, 6 idiomas.
+
+⭐ PRO
+Productos ilimitados, filtros avanzados (sitio / etiqueta / rango de fechas / rango de precios), exportación CSV con notas y precios objetivo, comparación de varios productos (hasta 6 curvas en un gráfico).
+
+🔒 PRIVACIDAD PRIMERO
+Toda la extracción y el almacenamiento ocurren en tu navegador. La única solicitud de red es la validación opcional de la licencia Pro: al activarla y, mientras esté activa, como máximo una vez cada 2 horas. Nunca se lee ni se sube contenido de páginas web.
+
+🌍 Inglés, chino, japonés, español, alemán y francés.
+
+Compatible con Chrome, Edge y otros navegadores basados en Chromium. Manifest V3, permisos mínimos.
+
+<<<<<<<<<< DEUTSCH · KURZ >>>>>>>>>>
+
+Produkte von jeder Shopping-Seite anpinnen: Titel, Preis, Link und Modell lokal mit Preisverlauf. Gratis 50, Pro unbegrenzt.
+
+<<<<<<<<<< DEUTSCH · BESCHREIBUNG >>>>>>>>>>
+
+VKT Item Pin ist eine Shopping-Recherche-Erweiterung, die Produkt-Snapshots mit einem Klick speichert: Titel, Preis, Link, Modell, Seite und Datum landen in einer lokalen Bibliothek – mit automatischer Preisverlaufs-Verfolgung.
+
+Produkte über mehrere Shops zu vergleichen bedeutet sonst dutzende offene Tabs und Kopieren in Tabellen. Mit VKT Item Pin genügt es, mit der Maus über ein Produkt zu fahren und den 📌-Pin-Button zu klicken – so entsteht direkt im Browser eine wachsende, preisverfolgte Bibliothek.
+
+🎯 HOVERN UND SPEICHERN
+Auf Produktseiten oder in Suchergebnis-Rastern: Cursor über das Produkt, Pin klicken – Titel, Preis, Link, Modell, Seite und Datum werden automatisch extrahiert. Im Vorschaupanel lassen sich Felder vor dem Speichern bearbeiten; mit dem „Pick“-Modus klickst du ein beliebiges Element auf der Seite an, um ein fehlendes Feld zu füllen.
+
+📈 PREISVERLAUF + ZIELPREIS-ALARM
+Öffne eine bereits angepinnte Produktseite erneut – der Preis wird automatisch erfasst, ein Punkt pro Tag, ohne zweiten Klick. Lege einen Zielpreis pro Produkt fest: Der erste Besuch, der ihn erreicht oder unterschreitet, zeigt eine Desktop-Benachrichtigung – komplett lokal, ohne Server und ohne E-Mail. Verfolgte Produkte zählen nicht gegen dein Gratis-Kontingent.
+
+🛒 24 SEITEN-PRESETS + UNIVERSAL-ENGINE
+Handabgestimmte Selektoren für 24 der weltweit beliebtesten Marktplätze, von internationalen Giganten bis zu regionalen Favoriten. Alle anderen Shops (Shopify, WooCommerce, unabhängige Shops) deckt die Universal-Engine ab: JSON-LD-strukturierte Daten → Open-Graph-Tags → generische Selektoren → manueller Pick-Modus.
+
+🗂 DASHBOARD
+Durchsuche und organisiere deine Bibliothek nach Datum oder Seite, bearbeite Einträge, korrigiere oder entferne fehlerhafte Preispunkte und betrachte Trend-Charts. Notiz und bis zu 10 Tags pro Produkt, beides durchsuchbar, dazu eine Zusammenfassung oben mit den Preissenkungen der letzten 30 Tage und dem Gesamtwert einer Bibliothek mit einer Währung. Ein Klick springt zu Google Shopping, eBay oder Amazon für denselben Titel. Vergleichen (Pro) überlagert den Preisverlauf von bis zu 6 Produkten in einem Chart.
+
+💾 DEINE DATEN, DEIN BROWSER
+Alles wird lokal über chrome.storage.local gespeichert. Kein Upload, kein Tracking, keine Analytics. Volle JSON-Sicherung exportieren/importieren (inklusive Notizen, Tags und Zielpreisen) oder CSV-Export (Pro) für Tabellenkalkulationen. Ein Speichermonitor warnt, bevor der lokale Speicher voll wird.
+
+🆓 KOSTENLOSER PLAN
+50 Produkte, automatische Preiserfassung bei jedem Besuch, Zielpreis-Alarm, Notizen und Tags, JSON-Backup, Speichermonitor, 6 Sprachen.
+
+⭐ PRO
+Unbegrenzte Produkte, erweiterte Filter (Seite / Tag / Zeitraum / Preisspanne), CSV-Export mit Notizen und Zielpreisen, Mehrprodukt-Vergleich (bis zu 6 Kurven in einem Chart).
+
+🔒 PRIVATSPHÄRE ZUERST
+Extraktion und Speicherung erfolgen vollständig lokal in deinem Browser. Die einzige Netzwerkanfrage ist die optionale Lizenzprüfung: bei der Aktivierung und – solange die Lizenz aktiv ist – höchstens einmal alle 2 Stunden. Seiteninhalte werden niemals gelesen oder hochgeladen.
+
+🌍 Englisch, Chinesisch, Japanisch, Spanisch, Deutsch, Französisch.
+
+Funktioniert in Chrome, Edge und anderen Chromium-basierten Browsern. Manifest V3, minimale Berechtigungen.
+
+<<<<<<<<<< FRANÇAIS · COURTE >>>>>>>>>>
+
+Épinglez des produits de toute boutique : titre, prix, lien et modèle en local, avec historique de prix. Gratuit 50, Pro illimité.
+
+<<<<<<<<<< FRANÇAIS · DÉTAILLÉE >>>>>>>>>>
+
+VKT Item Pin est une extension de recherche shopping qui capture des fiches produit en un clic : titre, prix, lien, modèle, site et date sont enregistrés dans une bibliothèque locale, avec suivi automatique de l'historique des prix.
+
+Comparer des produits entre plusieurs boutiques, c'est habituellement des dizaines d'onglets ouverts et du copier-coller dans des tableurs. Avec VKT Item Pin, survolez simplement un produit, cliquez sur le bouton 📌 Épingler, et constituez une bibliothèque suivie dans le temps, directement dans votre navigateur.
+
+🎯 SURVOLEZ ET ÉPINGLEZ
+Sur une fiche produit ou dans une grille de résultats, survolez un produit et cliquez sur Épingler : titre, prix, lien, modèle, site et date sont extraits automatiquement. Le panneau d'aperçu permet de modifier les champs avant l'enregistrement, et le mode « Pick » vous laisse cliquer sur n'importe quel élément de la page pour renseigner un champ manquant.
+
+📈 HISTORIQUE DES PRIX + ALERTES DE PRIX CIBLE
+Rouvrez une fiche produit déjà épinglée : le prix est relevé automatiquement, un point par jour, sans second clic. Fixez un prix cible par produit : la première visite qui l'atteint ou passe en dessous affiche une notification système, entièrement locale, sans serveur ni e-mail. Les produits déjà suivis ne consomment pas votre quota gratuit.
+
+🛒 24 SITES PRÉCONFIGURÉS + MOTEUR UNIVERSEL
+Sélecteurs optimisés à la main pour 24 des places de marché les plus populaires au monde, des géants internationaux aux favoris régionaux. Toutes les autres boutiques (Shopify, WooCommerce, boutiques indépendantes) sont couvertes par un moteur universel : données structurées JSON-LD → balises Open Graph → sélecteurs génériques → mode de sélection manuelle.
+
+🗂 TABLEAU DE BORD
+Recherchez et organisez votre bibliothèque par date ou par site, modifiez les enregistrements, corrigez ou supprimez les points de prix erronés et consultez les graphiques de tendance. Ajoutez une note et jusqu'à 10 étiquettes par produit, les deux cherchables, et lisez un bandeau récapitulatif avec les baisses des 30 derniers jours et la valeur totale d'une bibliothèque en une seule devise. Un clic ouvre Google Shopping, eBay ou Amazon pour le même titre. Comparer (Pro) superpose l'historique des prix de 6 produits dans un même graphique.
+
+💾 VOS DONNÉES, VOTRE NAVIGATEUR
+Tout est stocké localement via chrome.storage.local. Rien n'est envoyé, pas de traçage, pas d'analytique. Exportez/importez une sauvegarde JSON complète (notes, étiquettes et prix cible inclus) ou exportez en CSV (Pro) pour vos tableurs. Un moniteur de stockage vous alerte avant que le stockage local ne soit plein.
+
+🆓 FORMULE GRATUITE
+50 produits, relevé automatique à chaque visite, alertes de prix cible, notes et étiquettes, sauvegarde JSON, moniteur de stockage, 6 langues.
+
+⭐ PRO
+Produits illimités, filtres avancés (site / étiquette / période / fourchette de prix), export CSV avec notes et prix cible, comparaison multi-produits (jusqu'à 6 courbes dans un même graphique).
+
+🔒 CONFIDENTIALITÉ D'ABORD
+Toute l'extraction et le stockage se font localement dans votre navigateur. La seule requête réseau est la validation facultative de licence : à l'activation, puis au plus une fois toutes les 2 heures tant que la licence est active. Aucun contenu de page Web n'est jamais lu ni envoyé.
+
+🌍 Anglais, chinois, japonais, espagnol, allemand, français.
+
+Compatible avec Chrome, Edge et les autres navigateurs basés sur Chromium. Manifest V3, permissions minimales.

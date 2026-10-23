@@ -75,12 +75,12 @@ Comparing products across shopping sites usually means dozens of open tabs and c
 
 ## Installation
 
-1. Open your browser's extension page:
-   - **Chrome**: `chrome://extensions/`
-   - **Edge**: `edge://extensions/`
-2. Enable **Developer mode** (top-right toggle)
-3. Click **Load unpacked** and select the `vkt-item-pin` folder
-4. Hover any product on a shopping page and click the 📌 Pin button
+| Store | Link |
+|---|---|
+| Chrome Web Store | [Install for Chrome](https://chromewebstore.google.com/detail/ijimihnecmjmgllhibaljdocbkhfmjca) |
+| Microsoft Edge Add-ons | [Install for Edge](https://microsoftedge.microsoft.com/addons/detail/ahgadlbdecpnpbjiajmaepekmehccpgh) |
+
+> Install only from the official stores above — avoid third-party download sites.
 
 ---
 
@@ -107,19 +107,11 @@ Comparing products across shopping sites usually means dozens of open tabs and c
 
 ## How It Works
 
-```
-Hover a product → click Pin
-       ↓
-Extractors run (JSON-LD → site preset → generic → regex)
-       ↓
-Preview panel: edit / pick fields
-       ↓
-Saved to chrome.storage.local (URL normalized & de-duplicated)
-       ↓
-Revisit the same product → price recorded automatically (1 point / day)
-       ↓
-Dropped to your target? desktop notification → trend chart in dashboard
-```
+1. Hover a product and click the 📌 Pin button.
+2. Check the preview panel and edit or pick the fields you want to keep.
+3. The item is saved in your browser; repeated links are merged into a single entry.
+4. Revisit the same product and its price is recorded automatically, one point per day.
+5. When it drops to your target you get a desktop notification, and the dashboard charts the trend.
 
 All extraction and storage happen locally in your browser. Network access is limited to two optional cases: (1) when you activate or validate a Pro license key, the extension contacts the license server with your key and basic browser metadata (browser, language, timezone); (2) when the popup or dashboard shows a saved product thumbnail, your browser loads that image directly from the original store's URL. No webpage content or captured data is ever uploaded.
 

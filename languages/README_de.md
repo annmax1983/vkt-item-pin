@@ -65,10 +65,12 @@ Produktvergleiche über Einkaufsseiten hinweg bedeuten meist Dutzende offene Tab
 
 ## Installation
 
-1. Erweiterungsseite öffnen: **Chrome** `chrome://extensions/` · **Edge** `edge://extensions/`
-2. **Entwicklermodus** aktivieren (Schalter oben rechts)
-3. Auf **Entpackte Erweiterung laden** klicken und den Ordner `vkt-item-pin` auswählen
-4. Über ein beliebiges Produkt fahren und auf die 📌-Schaltfläche klicken
+| Store | Link |
+|---|---|
+| Chrome Web Store | [In Chrome installieren](https://chromewebstore.google.com/detail/ijimihnecmjmgllhibaljdocbkhfmjca) |
+| Microsoft Edge Add-ons | [In Edge installieren](https://microsoftedge.microsoft.com/addons/detail/ahgadlbdecpnpbjiajmaepekmehccpgh) |
+
+> Installieren Sie nur über die offiziellen Stores oben – meiden Sie Download-Seiten Dritter.
 
 ---
 

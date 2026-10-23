@@ -75,10 +75,12 @@ Comparer des produits entre sites marchands, c'est souvent des dizaines d'onglet
 
 ## Installation
 
-1. Ouvrez la page des extensions : **Chrome** `chrome://extensions/` · **Edge** `edge://extensions/`
-2. Activez le **Mode développeur** (interrupteur en haut à droite)
-3. Cliquez sur **Charger l'extension non empaquetée** et sélectionnez le dossier `vkt-item-pin`
-4. Survolez n'importe quel produit et cliquez sur le bouton 📌 Pin
+| Store | Lien |
+|---|---|
+| Chrome Web Store | [Installer dans Chrome](https://chromewebstore.google.com/detail/ijimihnecmjmgllhibaljdocbkhfmjca) |
+| Microsoft Edge Add-ons | [Installer dans Edge](https://microsoftedge.microsoft.com/addons/detail/ahgadlbdecpnpbjiajmaepekmehccpgh) |
+
+> Installez uniquement depuis les boutiques officielles ci-dessus — évitez les sites de téléchargement tiers.
 
 ---
 
