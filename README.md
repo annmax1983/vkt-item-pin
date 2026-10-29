@@ -4,7 +4,7 @@ English | [中文](languages/README_zh.md) | [Español](languages/README_es.md) 
 
 A shopping research extension that captures product snapshots with one hover: title, price, link, model, site and date are saved to a local library, with automatic price-history tracking.
 
-> Chromium-based · Manifest V3 · Minimal Permissions · No Tracking · 100% Local
+> Chrome · Edge · Firefox · Manifest V3 · Minimal Permissions · No Tracking · 100% Local
 
 ---
 
@@ -21,7 +21,7 @@ Comparing products across shopping sites usually means dozens of open tabs and c
 | 🛒 **24 Site Presets** | Hand-tuned selectors for Amazon, eBay, Etsy, Walmart, AliExpress, Temu and more — plus a universal engine (JSON-LD / OG / generic selectors) for every other shop |
 | 🏷 **Notes & Tags** | Keep the reasoning ("wait for Black Friday") and organize with up to 10 tags per item — all searchable |
 | 🖼️ **Thumbnails** | Product images are saved with each record |
-| 🔒 **Privacy First** | All data stays in your browser via `chrome.storage.local`. Nothing is uploaded |
+| 🔒 **Privacy First** | All data stays in your browser via the extension's local storage. Nothing is uploaded |
 
 ---
 
@@ -65,11 +65,14 @@ Comparing products across shopping sites usually means dozens of open tabs and c
 
 ## Supported Browsers
 
-| Browser | Status |
-|---------|--------|
-| Google Chrome | ✅ Fully supported |
-| Microsoft Edge | ✅ Fully supported |
-| Other Chromium-based browsers | ✅ Should work |
+| Browser | Status | Notes |
+|---------|--------|-------|
+| Google Chrome | ✅ Fully supported | Manifest V3 |
+| Microsoft Edge | ✅ Fully supported | Manifest V3 |
+| Mozilla Firefox | ✅ Fully supported | Manifest V3, Firefox 140+ (desktop) |
+| Other Chromium-based browsers | ✅ Should work | Manifest V3 |
+
+> **Firefox note:** hover capture, the capture preview, automatic price tracking, target-price notifications, price history, notes & tags, the dashboard and JSON backup all work the same way. The UI is the same toolbar **popup** on Chrome, Edge and Firefox — the only difference is the background implementation (service worker on Chromium, event page on Firefox). Firefox asks for `activeTab`, `scripting`, `storage`, `notifications`, `<all_urls>` and `https://api.annmax1983.com/*` (optional Pro license validation) — the same set as Chrome and Edge.
 
 ---
 
@@ -79,6 +82,7 @@ Comparing products across shopping sites usually means dozens of open tabs and c
 |---|---|
 | Chrome Web Store | [Install for Chrome](https://chromewebstore.google.com/detail/ijimihnecmjmgllhibaljdocbkhfmjca) |
 | Microsoft Edge Add-ons | [Install for Edge](https://microsoftedge.microsoft.com/addons/detail/ahgadlbdecpnpbjiajmaepekmehccpgh) |
+| Firefox Add-ons (AMO) | 🔜 Under review — link will be added once the listing is live |
 
 > Install only from the official stores above — avoid third-party download sites.
 
@@ -89,7 +93,7 @@ Comparing products across shopping sites usually means dozens of open tabs and c
 ### Capture a Product
 
 1. Hover any product (on a detail page **or** in a search-result grid) — a 📌 button appears
-2. Click it — a side panel opens with the extracted title, price, link, model, site and date
+2. Click it — a panel opens with the extracted title, price, link, model, site and date (side panel on Chrome / Edge, popup on Firefox)
 3. Correct anything, use **Pick** to grab a missing field, then click **Save**
 
 ### Track Prices

@@ -4,7 +4,7 @@
 
 Une extension de navigateur pour la recherche shopping : capturez des fiches produits d'un simple survol. Titre, prix, lien, modèle, site et date sont enregistrés dans une bibliothèque locale, avec suivi automatique de l'historique des prix.
 
-> Basé sur Chromium · Manifest V3 · Autorisations minimales · Aucun tracking · 100 % local
+> Chrome / Edge / Firefox · Manifest V3 · Autorisations minimales · Aucun tracking · 100 % local
 
 ---
 
@@ -21,7 +21,7 @@ Comparer des produits entre sites marchands, c'est souvent des dizaines d'onglet
 | 🛒 **24 sites préconfigurés** | Sélecteurs ajustés pour Amazon, eBay, Etsy, Walmart, AliExpress, Temu et plus — plus un moteur universel (JSON-LD / OG / sélecteurs génériques) pour toutes les autres boutiques |
 | 🏷 **Notes et étiquettes** | Notez la raison (« attendre le Black Friday ») et classez avec jusqu'à 10 étiquettes par produit, toutes cherchables |
 | 🖼️ **Vignettes** | L'image du produit est enregistrée avec chaque fiche |
-| 🔒 **Confidentialité d'abord** | Toutes les données restent dans votre navigateur via `chrome.storage.local`. Rien n'est envoyé en ligne |
+| 🔒 **Confidentialité d'abord** | Toutes les données restent dans votre navigateur via `storage.local`. Rien n'est envoyé en ligne |
 
 ---
 
@@ -69,7 +69,10 @@ Comparer des produits entre sites marchands, c'est souvent des dizaines d'onglet
 |------------|--------|
 | Google Chrome | ✅ Entièrement pris en charge |
 | Microsoft Edge | ✅ Entièrement pris en charge |
+| Mozilla Firefox | ✅ Entièrement pris en charge |
 | Autres navigateurs Chromium | ✅ Devrait fonctionner |
+
+> **Note Firefox :** la capture au survol, l’aperçu, le suivi automatique des prix, les alertes de prix cible, l’historique des prix, les notes et étiquettes, la bibliothèque et la sauvegarde JSON se comportent de la même façon sur les trois navigateurs. Chrome, Edge et Firefox utilisent la même interface en **popup de la barre d’outils** ; seule l’implémentation en arrière-plan diffère (service worker sur Chromium, page d’événements sur Firefox). Firefox demande `activeTab`, `scripting`, `storage`, `notifications`, `<all_urls>` et `https://api.annmax1983.com/*` (validation de licence Pro facultative) : exactement le même ensemble que Chrome et Edge.
 
 ---
 
@@ -79,6 +82,7 @@ Comparer des produits entre sites marchands, c'est souvent des dizaines d'onglet
 |---|---|
 | Chrome Web Store | [Installer dans Chrome](https://chromewebstore.google.com/detail/ijimihnecmjmgllhibaljdocbkhfmjca) |
 | Microsoft Edge Add-ons | [Installer dans Edge](https://microsoftedge.microsoft.com/addons/detail/ahgadlbdecpnpbjiajmaepekmehccpgh) |
+| Modules complémentaires Firefox (AMO) | 🔜 En cours d’examen — le lien sera ajouté après publication |
 
 > Installez uniquement depuis les boutiques officielles ci-dessus — évitez les sites de téléchargement tiers.
 

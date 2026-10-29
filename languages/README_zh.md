@@ -4,7 +4,7 @@
 
 一款购物调研浏览器扩展：悬停商品一键采集快照——标题、价格、链接、型号、站点、日期自动保存到本地资料库，并自动跟踪价格历史。
 
-> 基于 Chromium · Manifest V3 · 最小权限 · 无追踪 · 100% 本地
+> Chrome / Edge / Firefox · Manifest V3 · 最小权限 · 无追踪 · 100% 本地
 
 ---
 
@@ -21,7 +21,7 @@
 | 🛒 **24 站点预设** | Amazon、eBay、Etsy、Walmart、速卖通、Temu 等手调选择器，其余站点走通用引擎（JSON-LD / OG / 通用选择器） |
 | 🏷 **备注与标签** | 记下「等黑五再买」这类理由，每件最多 10 个标签，全部可搜索 |
 | 🖼️ **商品缩略图** | 每条记录保存商品图片 |
-| 🔒 **隐私优先** | 数据仅存浏览器本地（`chrome.storage.local`），绝不上传 |
+| 🔒 **隐私优先** | 数据仅存浏览器本地（`storage.local`），绝不上传 |
 
 ---
 
@@ -69,7 +69,10 @@
 |--------|------|
 | Google Chrome | ✅ 完整支持 |
 | Microsoft Edge | ✅ 完整支持 |
+| Mozilla Firefox | ✅ 完全支持 |
 | 其它 Chromium 内核浏览器 | ✅ 应可正常工作 |
+
+> **Firefox 说明：** 悬停采集、采集预览、自动价格跟踪、目标价通知、价格历史、备注与标签、资料库与 JSON 备份在三大浏览器上的表现一致。Chrome、Edge 与 Firefox 都使用同一个**工具栏弹窗**界面，差别只在于后台实现（Chromium 为 service worker，Firefox 为事件页）。Firefox 申请 `activeTab`、`scripting`、`storage`、`notifications`、`<all_urls>` 与 `https://api.annmax1983.com/*`（可选的 Pro 授权校验），与 Chrome / Edge 相同。
 
 ---
 
@@ -79,6 +82,7 @@
 |---|---|
 | Chrome 应用商店 | [在 Chrome 中安装](https://chromewebstore.google.com/detail/ijimihnecmjmgllhibaljdocbkhfmjca) |
 | Microsoft Edge 加载项 | [在 Edge 中安装](https://microsoftedge.microsoft.com/addons/detail/ahgadlbdecpnpbjiajmaepekmehccpgh) |
+| Firefox 附加组件（AMO） | 🔜 审核中，上架后补充链接 |
 
 > 请只通过上方官方商店安装，避免使用第三方下载站。
 

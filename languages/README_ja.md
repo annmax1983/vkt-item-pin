@@ -4,7 +4,7 @@
 
 ショッピングリサーチ用ブラウザ拡張：商品にカーソルを合わせるだけでスナップショットを保存。タイトル・価格・リンク・型番・サイト・日付をローカルライブラリに記録し、価格履歴も自動で追跡します。
 
-> Chromium ベース · Manifest V3 · 最小権限 · トラッキングなし · 100% ローカル
+> Chrome / Edge / Firefox · Manifest V3 · 最小権限 · トラッキングなし · 100% ローカル
 
 ---
 
@@ -21,7 +21,7 @@
 | 🛒 **24 サイト対応** | Amazon・eBay・Etsy・Walmart・AliExpress・Temu などを手動チューニング。その他のサイトは汎用エンジン（JSON-LD / OG / 汎用セレクタ）で対応 |
 | 🏷 **メモ & タグ** | 「ブラックフライデーまで待つ」などの理由を残せ、タグは 1 商品 10 個まで。どちらも検索できます |
 | 🖼️ **サムネイル** | 商品画像も記録と一緒に保存 |
-| 🔒 **プライバシー優先** | データは `chrome.storage.local` でブラウザ内にのみ保存。アップロードは一切なし |
+| 🔒 **プライバシー優先** | データは `storage.local` でブラウザ内にのみ保存。アップロードは一切なし |
 
 ---
 
@@ -69,7 +69,10 @@
 |----------|------|
 | Google Chrome | ✅ 完全対応 |
 | Microsoft Edge | ✅ 完全対応 |
+| Mozilla Firefox | ✅ 完全対応 |
 | その他 Chromium 系ブラウザ | ✅ 動作するはずです |
+
+> **Firefox について：** ホバーでの採取、プレビュー、自動価格追跡、目標価格通知、価格履歴、メモとタグ、ライブラリ、JSON バックアップはいずれも 3 ブラウザで同じ動作です。Chrome・Edge・Firefox はいずれも同じ**ツールバーのポップアップ**界面を使い、違いはバックグラウンドの実装（Chromium は service worker、Firefox はイベントページ）だけです。Firefox は `activeTab`、`scripting`、`storage`、`notifications`、`<all_urls>`、`https://api.annmax1983.com/*`（任意の Pro ライセンス検証）を要求し、Chrome / Edge と同じです。
 
 ---
 
@@ -79,6 +82,7 @@
 |---|---|
 | Chrome ウェブストア | [Chrome に追加](https://chromewebstore.google.com/detail/ijimihnecmjmgllhibaljdocbkhfmjca) |
 | Microsoft Edge アドオン | [Edge に追加](https://microsoftedge.microsoft.com/addons/detail/ahgadlbdecpnpbjiajmaepekmehccpgh) |
+| Firefox アドオン（AMO） | 🔜 審査中 — 公開後にリンクを追加します |
 
 > 上記の公式ストアからのみインストールしてください。第三者サイトの利用は避けてください。
 

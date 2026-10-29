@@ -4,7 +4,7 @@
 
 Eine Browser-Erweiterung für die Produktrecherche: Erfasst Produkt-Snapshots per Mauszeiger. Titel, Preis, Link, Modell, Website und Datum werden in einer lokalen Bibliothek gespeichert – inklusive automatischer Preisverlaufs-Verfolgung.
 
-> Chromium-basiert · Manifest V3 · Minimale Berechtigungen · Kein Tracking · 100 % lokal
+> Chrome / Edge / Firefox · Manifest V3 · Minimale Berechtigungen · Kein Tracking · 100 % lokal
 
 ---
 
@@ -21,7 +21,7 @@ Produktvergleiche über Einkaufsseiten hinweg bedeuten meist Dutzende offene Tab
 | 🛒 **24 Website-Voreinstellungen** | Feinabgestimmte Selektoren für Amazon, eBay, Etsy, Walmart, AliExpress, Temu u. v. m. – plus Universal-Engine (JSON-LD / OG / generische Selektoren) für alle anderen Shops |
 | 🏷 **Notizen & Tags** | Begründung notieren („bis Black Friday warten“) und mit bis zu 10 Tags ordnen – beides durchsuchbar |
 | 🖼️ **Vorschaubilder** | Produktbilder werden mit jedem Eintrag gespeichert |
-| 🔒 **Privatsphäre zuerst** | Alle Daten bleiben über `chrome.storage.local` im Browser. Nichts wird hochgeladen |
+| 🔒 **Privatsphäre zuerst** | Alle Daten bleiben über `storage.local` im Browser. Nichts wird hochgeladen |
 
 ---
 
@@ -63,12 +63,26 @@ Produktvergleiche über Einkaufsseiten hinweg bedeuten meist Dutzende offene Tab
 
 ---
 
+## Unterstützte Browser
+
+| Browser | Status |
+|--------|--------|
+| Google Chrome | ✅ Vollständig unterstützt |
+| Microsoft Edge | ✅ Vollständig unterstützt |
+| Mozilla Firefox | ✅ Vollständig unterstützt |
+| Andere Chromium-basierte Browser | ✅ Sollte funktionieren |
+
+> **Firefox-Hinweis:** Erfassung per Hover, Vorschau, automatische Preisverfolgung, Zielpreis-Benachrichtigungen, Preisverlauf, Notizen und Tags, Bibliothek und JSON-Backup verhalten sich in allen drei Browsern gleich. Chrome, Edge und Firefox verwenden dieselbe **Symbolleisten-Popup**-Oberfläche; der einzige Unterschied ist die Hintergrund-Implementierung (Service Worker unter Chromium, Event Page unter Firefox). Firefox fragt `activeTab`, `scripting`, `storage`, `notifications`, `<all_urls>` und `https://api.annmax1983.com/*` (optionale Pro-Lizenzprüfung) an – also dieselbe Liste wie Chrome und Edge.
+
+---
+
 ## Installation
 
 | Store | Link |
 |---|---|
 | Chrome Web Store | [In Chrome installieren](https://chromewebstore.google.com/detail/ijimihnecmjmgllhibaljdocbkhfmjca) |
 | Microsoft Edge Add-ons | [In Edge installieren](https://microsoftedge.microsoft.com/addons/detail/ahgadlbdecpnpbjiajmaepekmehccpgh) |
+| Firefox-Add-ons (AMO) | 🔜 In Prüfung – Link folgt nach der Freigabe |
 
 > Installieren Sie nur über die offiziellen Stores oben – meiden Sie Download-Seiten Dritter.
 

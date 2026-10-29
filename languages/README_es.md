@@ -4,7 +4,7 @@
 
 Una extensión de navegador para investigar compras: captura instantáneas de productos con solo pasar el cursor. El título, el precio, el enlace, el modelo, el sitio y la fecha se guardan en una biblioteca local, con seguimiento automático del historial de precios.
 
-> Basado en Chromium · Manifest V3 · Permisos mínimos · Sin rastreo · 100 % local
+> Chrome / Edge / Firefox · Manifest V3 · Permisos mínimos · Sin rastreo · 100 % local
 
 ---
 
@@ -21,7 +21,7 @@ Comparar productos entre tiendas suele significar decenas de pestañas abiertas 
 | 🛒 **24 sitios preconfigurados** | Selectores ajustados para Amazon, eBay, Etsy, Walmart, AliExpress, Temu y más, además de un motor universal (JSON-LD / OG / selectores genéricos) para cualquier otra tienda |
 | 🏷 **Notas y etiquetas** | Anota el motivo («esperar al Black Friday») y organiza con hasta 10 etiquetas por producto, todo buscable |
 | 🖼️ **Miniaturas** | Cada registro guarda la imagen del producto |
-| 🔒 **Privacidad primero** | Todos los datos permanecen en tu navegador con `chrome.storage.local`. No se sube nada |
+| 🔒 **Privacidad primero** | Todos los datos permanecen en tu navegador con `storage.local`. No se sube nada |
 
 ---
 
@@ -63,12 +63,26 @@ Comparar productos entre tiendas suele significar decenas de pestañas abiertas 
 
 ---
 
+## Navegadores compatibles
+
+| Navegador | Estado |
+|---------|--------|
+| Google Chrome | ✅ Totalmente compatible |
+| Microsoft Edge | ✅ Totalmente compatible |
+| Mozilla Firefox | ✅ Totalmente compatible |
+| Otros navegadores basados en Chromium | ✅ Debería funcionar |
+
+> **Nota sobre Firefox:** la captura al pasar el cursor, la vista previa, el seguimiento automático de precios, las alertas de precio objetivo, el historial de precios, las notas y etiquetas, la biblioteca y la copia JSON se comportan igual en los tres navegadores. Chrome, Edge y Firefox usan la misma interfaz de **ventana emergente de la barra de herramientas**; la única diferencia es la implementación en segundo plano (service worker en Chromium, página de eventos en Firefox). Firefox solicita `activeTab`, `scripting`, `storage`, `notifications`, `<all_urls>` y `https://api.annmax1983.com/*` (validación opcional de licencia Pro): el mismo conjunto que Chrome y Edge.
+
+---
+
 ## Instalación
 
 | Tienda | Enlace |
 |---|---|
 | Chrome Web Store | [Instalar en Chrome](https://chromewebstore.google.com/detail/ijimihnecmjmgllhibaljdocbkhfmjca) |
 | Complementos de Microsoft Edge | [Instalar en Edge](https://microsoftedge.microsoft.com/addons/detail/ahgadlbdecpnpbjiajmaepekmehccpgh) |
+| Complementos de Firefox (AMO) | 🔜 En revisión: el enlace se añadirá al publicarse |
 
 > Instale solo desde las tiendas oficiales de arriba; evite sitios de descarga de terceros.
 
