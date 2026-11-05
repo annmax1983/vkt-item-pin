@@ -82,7 +82,7 @@ Produktvergleiche über Einkaufsseiten hinweg bedeuten meist Dutzende offene Tab
 |---|---|
 | Chrome Web Store | [In Chrome installieren](https://chromewebstore.google.com/detail/ijimihnecmjmgllhibaljdocbkhfmjca) |
 | Microsoft Edge Add-ons | [In Edge installieren](https://microsoftedge.microsoft.com/addons/detail/ahgadlbdecpnpbjiajmaepekmehccpgh) |
-| Firefox-Add-ons (AMO) | 🔜 In Prüfung – Link folgt nach der Freigabe |
+| Firefox-Add-ons (AMO) | [Für Firefox installieren](https://addons.mozilla.org/firefox/addon/vkt-item-pin/) |
 
 > Installieren Sie nur über die offiziellen Stores oben – meiden Sie Download-Seiten Dritter.
 
@@ -129,4 +129,10 @@ Copyright © 2026 VKT Item Pin. Alle Rechte vorbehalten.
 
 Wenn Ihnen VKT Item Pin hilft, unterstützen Sie das Projekt!
 
-**[👉 Lizenzschlüssel holen](https://www.annmax1983.com/checkout.html?plugin=itempin)** · [GitHub](https://github.com/annmax1983/ItemPin) · [Offizielle Website](https://www.annmax1983.com/extensions/itempin)
+**[👉 Lizenzschlüssel holen](https://annmax1983.com/checkout?plugin=itempin)** · [GitHub](https://github.com/annmax1983/ItemPin) · [Offizielle Website](https://www.annmax1983.com/extensions/itempin)
+
+---
+
+## Links
+
+- **☕ Projekt unterstützen (Ko-fi):** https://ko-fi.com/annmax?ref=vkt-item-pin

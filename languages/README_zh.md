@@ -82,7 +82,7 @@
 |---|---|
 | Chrome 应用商店 | [在 Chrome 中安装](https://chromewebstore.google.com/detail/ijimihnecmjmgllhibaljdocbkhfmjca) |
 | Microsoft Edge 加载项 | [在 Edge 中安装](https://microsoftedge.microsoft.com/addons/detail/ahgadlbdecpnpbjiajmaepekmehccpgh) |
-| Firefox 附加组件（AMO） | 🔜 审核中，上架后补充链接 |
+| Firefox 附加组件（AMO） | [安装 Firefox 版](https://addons.mozilla.org/firefox/addon/vkt-item-pin/) |
 
 > 请只通过上方官方商店安装，避免使用第三方下载站。
 
@@ -141,4 +141,10 @@ Copyright © 2026 VKT Item Pin. 保留所有权利。
 
 如果 VKT Item Pin 对您有帮助，欢迎支持这个项目！
 
-**[👉 获取激活密钥](https://www.annmax1983.com/checkout.html?plugin=itempin)** · [GitHub](https://github.com/annmax1983/ItemPin) · [官网](https://www.annmax1983.com/extensions/itempin)
+**[👉 获取激活密钥](https://annmax1983.com/checkout?plugin=itempin)** · [GitHub](https://github.com/annmax1983/ItemPin) · [官网](https://www.annmax1983.com/extensions/itempin)
+
+---
+
+## 链接
+
+- **☕ 支持这个项目（Ko-fi）:** https://ko-fi.com/annmax?ref=vkt-item-pin

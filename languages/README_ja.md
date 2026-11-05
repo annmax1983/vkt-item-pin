@@ -82,7 +82,7 @@
 |---|---|
 | Chrome ウェブストア | [Chrome に追加](https://chromewebstore.google.com/detail/ijimihnecmjmgllhibaljdocbkhfmjca) |
 | Microsoft Edge アドオン | [Edge に追加](https://microsoftedge.microsoft.com/addons/detail/ahgadlbdecpnpbjiajmaepekmehccpgh) |
-| Firefox アドオン（AMO） | 🔜 審査中 — 公開後にリンクを追加します |
+| Firefox アドオン（AMO） | [Firefox 版をインストール](https://addons.mozilla.org/firefox/addon/vkt-item-pin/) |
 
 > 上記の公式ストアからのみインストールしてください。第三者サイトの利用は避けてください。
 
@@ -141,4 +141,10 @@ Copyright © 2026 VKT Item Pin. All rights reserved.
 
 VKT Item Pin が役に立ったら、プロジェクトの支援をご検討ください！
 
-**[👉 ライセンスキーを入手](https://www.annmax1983.com/checkout.html?plugin=itempin)** · [GitHub](https://github.com/annmax1983/ItemPin) · [公式サイト](https://www.annmax1983.com/extensions/itempin)
+**[👉 ライセンスキーを入手](https://annmax1983.com/checkout?plugin=itempin)** · [GitHub](https://github.com/annmax1983/ItemPin) · [公式サイト](https://www.annmax1983.com/extensions/itempin)
+
+---
+
+## リンク
+
+- **☕ 開発を支援（Ko-fi）:** https://ko-fi.com/annmax?ref=vkt-item-pin

@@ -82,7 +82,7 @@ Comparer des produits entre sites marchands, c'est souvent des dizaines d'onglet
 |---|---|
 | Chrome Web Store | [Installer dans Chrome](https://chromewebstore.google.com/detail/ijimihnecmjmgllhibaljdocbkhfmjca) |
 | Microsoft Edge Add-ons | [Installer dans Edge](https://microsoftedge.microsoft.com/addons/detail/ahgadlbdecpnpbjiajmaepekmehccpgh) |
-| Modules complémentaires Firefox (AMO) | 🔜 En cours d’examen — le lien sera ajouté après publication |
+| Modules complémentaires Firefox (AMO) | [Installer pour Firefox](https://addons.mozilla.org/firefox/addon/vkt-item-pin/) |
 
 > Installez uniquement depuis les boutiques officielles ci-dessus — évitez les sites de téléchargement tiers.
 
@@ -129,4 +129,10 @@ Copyright © 2026 VKT Item Pin. Tous droits réservés.
 
 Si VKT Item Pin vous est utile, pensez à soutenir le projet !
 
-**[👉 Obtenir une clé de licence](https://www.annmax1983.com/checkout.html?plugin=itempin)** · [GitHub](https://github.com/annmax1983/ItemPin) · [Site officiel](https://www.annmax1983.com/extensions/itempin)
+**[👉 Obtenir une clé de licence](https://annmax1983.com/checkout?plugin=itempin)** · [GitHub](https://github.com/annmax1983/ItemPin) · [Site officiel](https://www.annmax1983.com/extensions/itempin)
+
+---
+
+## Liens
+
+- **☕ Soutenir le projet (Ko-fi):** https://ko-fi.com/annmax?ref=vkt-item-pin

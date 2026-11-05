@@ -82,7 +82,7 @@ Comparing products across shopping sites usually means dozens of open tabs and c
 |---|---|
 | Chrome Web Store | [Install for Chrome](https://chromewebstore.google.com/detail/ijimihnecmjmgllhibaljdocbkhfmjca) |
 | Microsoft Edge Add-ons | [Install for Edge](https://microsoftedge.microsoft.com/addons/detail/ahgadlbdecpnpbjiajmaepekmehccpgh) |
-| Firefox Add-ons (AMO) | 🔜 Under review — link will be added once the listing is live |
+| Firefox Add-ons (AMO) | [Install for Firefox](https://addons.mozilla.org/firefox/addon/vkt-item-pin/) |
 
 > Install only from the official stores above — avoid third-party download sites.
 
@@ -93,7 +93,7 @@ Comparing products across shopping sites usually means dozens of open tabs and c
 ### Capture a Product
 
 1. Hover any product (on a detail page **or** in a search-result grid) — a 📌 button appears
-2. Click it — a panel opens with the extracted title, price, link, model, site and date (side panel on Chrome / Edge, popup on Firefox)
+2. Click it — a panel opens with the extracted title, price, link, model, site and date (a floating panel inside the page)
 3. Correct anything, use **Pick** to grab a missing field, then click **Save**
 
 ### Track Prices
@@ -141,4 +141,14 @@ Copyright © 2026 VKT Item Pin. All rights reserved.
 
 If you find VKT Item Pin helpful, consider supporting the project!
 
-**[👉 Get a License Key](https://www.annmax1983.com/checkout.html?plugin=itempin)** · [GitHub](https://github.com/annmax1983/ItemPin) · [Official Website](https://www.annmax1983.com/extensions/itempin)
+**[👉 Get a License Key](https://annmax1983.com/checkout?plugin=itempin)** · [GitHub](https://github.com/annmax1983/ItemPin) · [Official Website](https://www.annmax1983.com/extensions/itempin)
+
+---
+
+## Links
+
+- **Official website:** https://annmax1983.com/
+- **This extension:** https://annmax1983.com/extensions/itempin
+- **Privacy policy:** https://annmax1983.com/privacy
+- **Contact:** support@annmax1983.com
+- **☕ Support this project (Ko-fi):** https://ko-fi.com/annmax?ref=itempin
