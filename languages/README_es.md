@@ -36,11 +36,13 @@ Comparar productos entre tiendas suele significar decenas de pestañas abiertas 
 | 🔁 **Historial automático** | Al abrir de nuevo un producto fijado, el precio se registra en segundo plano: un punto por día como máximo |
 | 🔔 **Alerta de precio objetivo** | Define un precio objetivo por producto; la captura que lo alcanza por primera vez lanza una notificación del sistema (todo local) |
 | 📈 **Historial de precios** | Recapturas ilimitadas en productos seguidos, con gráfica de tendencia por producto |
-| 🏷 **Notas y etiquetas** | Una nota libre y hasta 10 etiquetas por producto; ambas son buscables y filtrables |
+| 🏷 **Notas y etiquetas** | Una nota libre y hasta 10 etiquetas por producto; se pueden buscar, filtrar y exportar |
+| 🔍 **Filtros y orden** | Filtra por sitio o etiqueta y ordena por última actividad, mayor bajada o precio |
 | 📊 **Estadísticas** | Franja resumen: cuántos productos bajaron en 30 días y el valor total de una biblioteca de una sola moneda |
 | 🧭 **Comparar fuera** | Un clic para buscar el mismo título en Google Shopping, eBay o Amazon |
 | ✏️ **Editar registros** | Corrige títulos y modelos, corrige o elimina puntos de precio erróneos, cambia notas, etiquetas y precio objetivo |
 | 💾 **Copia JSON** | Exporta / importa una copia completa de tu biblioteca (sin conexión), incluidas notas, etiquetas y precios objetivo |
+| 📤 **Exportar CSV** | Formato largo (una fila por punto de precio, con BOM, compatible con Excel) incluyendo notas, etiquetas y precio objetivo |
 | 🧮 **Monitor de almacenamiento** | Muestra el uso real y avisa antes de llenarse |
 | 🌍 **6 idiomas** | Inglés, chino, japonés, español, alemán, francés |
 
@@ -49,8 +51,7 @@ Comparar productos entre tiendas suele significar decenas de pestañas abiertas 
 | Función | Descripción |
 |---------|-------------|
 | ♾️ **Productos ilimitados** | El plan gratuito cubre 50 productos; Pro elimina el límite (las recapturas nunca cuentan) |
-| 🔍 **Filtros avanzados** | Filtra por sitio, etiqueta, rango de fechas y rango de precios |
-| 📤 **Exportar CSV** | Formato largo (una fila por punto de precio, con BOM, compatible con Excel) incluyendo notas, etiquetas y precio objetivo |
+| 🔍 **Filtros avanzados** | Filtra por rango de fechas y rango de precios (los filtros por sitio y etiqueta son gratuitos) |
 | 📊 **Comparar productos** | Superpone el historial de precios de hasta 6 productos en una sola gráfica |
 
 ---
@@ -119,9 +120,19 @@ Comparar productos entre tiendas suele significar decenas de pestañas abiertas 
 
 ---
 
+## Aviso sobre el código fuente
+
+> ⚠️ **Este repositorio es solo para presentar el proyecto: el código fuente completo no se publica aquí.** Solo contiene la documentación de uso, las notas de versión y la información de soporte de la extensión.
+
+> 📥 **Descárgala e instálala únicamente desde las tiendas oficiales de navegadores:** Chrome Web Store · Microsoft Edge Add-ons · Complementos de Firefox (AMO). Desde aquí no se distribuye ningún instalador sin conexión.
+
+---
+
 ## Licencia
 
 Copyright © 2026 VKT Item Pin. Todos los derechos reservados.
+
+Este software es propietario y de código cerrado. Sin autorización previa por escrito del autor, queda estrictamente prohibido descompilar, aplicar ingeniería inversa, crackear, modificar, reempaquetar, redistribuir o revender el programa (total o parcialmente).
 
 ---
 

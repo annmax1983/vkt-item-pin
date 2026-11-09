@@ -36,11 +36,13 @@ Produktvergleiche über Einkaufsseiten hinweg bedeuten meist Dutzende offene Tab
 | 🔁 **Automatischer Preisverlauf** | Beim erneuten Öffnen einer angepinnten Produktseite wird der Preis im Hintergrund erfasst – ein Preispunkt pro Tag |
 | 🔔 **Zielpreis-Alarm** | Zielpreis pro Artikel setzen; die Erfassung, die den Preis erstmals auf oder unter den Zielpreis bringt, löst eine Desktop-Benachrichtigung aus (rein lokal) |
 | 📈 **Preisverlauf** | Unbegrenzte erneute Erfassungen bei verfolgten Produkten, mit Trend-Chart pro Artikel |
-| 🏷 **Notizen & Tags** | Eine Notiz und bis zu 10 Tags pro Artikel – beides durchsuchbar und filterbar |
+| 🏷 **Notizen & Tags** | Eine Notiz und bis zu 10 Tags pro Artikel – durchsuchbar, filterbar und im Export enthalten |
+| 🔍 **Filter & Sortierung** | Nach Website oder Tag eingrenzen, nach letzter Aktivität, größter Senkung oder Preis sortieren |
 | 📊 **Bibliotheks-Statistik** | Zusammenfassung oben: Preissenkungen der letzten 30 Tage und Gesamtwert einer Bibliothek mit einer Währung |
 | 🧭 **Anderswo vergleichen** | Mit einem Klick denselben Titel bei Google Shopping, eBay oder Amazon suchen |
 | ✏️ **Einträge bearbeiten** | Titel/Modelle korrigieren, fehlerhafte Preispunkte ändern oder entfernen, Notizen, Tags und Zielpreis anpassen |
 | 💾 **JSON-Backup** | Vollständige Bibliothek exportieren / importieren (offline nutzbar) – inklusive Notizen, Tags und Zielpreisen |
+| 📤 **CSV-Export** | Langformat (eine Zeile pro Preispunkt, mit BOM, Excel-freundlich) inklusive Notizen, Tags und Zielpreis |
 | 🧮 **Speicher-Monitor** | Zeigt die echte Speichernutzung und warnt frühzeitig |
 | 🌍 **6 Sprachen** | Englisch, Chinesisch, Japanisch, Spanisch, Deutsch, Französisch |
 
@@ -49,8 +51,7 @@ Produktvergleiche über Einkaufsseiten hinweg bedeuten meist Dutzende offene Tab
 | Funktion | Beschreibung |
 |----------|--------------|
 | ♾️ **Unbegrenzte Produkte** | Der Gratisplan umfasst 50 Produkte; Pro entfernt das Limit (erneute Erfassungen zählen nie mit) |
-| 🔍 **Erweiterte Filter** | Nach Website, Tag, Zeitraum und Preisspanne filtern |
-| 📤 **CSV-Export** | Langformat (eine Zeile pro Preispunkt, mit BOM, Excel-freundlich) inklusive Notizen, Tags und Zielpreis |
+| 🔍 **Erweiterte Filter** | Nach Zeitraum und Preisspanne filtern (Website- und Tag-Filter sind gratis) |
 | 📊 **Produkte vergleichen** | Preisverläufe von bis zu 6 Produkten in einem Chart überlagern |
 
 ---
@@ -119,9 +120,19 @@ Produktvergleiche über Einkaufsseiten hinweg bedeuten meist Dutzende offene Tab
 
 ---
 
+## Hinweis zum Quellcode
+
+> ⚠️ **Dieses Repository dient ausschließlich der Projektpräsentation — der vollständige Quellcode wird hier nicht veröffentlicht.** Es enthält nur die Nutzungsdokumentation, die Release-Notizen und Support-Informationen zur Erweiterung.
+
+> 📥 **Installation ausschließlich über die offiziellen Browser-Stores:** Chrome Web Store · Microsoft Edge Add-ons · Firefox-Add-ons (AMO). Von hier werden keine Offline-Installer verteilt.
+
+---
+
 ## Lizenz
 
 Copyright © 2026 VKT Item Pin. Alle Rechte vorbehalten.
+
+Diese Software ist proprietär und quellgeschlossen. Ohne vorherige schriftliche Genehmigung des Autors ist das Dekompilieren, Reverse-Engineering, Knacken, Verändern, Neuverpacken, Weiterverbreiten oder Weiterverkaufen der Software (ganz oder teilweise) streng untersagt.
 
 ---
 

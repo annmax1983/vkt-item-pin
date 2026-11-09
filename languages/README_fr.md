@@ -36,11 +36,13 @@ Comparer des produits entre sites marchands, c'est souvent des dizaines d'onglet
 | 🔁 **Historique automatique** | Rouvrir un produit épinglé relève le prix en arrière-plan : un point par jour maximum |
 | 🔔 **Alerte de prix cible** | Fixez un prix cible par produit ; la capture qui l'atteint pour la première fois affiche une notification système (100 % locale) |
 | 📈 **Historique des prix** | Recaptures illimitées sur les produits suivis, avec graphique de tendance par article |
-| 🏷 **Notes et étiquettes** | Une note libre et jusqu'à 10 étiquettes par produit ; les deux sont cherchables et filtrables |
+| 🏷 **Notes et étiquettes** | Une note libre et jusqu'à 10 étiquettes par produit ; servent à la recherche, aux filtres et à l'export |
+| 🔍 **Filtres et tri** | Filtrez par site ou étiquette, triez par dernière activité, plus forte baisse ou prix |
 | 📊 **Statistiques** | Bandeau récapitulatif : nombre de baisses sur 30 jours et valeur totale d'une bibliothèque en une seule devise |
 | 🧭 **Comparer ailleurs** | Un clic pour rechercher le même titre sur Google Shopping, eBay ou Amazon |
 | ✏️ **Modifier les fiches** | Corrigez titres et modèles, corrigez ou supprimez les points de prix erronés, modifiez notes, étiquettes et prix cible |
 | 💾 **Sauvegarde JSON** | Exportez / importez une sauvegarde complète de votre bibliothèque (hors ligne), notes, étiquettes et prix cible inclus |
+| 📤 **Export CSV** | Format long (une ligne par point de prix, avec BOM, compatible Excel) incluant notes, étiquettes et prix cible |
 | 🧮 **Moniteur de stockage** | Affiche l'utilisation réelle et alerte avant saturation |
 | 🌍 **6 langues** | Anglais, chinois, japonais, espagnol, allemand, français |
 
@@ -49,8 +51,7 @@ Comparer des produits entre sites marchands, c'est souvent des dizaines d'onglet
 | Fonctionnalité | Description |
 |----------------|-------------|
 | ♾️ **Produits illimités** | Le plan gratuit couvre 50 produits ; Pro supprime la limite (les recaptures ne comptent jamais) |
-| 🔍 **Filtres avancés** | Filtrez par site, étiquette, période et fourchette de prix |
-| 📤 **Export CSV** | Format long (une ligne par point de prix, avec BOM, compatible Excel) incluant notes, étiquettes et prix cible |
+| 🔍 **Filtres avancés** | Filtrez par période et fourchette de prix (les filtres par site et étiquette sont gratuits) |
 | 📊 **Comparaison multi-produits** | Superposez l'historique de prix de 6 produits dans un même graphique |
 
 ---
@@ -119,9 +120,19 @@ Comparer des produits entre sites marchands, c'est souvent des dizaines d'onglet
 
 ---
 
+## Avis sur le code source
+
+> ⚠️ **Ce dépôt sert uniquement à la présentation du projet — le code source complet n'y est pas publié.** Il ne contient que la documentation d'utilisation, les notes de version et les informations d'assistance de l'extension.
+
+> 📥 **Téléchargement et installation uniquement depuis les boutiques officielles :** Chrome Web Store · Microsoft Edge Add-ons · Modules complémentaires Firefox (AMO). Aucun installateur hors ligne n'est distribué ici.
+
+---
+
 ## Licence
 
 Copyright © 2026 VKT Item Pin. Tous droits réservés.
+
+Ce logiciel est propriétaire et à code fermé. Sans autorisation écrite préalable de l'auteur, la décompilation, l'ingénierie inverse, le crackage, la modification, le reconditionnement, la redistribution ou la revente du logiciel (en tout ou en partie) sont strictement interdites.
 
 ---
 

@@ -36,11 +36,13 @@ Comparing products across shopping sites usually means dozens of open tabs and c
 | 🔁 **Automatic Price Tracking** | Revisiting a page you already pinned records the price in the background — one price point per day, no clicking |
 | 🔔 **Target Price Alerts** | Set a target per item; the record that first brings the price to or below it shows a desktop notification (local only) |
 | 📈 **Price History** | Unlimited re-captures on tracked products — each capture adds a price point, with a trend chart per item |
-| 🏷 **Notes & Tags** | A free-text note plus up to 10 tags per item; both are searchable and filterable |
+| 🏷 **Notes & Tags** | A free-text note plus up to 10 tags per item; searchable, filterable and exported |
+| 🔍 **Filters & Sort** | Narrow the library by site or tag, and sort by last activity, biggest drop or price |
 | 📊 **Library Stats** | Summary strip: how many items dropped in the last 30 days and the total value of a single-currency library |
 | 🧭 **Compare Elsewhere** | One click to search the same title on Google Shopping, eBay or Amazon |
 | ✏️ **Edit Records** | Fix titles/models, correct or remove bad price points, change notes, tags and target price |
 | 💾 **JSON Backup** | Export / import a full backup of your library — including notes, tags and target prices |
+| 📤 **CSV Export** | Long-format CSV (one row per price point, BOM, Excel-friendly) including notes, tags and target price |
 | 🧮 **Storage Monitor** | Shows real storage usage and warns before it gets full |
 | 🌍 **6 Languages** | English, Chinese, Japanese, Spanish, German, French |
 
@@ -49,8 +51,7 @@ Comparing products across shopping sites usually means dozens of open tabs and c
 | Feature | Description |
 |---------|-------------|
 | ♾️ **Unlimited Products** | Free plan covers 50 products; Pro removes the limit (re-captures never count against it) |
-| 🔍 **Advanced Filters** | Filter by site, tag, date range and price range |
-| 📤 **CSV Export** | Long-format CSV (one row per price point, BOM, Excel-friendly) including notes, tags and target price |
+| 🔍 **Advanced Filters** | Filter by date range and price range (site and tag filters are free) |
 | 📊 **Multi-Item Compare** | Overlay price history of up to 6 products in one chart |
 
 ---
@@ -131,9 +132,19 @@ All extraction and storage happen locally in your browser. Network access is lim
 
 ---
 
+## Source Code Notice
+
+> ⚠️ **This repository is for project showcase only — the full source code is not published here.** It contains the user documentation, release notes and support information for the extension.
+
+> 📥 **Download and install only from the official browser stores:** Chrome Web Store · Microsoft Edge Add-ons · Firefox Add-ons (AMO). No offline installation package is distributed from this repository.
+
+---
+
 ## License
 
 Copyright © 2026 VKT Item Pin. All rights reserved.
+
+This software is proprietary and closed-source. Without prior written authorization from the author, decompiling, reverse-engineering, cracking, modifying, repackaging, redistributing or reselling the program (in whole or in part) is strictly prohibited.
 
 ---
 
