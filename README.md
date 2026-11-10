@@ -16,7 +16,7 @@ Comparing products across shopping sites usually means dozens of open tabs and c
 |-----------|--------|
 | 🎯 **Hover to Capture** | Hover a product, click the Pin button — title, price, link, model, site and date are extracted automatically |
 | 🔁 **Automatic Price Tracking** | Open a product you already pinned and its price is recorded for you — no second click |
-| 🔔 **Local Price Alerts** | Set a target price per item; the first revisit at or below it fires a desktop notification — no server, no email |
+| 🔔 **Local Price Alerts (Pro)** | Set a target price per item; the first revisit at or below it fires a desktop notification — no server, no email |
 | 📈 **Price History** | Every capture — manual or automatic — adds a point and builds a per-item trend chart |
 | 🛒 **24 Site Presets** | Hand-tuned selectors for Amazon, eBay, Etsy, Walmart, AliExpress, Temu and more — plus a universal engine (JSON-LD / OG / generic selectors) for every other shop |
 | 🏷 **Notes & Tags** | Keep the reasoning ("wait for Black Friday") and organize with up to 10 tags per item — all searchable |
@@ -34,13 +34,12 @@ Comparing products across shopping sites usually means dozens of open tabs and c
 | 🎯 **One-Click Capture** | Hover any product on product pages or listing/search pages and pin it |
 | 📋 **Preview & Pick** | Edit fields before saving; "Pick" mode lets you click any element on the page to fill a field |
 | 🔁 **Automatic Price Tracking** | Revisiting a page you already pinned records the price in the background — one price point per day, no clicking |
-| 🔔 **Target Price Alerts** | Set a target per item; the record that first brings the price to or below it shows a desktop notification (local only) |
 | 📈 **Price History** | Unlimited re-captures on tracked products — each capture adds a price point, with a trend chart per item |
 | 🏷 **Notes & Tags** | A free-text note plus up to 10 tags per item; searchable, filterable and exported |
 | 🔍 **Filters & Sort** | Narrow the library by site or tag, and sort by last activity, biggest drop or price |
-| 📊 **Library Stats** | Summary strip: how many items dropped in the last 30 days and the total value of a single-currency library |
+| 📊 **Library Stats** | Summary strip: how many items dropped in the last 30 days |
 | 🧭 **Compare Elsewhere** | One click to search the same title on Google Shopping, eBay or Amazon |
-| ✏️ **Edit Records** | Fix titles/models, correct or remove bad price points, change notes, tags and target price |
+| ✏️ **Edit Records** | Fix titles/models, correct or remove bad price points, change notes and tags (the target price field is Pro) |
 | 💾 **JSON Backup** | Export / import a full backup of your library — including notes, tags and target prices |
 | 📤 **CSV Export** | Long-format CSV (one row per price point, BOM, Excel-friendly) including notes, tags and target price |
 | 🧮 **Storage Monitor** | Shows real storage usage and warns before it gets full |
@@ -50,7 +49,8 @@ Comparing products across shopping sites usually means dozens of open tabs and c
 
 | Feature | Description |
 |---------|-------------|
-| ♾️ **Unlimited Products** | Free plan covers 50 products; Pro removes the limit (re-captures never count against it) |
+| 🔔 **Target Price Alerts** | Set a target per item; the first revisit at or below it fires a desktop notification (local only, with an on/off switch in the dashboard) |
+| ♾️ **Unlimited Products** | Free plan covers 10 products; Pro removes the limit (re-captures never count against it) |
 | 🔍 **Advanced Filters** | Filter by date range and price range (site and tag filters are free) |
 | 📊 **Multi-Item Compare** | Overlay price history of up to 6 products in one chart |
 
@@ -99,7 +99,7 @@ Comparing products across shopping sites usually means dozens of open tabs and c
 
 ### Track Prices
 
-- Just visit a product you already pinned — the price is recorded automatically, once per day (saved products count toward the 50-product free limit; revisiting an existing product never adds a record or uses another slot)
+- Just visit a product you already pinned — the price is recorded automatically, once per day (saved products count toward the 10-product free limit; revisiting an existing product never adds a record or uses another slot)
 - Set a **target price** in the dashboard; when a visit brings the price to or below it, you get a desktop notification. It fires once per crossing — no repeated nagging
 - Open the dashboard for the trend chart, the 30-day drop summary, or **Compare** (Pro) to overlay multiple products
 - Add a **note** and **tags** in the dashboard to remember why an item is worth waiting for
@@ -126,7 +126,7 @@ All extraction and storage happen locally in your browser. Network access is lim
 
 - `storage` — Saves your product library locally. No webpage content leaves your browser.
 - `scripting` + `activeTab` — Inject the Pin button / extract fields only while you interact with the page.
-- `notifications` — Only used for local target-price alerts; nothing is sent anywhere.
+- `notifications` — Only used for local target-price alerts (Pro); nothing is sent anywhere.
 - `<all_urls>` — Lets the extension work on every shopping site. It never reads or uploads page content in the background.
 - No tracking, no analytics. Network requests are limited to license activation/validation and product thumbnails loaded from the store that hosts them.
 

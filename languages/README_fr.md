@@ -16,7 +16,7 @@ Comparer des produits entre sites marchands, c'est souvent des dizaines d'onglet
 |----------|--------|
 | 🎯 **Capture au survol** | Survolez un produit et cliquez sur Pin — titre, prix, lien, modèle, site et date extraits automatiquement |
 | 🔁 **Prix relevé automatiquement** | Rouvrez une fiche produit déjà épinglée : le prix est enregistré sans second clic |
-| 🔔 **Alerte de prix locale** | Fixez un prix cible par produit : la première visite qui l'atteint ou passe en dessous déclenche une notification système, sans serveur ni e-mail |
+| 🔔 **Alerte de prix locale (Pro)** | Fixez un prix cible par produit : la première visite qui l'atteint ou passe en dessous déclenche une notification système, sans serveur ni e-mail |
 | 📈 **Historique des prix** | Chaque capture, manuelle ou automatique, ajoute un point et construit le graphique de tendance |
 | 🛒 **24 sites préconfigurés** | Sélecteurs ajustés pour Amazon, eBay, Etsy, Walmart, AliExpress, Temu et plus — plus un moteur universel (JSON-LD / OG / sélecteurs génériques) pour toutes les autres boutiques |
 | 🏷 **Notes et étiquettes** | Notez la raison (« attendre le Black Friday ») et classez avec jusqu'à 10 étiquettes par produit, toutes cherchables |
@@ -34,13 +34,12 @@ Comparer des produits entre sites marchands, c'est souvent des dizaines d'onglet
 | 🎯 **Capture en un clic** | Épinglez n'importe quel produit, sur une fiche produit ou dans une grille de résultats |
 | 📋 **Aperçu et sélection** | Modifiez les champs avant d'enregistrer ; le mode « Choisir » remplit un champ en cliquant sur un élément de la page |
 | 🔁 **Historique automatique** | Rouvrir un produit épinglé relève le prix en arrière-plan : un point par jour maximum |
-| 🔔 **Alerte de prix cible** | Fixez un prix cible par produit ; la capture qui l'atteint pour la première fois affiche une notification système (100 % locale) |
 | 📈 **Historique des prix** | Recaptures illimitées sur les produits suivis, avec graphique de tendance par article |
 | 🏷 **Notes et étiquettes** | Une note libre et jusqu'à 10 étiquettes par produit ; servent à la recherche, aux filtres et à l'export |
 | 🔍 **Filtres et tri** | Filtrez par site ou étiquette, triez par dernière activité, plus forte baisse ou prix |
-| 📊 **Statistiques** | Bandeau récapitulatif : nombre de baisses sur 30 jours et valeur totale d'une bibliothèque en une seule devise |
+| 📊 **Statistiques** | Bandeau récapitulatif : nombre de baisses sur 30 jours |
 | 🧭 **Comparer ailleurs** | Un clic pour rechercher le même titre sur Google Shopping, eBay ou Amazon |
-| ✏️ **Modifier les fiches** | Corrigez titres et modèles, corrigez ou supprimez les points de prix erronés, modifiez notes, étiquettes et prix cible |
+| ✏️ **Modifier les fiches** | Corrigez titres et modèles, corrigez ou supprimez les points de prix erronés, modifiez notes et étiquettes (le prix cible est Pro) |
 | 💾 **Sauvegarde JSON** | Exportez / importez une sauvegarde complète de votre bibliothèque (hors ligne), notes, étiquettes et prix cible inclus |
 | 📤 **Export CSV** | Format long (une ligne par point de prix, avec BOM, compatible Excel) incluant notes, étiquettes et prix cible |
 | 🧮 **Moniteur de stockage** | Affiche l'utilisation réelle et alerte avant saturation |
@@ -50,7 +49,8 @@ Comparer des produits entre sites marchands, c'est souvent des dizaines d'onglet
 
 | Fonctionnalité | Description |
 |----------------|-------------|
-| ♾️ **Produits illimités** | Le plan gratuit couvre 50 produits ; Pro supprime la limite (les recaptures ne comptent jamais) |
+| 🔔 **Alerte de prix cible** | Fixez un prix cible par produit ; la première visite qui l'atteint affiche une notification système (100 % locale, avec interrupteur dans le tableau de bord) |
+| ♾️ **Produits illimités** | Le plan gratuit couvre 10 produits ; Pro supprime la limite (les recaptures ne comptent jamais) |
 | 🔍 **Filtres avancés** | Filtrez par période et fourchette de prix (les filtres par site et étiquette sont gratuits) |
 | 📊 **Comparaison multi-produits** | Superposez l'historique de prix de 6 produits dans un même graphique |
 
@@ -99,7 +99,7 @@ Comparer des produits entre sites marchands, c'est souvent des dizaines d'onglet
 
 ### Suivre les prix
 
-- Rouvrez simplement une fiche déjà enregistrée : le prix est relevé automatiquement, un point par jour maximum (le plan gratuit permet d'enregistrer jusqu'à 50 produits ; relever à nouveau le prix d'un produit déjà enregistré n'ajoute aucun enregistrement et ne consomme aucune place supplémentaire)
+- Rouvrez simplement une fiche déjà enregistrée : le prix est relevé automatiquement, un point par jour maximum (le plan gratuit permet d'enregistrer jusqu'à 10 produits ; relever à nouveau le prix d'un produit déjà enregistré n'ajoute aucun enregistrement et ne consomme aucune place supplémentaire)
 - Définissez un **prix cible** dans le tableau de bord : quand une visite amène le prix à ce niveau ou en dessous, une notification système s'affiche, une seule fois par franchissement et sans répétition
 - Ouvrez le tableau de bord pour le graphique de tendance et le bilan des baisses sur 30 jours, ou utilisez **Comparer** (Pro) pour superposer plusieurs produits
 - Utilisez **note** et **étiquettes** pour garder en tête pourquoi le produit vaut l'attente
@@ -114,7 +114,7 @@ Comparer des produits entre sites marchands, c'est souvent des dizaines d'onglet
 
 - `storage` — Enregistre votre bibliothèque localement. Aucun contenu de page ne quitte votre navigateur.
 - `scripting` + `activeTab` — Injectent le bouton Pin / extraient les champs uniquement pendant votre interaction.
-- `notifications` — Utilisée uniquement pour les alertes locales de prix cible ; rien n'est envoyé nulle part.
+- `notifications` — Utilisée uniquement pour les alertes locales de prix cible (Pro) ; rien n'est envoyé nulle part.
 - `<all_urls>` — Permet de fonctionner sur tous les sites marchands. Ne lit ni n'envoie jamais de contenu en arrière-plan.
 - Aucun tracking, aucune analytics. Les requêtes réseau se limitent à l'activation/validation de la licence Pro et aux vignettes de produits, chargées directement depuis le site d'origine.
 

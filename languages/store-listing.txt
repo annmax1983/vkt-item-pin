@@ -6,7 +6,7 @@ VKT Item Pin — Chrome Web Store 文案（六语言纯文本版，v1.4.0）
 
 <<<<<<<<<< ENGLISH · SHORT >>>>>>>>>>
 
-Pin products from any shopping site: title, price, link and model saved locally with price history. Free 50, Pro unlimited.
+Pin products from any shopping site: title, price, link and model saved locally with price history. Free 10, Pro unlimited.
 
 <<<<<<<<<< ENGLISH · DETAILED >>>>>>>>>>
 
@@ -30,7 +30,7 @@ Search and organize your library by date or site, edit records, correct or remov
 Everything is stored locally via chrome.storage.local. Nothing is uploaded, no tracking, no analytics. Export/import a full JSON backup (notes, tags and target prices included), or export CSV (Pro) for spreadsheets. A storage monitor warns you before local storage gets full.
 
 🆓 FREE PLAN
-50 products, automatic price tracking on every revisit, target-price alerts, notes and tags, JSON backup, storage monitor, 6 languages.
+10 products, automatic price tracking on every revisit, target-price alerts, notes and tags, JSON backup, storage monitor, 6 languages.
 
 ⭐ PRO
 Unlimited products, advanced filters (site / tag / date range / price range), CSV export with notes and target prices, multi-item compare (up to 6 products in one chart).
@@ -44,7 +44,7 @@ Works on Chrome, Edge and other Chromium-based browsers. Manifest V3, minimal pe
 
 <<<<<<<<<< 中文 · 简短 >>>>>>>>>>
 
-任意购物网站悬停即可收藏商品：标题、价格、链接、型号本地保存并生成价格走势。免费 50 条，Pro 无限制。
+任意购物网站悬停即可收藏商品：标题、价格、链接、型号本地保存并生成价格走势。免费 10 条，Pro 无限制。
 
 <<<<<<<<<< 中文 · 详细 >>>>>>>>>>
 
@@ -68,7 +68,7 @@ VKT Item Pin 是一款购物调研扩展，一键保存商品快照：标题、�
 所有数据通过 chrome.storage.local 保存在本地，不上传、无跟踪、无统计。支持 JSON 全量备份导入导出（含备注、标签、目标价），CSV 导出（Pro）可直接用于表格软件。存储监控会在空间将满时提前提醒。
 
 🆓 免费版
-50 件商品、每次重访自动记价、目标价提醒、备注与标签、JSON 备份、存储监控、6 种语言。
+10 件商品、每次重访自动记价、目标价提醒、备注与标签、JSON 备份、存储监控、6 种语言。
 
 ⭐ Pro 版
 无限商品、高级筛选（站点 / 标签 / 日期范围 / 价格区间）、CSV 导出（含备注与目标价）、多商品对比（一张图最多 6 条曲线）。
@@ -82,7 +82,7 @@ VKT Item Pin 是一款购物调研扩展，一键保存商品快照：标题、�
 
 <<<<<<<<<< 日本語 · 短い >>>>>>>>>>
 
-どのショッピングサイトでも商品をピン留め：タイトル・価格・リンク・型番をローカル保存し価格履歴を記録。無料50件、Pro無制限。
+どのショッピングサイトでも商品をピン留め：タイトル・価格・リンク・型番をローカル保存し価格履歴を記録。無料10件、Pro無制限。
 
 <<<<<<<<<< 日本語 · 詳細 >>>>>>>>>>
 
@@ -106,7 +106,7 @@ VKT Item Pin は、ワンクリックで商品情報を保存できるショッ�
 すべて chrome.storage.local にローカル保存。アップロードなし、トラッキングなし、アナリティクスなし。JSON フルバックアップの入出力（メモ・タグ・目標価格を含む）、スプレッドシート向け CSV エクスポート（Pro）に対応。ストレージモニターが容量不足を事前に警告します。
 
 🆓 無料プラン
-50 商品、再訪時の自動記録、目標価格アラート、メモとタグ、JSON バックアップ、ストレージモニター、6 言語対応。
+10 商品、再訪時の自動記録、目標価格アラート、メモとタグ、JSON バックアップ、ストレージモニター、6 言語対応。
 
 ⭐ Pro
 商品数無制限、高度なフィルタ（サイト / タグ / 期間 / 価格帯）、CSV エクスポート（メモ・目標価格を含む）、複数商品比較（1 チャートに最大 6 本）。
@@ -120,7 +120,7 @@ Chrome、Edge など Chromium 系ブラウザに対応。Manifest V3、最小限
 
 <<<<<<<<<< ESPAÑOL · CORTA >>>>>>>>>>
 
-Fija productos de cualquier tienda: título, precio, enlace y modelo en local con historial de precios. Gratis 50, Pro ilimitado.
+Fija productos de cualquier tienda: título, precio, enlace y modelo en local con historial de precios. Gratis 10, Pro ilimitado.
 
 <<<<<<<<<< ESPAÑOL · DETALLADA >>>>>>>>>>
 
@@ -144,7 +144,7 @@ Busca y organiza tu biblioteca por fecha o sitio, edita registros, corrige o eli
 Todo se guarda localmente con chrome.storage.local. Nada se sube, sin rastreo, sin analíticas. Exporta e importa una copia de seguridad JSON completa (con notas, etiquetas y precios objetivo) o exporta CSV (Pro) para hojas de cálculo. Un monitor de almacenamiento te avisa antes de quedarte sin espacio.
 
 🆓 PLAN GRATUITO
-50 productos, registro automático en cada visita, avisos de precio objetivo, notas y etiquetas, copia JSON, monitor de almacenamiento, 6 idiomas.
+10 productos, registro automático en cada visita, avisos de precio objetivo, notas y etiquetas, copia JSON, monitor de almacenamiento, 6 idiomas.
 
 ⭐ PRO
 Productos ilimitados, filtros avanzados (sitio / etiqueta / rango de fechas / rango de precios), exportación CSV con notas y precios objetivo, comparación de varios productos (hasta 6 curvas en un gráfico).
@@ -158,7 +158,7 @@ Compatible con Chrome, Edge y otros navegadores basados en Chromium. Manifest V3
 
 <<<<<<<<<< DEUTSCH · KURZ >>>>>>>>>>
 
-Produkte von jeder Shopping-Seite anpinnen: Titel, Preis, Link und Modell lokal mit Preisverlauf. Gratis 50, Pro unbegrenzt.
+Produkte von jeder Shopping-Seite anpinnen: Titel, Preis, Link und Modell lokal mit Preisverlauf. Gratis 10, Pro unbegrenzt.
 
 <<<<<<<<<< DEUTSCH · BESCHREIBUNG >>>>>>>>>>
 
@@ -182,7 +182,7 @@ Durchsuche und organisiere deine Bibliothek nach Datum oder Seite, bearbeite Ein
 Alles wird lokal über chrome.storage.local gespeichert. Kein Upload, kein Tracking, keine Analytics. Volle JSON-Sicherung exportieren/importieren (inklusive Notizen, Tags und Zielpreisen) oder CSV-Export (Pro) für Tabellenkalkulationen. Ein Speichermonitor warnt, bevor der lokale Speicher voll wird.
 
 🆓 KOSTENLOSER PLAN
-50 Produkte, automatische Preiserfassung bei jedem Besuch, Zielpreis-Alarm, Notizen und Tags, JSON-Backup, Speichermonitor, 6 Sprachen.
+10 Produkte, automatische Preiserfassung bei jedem Besuch, Zielpreis-Alarm, Notizen und Tags, JSON-Backup, Speichermonitor, 6 Sprachen.
 
 ⭐ PRO
 Unbegrenzte Produkte, erweiterte Filter (Seite / Tag / Zeitraum / Preisspanne), CSV-Export mit Notizen und Zielpreisen, Mehrprodukt-Vergleich (bis zu 6 Kurven in einem Chart).
@@ -196,7 +196,7 @@ Funktioniert in Chrome, Edge und anderen Chromium-basierten Browsern. Manifest V
 
 <<<<<<<<<< FRANÇAIS · COURTE >>>>>>>>>>
 
-Épinglez des produits de toute boutique : titre, prix, lien et modèle en local, avec historique de prix. Gratuit 50, Pro illimité.
+Épinglez des produits de toute boutique : titre, prix, lien et modèle en local, avec historique de prix. Gratuit 10, Pro illimité.
 
 <<<<<<<<<< FRANÇAIS · DÉTAILLÉE >>>>>>>>>>
 
@@ -220,7 +220,7 @@ Recherchez et organisez votre bibliothèque par date ou par site, modifiez les e
 Tout est stocké localement via chrome.storage.local. Rien n'est envoyé, pas de traçage, pas d'analytique. Exportez/importez une sauvegarde JSON complète (notes, étiquettes et prix cible inclus) ou exportez en CSV (Pro) pour vos tableurs. Un moniteur de stockage vous alerte avant que le stockage local ne soit plein.
 
 🆓 FORMULE GRATUITE
-50 produits, relevé automatique à chaque visite, alertes de prix cible, notes et étiquettes, sauvegarde JSON, moniteur de stockage, 6 langues.
+10 produits, relevé automatique à chaque visite, alertes de prix cible, notes et étiquettes, sauvegarde JSON, moniteur de stockage, 6 langues.
 
 ⭐ PRO
 Produits illimités, filtres avancés (site / étiquette / période / fourchette de prix), export CSV avec notes et prix cible, comparaison multi-produits (jusqu'à 6 courbes dans un même graphique).

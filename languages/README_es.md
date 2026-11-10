@@ -16,7 +16,7 @@ Comparar productos entre tiendas suele significar decenas de pestañas abiertas 
 |---------|---------|
 | 🎯 **Captura al pasar el cursor** | Pasa el cursor y pulsa Pin: título, precio, enlace, modelo, sitio y fecha se extraen automáticamente |
 | 🔁 **Precio registrado automáticamente** | Vuelve a abrir un producto que ya fijaste y el precio se registra solo, sin un segundo clic |
-| 🔔 **Alerta de precio local** | Define un precio objetivo por producto: la primera visita que lo alcance o baje de él muestra una notificación del sistema, sin servidor ni correo |
+| 🔔 **Alerta de precio local (Pro)** | Define un precio objetivo por producto: la primera visita que lo alcance o baje de él muestra una notificación del sistema, sin servidor ni correo |
 | 📈 **Historial de precios** | Cada captura, manual o automática, añade un punto y crea la gráfica de tendencia |
 | 🛒 **24 sitios preconfigurados** | Selectores ajustados para Amazon, eBay, Etsy, Walmart, AliExpress, Temu y más, además de un motor universal (JSON-LD / OG / selectores genéricos) para cualquier otra tienda |
 | 🏷 **Notas y etiquetas** | Anota el motivo («esperar al Black Friday») y organiza con hasta 10 etiquetas por producto, todo buscable |
@@ -34,13 +34,12 @@ Comparar productos entre tiendas suele significar decenas de pestañas abiertas 
 | 🎯 **Captura con un clic** | Fija cualquier producto en páginas de detalle o listados de búsqueda |
 | 📋 **Vista previa y selección** | Edita los campos antes de guardar; el modo «Elegir» permite hacer clic en cualquier elemento para rellenar un campo |
 | 🔁 **Historial automático** | Al abrir de nuevo un producto fijado, el precio se registra en segundo plano: un punto por día como máximo |
-| 🔔 **Alerta de precio objetivo** | Define un precio objetivo por producto; la captura que lo alcanza por primera vez lanza una notificación del sistema (todo local) |
 | 📈 **Historial de precios** | Recapturas ilimitadas en productos seguidos, con gráfica de tendencia por producto |
 | 🏷 **Notas y etiquetas** | Una nota libre y hasta 10 etiquetas por producto; se pueden buscar, filtrar y exportar |
 | 🔍 **Filtros y orden** | Filtra por sitio o etiqueta y ordena por última actividad, mayor bajada o precio |
-| 📊 **Estadísticas** | Franja resumen: cuántos productos bajaron en 30 días y el valor total de una biblioteca de una sola moneda |
+| 📊 **Estadísticas** | Franja resumen: cuántos productos bajaron en 30 días |
 | 🧭 **Comparar fuera** | Un clic para buscar el mismo título en Google Shopping, eBay o Amazon |
-| ✏️ **Editar registros** | Corrige títulos y modelos, corrige o elimina puntos de precio erróneos, cambia notas, etiquetas y precio objetivo |
+| ✏️ **Editar registros** | Corrige títulos y modelos, corrige o elimina puntos de precio erróneos, cambia notas y etiquetas (el precio objetivo es Pro) |
 | 💾 **Copia JSON** | Exporta / importa una copia completa de tu biblioteca (sin conexión), incluidas notas, etiquetas y precios objetivo |
 | 📤 **Exportar CSV** | Formato largo (una fila por punto de precio, con BOM, compatible con Excel) incluyendo notas, etiquetas y precio objetivo |
 | 🧮 **Monitor de almacenamiento** | Muestra el uso real y avisa antes de llenarse |
@@ -50,7 +49,8 @@ Comparar productos entre tiendas suele significar decenas de pestañas abiertas 
 
 | Función | Descripción |
 |---------|-------------|
-| ♾️ **Productos ilimitados** | El plan gratuito cubre 50 productos; Pro elimina el límite (las recapturas nunca cuentan) |
+| 🔔 **Alerta de precio objetivo** | Define un precio objetivo por producto; la primera visita que lo alcanza lanza una notificación del sistema (todo local, con interruptor en el panel) |
+| ♾️ **Productos ilimitados** | El plan gratuito cubre 10 productos; Pro elimina el límite (las recapturas nunca cuentan) |
 | 🔍 **Filtros avanzados** | Filtra por rango de fechas y rango de precios (los filtros por sitio y etiqueta son gratuitos) |
 | 📊 **Comparar productos** | Superpone el historial de precios de hasta 6 productos en una sola gráfica |
 
@@ -99,7 +99,7 @@ Comparar productos entre tiendas suele significar decenas de pestañas abiertas 
 
 ### Seguir precios
 
-- Abre de nuevo un producto ya guardado: el precio se registra solo, un punto por día como máximo (el plan gratuito permite guardar hasta 50 productos; volver a registrar el precio de un producto ya guardado no añade un registro ni consume otra plaza)
+- Abre de nuevo un producto ya guardado: el precio se registra solo, un punto por día como máximo (el plan gratuito permite guardar hasta 10 productos; volver a registrar el precio de un producto ya guardado no añade un registro ni consume otra plaza)
 - Define un **precio objetivo** en el panel: cuando una visita lleve el precio a ese valor o por debajo, verás una notificación del sistema, una sola vez por cruce y sin repetirse
 - Abre el panel para ver la gráfica de tendencia, el resumen de bajadas de 30 días, o usa **Comparar** (Pro) para superponer varios productos
 - Usa **nota** y **etiquetas** para recordar por qué merece la pena esperar
@@ -114,7 +114,7 @@ Comparar productos entre tiendas suele significar decenas de pestañas abiertas 
 
 - `storage` — Guarda tu biblioteca localmente. Ningún contenido de página sale de tu navegador.
 - `scripting` + `activeTab` — Inyectan el botón Pin / extraen campos solo mientras interactúas con la página.
-- `notifications` — Solo se usa para las alertas locales de precio objetivo; no se envía nada a ningún sitio.
+- `notifications` — Solo se usa para las alertas locales de precio objetivo (Pro); no se envía nada a ningún sitio.
 - `<all_urls>` — Permite funcionar en cualquier tienda. Nunca lee ni sube contenido en segundo plano.
 - Sin rastreo ni analíticas. Las solicitudes de red se limitan a la activación/validación de la licencia Pro y a las miniaturas de productos, que se cargan directamente desde el sitio original.
 
